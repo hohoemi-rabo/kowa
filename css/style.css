@@ -1851,7 +1851,7 @@ img {
     width: 140px;
     opacity: 0;
     visibility: hidden;
-    transition: all 2s ease-in-out !important;
+    transition: all 0.8s ease-in-out;
     pointer-events: none;
   }
 
@@ -6291,7 +6291,7 @@ html {
     overflow: hidden !important;
     border: 1px solid var(--color-border-light) !important;
     width: 140px !important;
-    transition: all 0.8s ease-in-out !important;
+    transition: all 0.8s ease-in-out;
   }
   
   .fixed-sidebar.show {
