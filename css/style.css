@@ -4188,11 +4188,11 @@ img {
   transform: translateY(-50%);
   width: 3px;
   height: 50px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     var(--color-primary) 0%,
     var(--color-accent) 100%
-  );
+  ); */
   border-radius: 2px;
   z-index: 2;
 }
