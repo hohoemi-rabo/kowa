@@ -4674,7 +4674,11 @@ img {
 .company-overview__title {
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-700) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -4706,7 +4710,11 @@ img {
   width: 30%;
   font-weight: 600;
   color: var(--color-text);
-  background: linear-gradient(135deg, var(--color-primary-50) 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-50) 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
   border-radius: 8px 0 0 8px;
   position: relative;
 }
@@ -4747,7 +4755,11 @@ img {
 .ceo-message__title {
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-700) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -4824,7 +4836,11 @@ img {
 .staff-section__title {
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-700) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -4965,7 +4981,11 @@ img {
 .company-access__title {
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-700) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -5490,7 +5510,11 @@ img {
 .form-title {
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-700) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -5553,7 +5577,8 @@ img {
 .form-textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1), inset 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1),
+    inset 0 1px 3px rgba(0, 0, 0, 0.02);
   background: white;
   transform: translateY(-1px);
 }
@@ -5636,7 +5661,11 @@ img {
   letter-spacing: 1px;
   padding: var(--spacing-5) var(--spacing-8);
   border-radius: 50px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-700) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
   box-shadow: 0 4px 16px rgba(30, 58, 138, 0.3);
   transition: all 0.4s ease;
 }
@@ -5644,7 +5673,11 @@ img {
 .form-submit:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(30, 58, 138, 0.4);
-  background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-800) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-700) 0%,
+    var(--color-primary-800) 100%
+  );
 }
 
 .form-submit:disabled {
@@ -6291,16 +6324,16 @@ html {
     overflow: hidden !important;
     border: 1px solid var(--color-border-light) !important;
     width: 140px !important;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
-  
+
   .fixed-sidebar.show {
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(-50%) translateX(0) !important;
     pointer-events: auto !important;
   }
-  
+
   .fixed-sidebar:not(.show) {
     opacity: 0 !important;
     visibility: hidden !important;
