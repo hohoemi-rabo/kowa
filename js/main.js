@@ -421,9 +421,13 @@ function initSmoothScroll() {
             if (target) {
                 e.preventDefault();
                 
-                // ヘッダーの高さを考慮してスクロール
+                // getBoundingClientRectを使用して正確な位置を取得
+                const rect = target.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = target.offsetTop - headerHeight - 20;
+                
+                // 現在のスクロール位置 + 要素の相対位置 - ヘッダーの高さ
+                const targetPosition = scrollTop + rect.top - headerHeight - 20;
                 
                 window.scrollTo({
                     top: targetPosition,
