@@ -2514,7 +2514,11 @@ img {
    ===================================================== */
 .facilities {
   padding: var(--spacing-24) 0;
-  background: linear-gradient(135deg, rgba(248, 249, 250, 1) 0%, rgba(243, 244, 246, 0.5) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(248, 249, 250, 1) 0%,
+    rgba(243, 244, 246, 0.5) 100%
+  );
   position: relative;
   overflow: hidden;
 }
@@ -2526,9 +2530,16 @@ img {
   left: 0;
   right: 0;
   height: 100%;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(30, 58, 138, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(249, 168, 212, 0.03) 0%, transparent 50%);
+  background-image: radial-gradient(
+      circle at 20% 50%,
+      rgba(30, 58, 138, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(249, 168, 212, 0.03) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -2566,9 +2577,7 @@ img {
   background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.07),
-    0 2px 4px rgba(0, 0, 0, 0.05),
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(30, 58, 138, 0.08);
   transition: var(--transition-all);
@@ -2582,15 +2591,17 @@ img {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .hall-card:hover {
-  box-shadow: 
-    0 12px 24px rgba(30, 58, 138, 0.12),
-    0 4px 8px rgba(0, 0, 0, 0.08),
+  box-shadow: 0 12px 24px rgba(30, 58, 138, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 1);
   transform: translateY(-6px);
   border-color: rgba(30, 58, 138, 0.15);
@@ -2774,7 +2785,11 @@ img {
 .hall-card__title {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
-  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary-800) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-text) 0%,
+    var(--color-primary-800) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2785,7 +2800,11 @@ img {
   display: flex;
   align-items: center;
   gap: var(--spacing-2);
-  background: linear-gradient(135deg, var(--color-primary-50) 0%, rgba(255, 255, 255, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-50) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
   color: var(--color-primary);
   padding: var(--spacing-2) var(--spacing-4);
   border-radius: var(--radius-full);
@@ -2854,9 +2873,7 @@ img {
 
 .equipment-item:hover {
   transform: translateY(-4px);
-  box-shadow: 
-    0 6px 12px rgba(30, 58, 138, 0.1),
-    0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 12px rgba(30, 58, 138, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
   background: linear-gradient(135deg, #ffffff 0%, var(--color-primary-50) 100%);
   border-color: var(--color-primary-200);
 }
@@ -2901,9 +2918,7 @@ img {
   background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.07),
-    0 2px 4px rgba(0, 0, 0, 0.05),
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(30, 58, 138, 0.08);
   position: relative;
@@ -2916,7 +2931,11 @@ img {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-success) 0%, var(--color-primary) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-success) 0%,
+    var(--color-primary) 100%
+  );
 }
 
 @media (min-width: 768px) {
@@ -3334,7 +3353,11 @@ img {
   right: -10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(30, 58, 138, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(30, 58, 138, 0.1) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   animation: float 20s ease-in-out infinite;
 }
@@ -3597,17 +3620,17 @@ img {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-8);
   }
-  
+
   .footer__column--main {
     grid-column: 1 / -1;
     padding-right: 0;
     text-align: center;
   }
-  
+
   .footer__social {
     justify-content: center;
   }
-  
+
   .footer__phone {
     justify-content: center;
   }
@@ -3619,30 +3642,30 @@ img {
     gap: var(--spacing-6);
     text-align: center;
   }
-  
+
   .footer__title {
     justify-content: center;
   }
-  
+
   .footer__links a {
     padding-left: 0;
   }
-  
+
   .footer__links a::before {
     display: none;
   }
-  
+
   .footer__features {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-4);
   }
-  
+
   .footer__bottom-content {
     flex-direction: column;
     gap: var(--spacing-4);
     text-align: center;
   }
-  
+
   .footer__certifications {
     width: 100%;
     justify-content: center;
@@ -3653,7 +3676,7 @@ img {
   .footer__features {
     grid-template-columns: 1fr;
   }
-  
+
   .footer__feature {
     justify-content: center;
     text-align: center;
@@ -4027,6 +4050,169 @@ img {
   width: 2px;
   height: 40px;
   background: var(--color-primary-light);
+}
+
+/* =====================================================
+   P-Flow Design (Reference Image Style)
+   ===================================================== */
+/* P-Flow Header */
+.p-flow__header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-bottom: var(--spacing-7);
+  background: #b8cdc5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.p-flow__phase {
+  background: linear-gradient(135deg, #b8cdc5 0%, #9fb9b1 100%);
+  color: white;
+  text-align: center;
+  padding: var(--spacing-3) var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* P-Flow List */
+.p-flow__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+  background-image: linear-gradient(90deg, #ccc, #ccc 2px, transparent 0);
+  background-size: 4px 2px;
+  background-position: left 50% top 18px;
+  background-repeat: repeat-x;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.p-flow__listItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.p-flow__listItemLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text);
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4) var(--spacing-2);
+  min-width: 70px;
+  min-height: 250px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.p-flow__listItemLink:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.2);
+  transform: translateY(-2px);
+}
+
+.p-flow__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-2);
+}
+
+.p-flow__text {
+  font-size: var(--font-size-base);
+  line-height: 1.3;
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  /* height: 40px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Separation styling for specific items */
+.p-flow__listItemLink--separation::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* Responsive Design for P-Flow */
+@media (max-width: 1024px) {
+  /* PC版の複雑なレイアウトを非表示 */
+  .p-flow__header {
+    display: none;
+  }
+  
+  .p-flow__list {
+    display: none;
+  }
+  
+  /* ボタンのみ表示用のスタイル強化 */
+  .timeline-more {
+    text-align: center;
+    padding: var(--spacing-8) 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(30, 58, 138, 0.1);
+    margin-top: 0;
+  }
+  
+  .timeline-more__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    padding: var(--spacing-4) var(--spacing-8);
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-weight-semibold);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
+    font-size: var(--font-size-base);
+  }
+  
+  .timeline-more__link:hover {
+    background: var(--color-primary-700);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3);
+  }
+  
+  .timeline-more__link i {
+    font-size: var(--font-size-base);
+  }
 }
 
 /* Timeline More Link */
