@@ -334,8 +334,12 @@ function initScrollToTop() {
     const backToTopBtn = document.getElementById('backToTop');
     const sidebar = document.querySelector('.fixed-sidebar');
     
+    console.log('InitScrollToTop - Sidebar element:', sidebar);
+    console.log('Window width:', window.innerWidth);
+    
     if (backToTopBtn && sidebar) {
-        let isScrolling = false;
+        // デバッグ情報
+        console.log('Sidebar initialized');
         
         // スクロール位置に応じて表示/非表示（最適化版）
         const handleScroll = throttle(() => {
@@ -346,10 +350,16 @@ function initScrollToTop() {
             // 300px以上スクロールしたらサイドバー全体を表示
             if (scrollTop > 300) {
                 backToTopBtn.classList.add('show');
-                sidebar.classList.add('show');
+                if (!sidebar.classList.contains('show')) {
+                    console.log('Adding show class to sidebar');
+                    sidebar.classList.add('show');
+                }
             } else {
                 backToTopBtn.classList.remove('show');
-                sidebar.classList.remove('show');
+                if (sidebar.classList.contains('show')) {
+                    console.log('Removing show class from sidebar');
+                    sidebar.classList.remove('show');
+                }
             }
             
             // スクロール進捗に基づいて視覚的フィードバック
