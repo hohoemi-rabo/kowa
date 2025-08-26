@@ -1,0 +1,562 @@
+/* =====================================================
+   御供花・御供物ページ専用CSS
+   ===================================================== */
+
+/* =====================================================
+   Hero Section
+   ===================================================== */
+.flower-hero {
+  padding: var(--spacing-24) 0 var(--spacing-20);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.03) 0%,
+    rgba(37, 99, 235, 0.01) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.flower-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.flower-hero__content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.flower-hero__title {
+  margin-bottom: var(--spacing-8);
+}
+
+.flower-hero__subtitle {
+  display: block;
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  color: var(--color-primary);
+  letter-spacing: 3px;
+  margin-bottom: var(--spacing-2);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.flower-hero__maintitle {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.flower-hero__text {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.flower-hero__highlight {
+  display: inline-block;
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-6);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1) 0%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--radius-full);
+  color: #B8860B;
+  font-weight: 600;
+}
+
+.flower-hero__highlight i {
+  color: #FFD700;
+  margin-right: var(--spacing-2);
+}
+
+/* =====================================================
+   Flower Section
+   ===================================================== */
+.flower-section {
+  padding: var(--spacing-20) 0;
+  position: relative;
+}
+
+.flower-section--alt {
+  background: var(--color-background);
+}
+
+.flower-section__header {
+  text-align: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.flower-section__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-6);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  position: relative;
+  padding: var(--spacing-4) var(--spacing-8);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
+  color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(30, 58, 138, 0.2);
+}
+
+.flower-section__title i {
+  font-size: var(--font-size-xl);
+}
+
+.flower-section__description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   Flower Grid
+   ===================================================== */
+.flower-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.flower-grid--two {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   Flower Card
+   ===================================================== */
+.flower-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.flower-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.flower-card__badge {
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+  background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  color: white;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+}
+
+.flower-card__image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: var(--color-background);
+}
+
+.flower-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.flower-card:hover .flower-card__image img {
+  transform: scale(1.1);
+}
+
+.flower-card__content {
+  padding: var(--spacing-8);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.flower-card__name {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-3);
+}
+
+.flower-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-6);
+  flex: 1;
+}
+
+/* Price Display */
+.flower-card__price {
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+  border: 1px solid var(--color-border);
+}
+
+.price-regular {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px dashed rgba(156, 163, 175, 0.3);
+}
+
+.price-member {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.price-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price-member .price-label {
+  color: #B8860B;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.price-member .price-label i {
+  color: #FFD700;
+}
+
+.price-amount {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.price-member .price-amount {
+  font-size: var(--font-size-2xl);
+  color: #B8860B;
+}
+
+.price-regular .price-amount {
+  text-decoration: line-through;
+  text-decoration-color: rgba(156, 163, 175, 0.8);
+  text-decoration-thickness: 1px;
+  opacity: 0.7;
+  font-size: var(--font-size-lg);
+}
+
+.price-tax {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-left: var(--spacing-1);
+}
+
+/* Button */
+.flower-card__button {
+  width: 100%;
+  padding: var(--spacing-4) var(--spacing-6);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  text-decoration: none;
+}
+
+.flower-card__button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-700) 0%,
+    var(--color-primary-800) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+  color: white;
+}
+
+.flower-card__button i {
+  font-size: var(--font-size-lg);
+}
+
+/* =====================================================
+   CTA Section
+   ===================================================== */
+.flower-cta {
+  padding: var(--spacing-24) 0;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.95) 0%,
+    rgba(37, 99, 235, 0.9) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.flower-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(255, 255, 255, 0.03) 35px,
+    rgba(255, 255, 255, 0.03) 70px
+  );
+  pointer-events: none;
+}
+
+.flower-cta__content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.flower-cta__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--spacing-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+}
+
+.flower-cta__title i {
+  color: #FFD700;
+}
+
+.flower-cta__text {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-12);
+}
+
+.flower-cta__buttons {
+  display: flex;
+  gap: var(--spacing-6);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-8);
+}
+
+.flower-cta__button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-6) var(--spacing-10);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 250px;
+  justify-content: center;
+}
+
+.flower-cta__button--phone {
+  background: white;
+  color: var(--color-primary);
+  border: 2px solid white;
+}
+
+.flower-cta__button--phone:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.flower-cta__button--phone span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.flower-cta__button--phone strong {
+  font-size: var(--font-size-xl);
+  letter-spacing: 1px;
+}
+
+.flower-cta__button--phone small {
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.flower-cta__button--form {
+  background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  color: white;
+  border: 2px solid transparent;
+  font-size: var(--font-size-lg);
+}
+
+.flower-cta__button--form:hover {
+  background: linear-gradient(135deg, #B8860B 0%, #8B6914 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.3);
+}
+
+.flower-cta__note {
+  display: inline-block;
+  padding: var(--spacing-4) var(--spacing-8);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  color: white;
+  font-size: var(--font-size-base);
+  backdrop-filter: blur(10px);
+}
+
+.flower-cta__note i {
+  color: #FFD700;
+  margin-right: var(--spacing-2);
+}
+
+/* =====================================================
+   Responsive Design
+   ===================================================== */
+@media (max-width: 768px) {
+  .flower-hero__maintitle {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+  
+  .flower-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .flower-grid--two {
+    grid-template-columns: 1fr;
+  }
+  
+  .flower-section__title {
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-3) var(--spacing-6);
+  }
+  
+  .flower-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flower-cta__button {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flower-card__image {
+    height: 200px;
+  }
+  
+  .flower-card__content {
+    padding: var(--spacing-6);
+  }
+  
+  .price-regular,
+  .price-member {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+  
+  .flower-cta__button--phone span {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* =====================================================
+   Animations
+   ===================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flower-card {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.flower-card:nth-child(1) { animation-delay: 0.1s; }
+.flower-card:nth-child(2) { animation-delay: 0.2s; }
+.flower-card:nth-child(3) { animation-delay: 0.3s; }
+.flower-card:nth-child(4) { animation-delay: 0.4s; }
