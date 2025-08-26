@@ -2077,271 +2077,45 @@
             </div>
         </section>
 
-        <!-- Contact Forms Section -->
-        <section class="contact-forms" id="contact" aria-labelledby="contact-forms-title">
+        <!-- Contact CTA Section -->
+        <section class="contact-cta-section" id="contact" aria-labelledby="contact-title">
             <div class="container">
-                <header class="section-header">
-                    <h2 class="section-title" id="contact-forms-title">
-                        <span class="section-title__main">お問い合わせ・資料請求</span>
-                        <span class="section-title__sub">Contact & Request</span>
-                    </h2>
-                    <p class="section-description">
-                        ご相談・ご質問はお気軽にお問い合わせください<br>
-                        24時間365日対応いたします
-                    </p>
-                </header>
+                <div class="alpha-club__contact-cta">
+                    <div class="contact-cta__overlay">
+                        <div class="contact-cta__header">
+                            <h3 class="contact-cta__title" id="contact-title">
+                                <i class="fas fa-phone-volume"></i>
+                                お問い合わせ・ご相談
+                            </h3>
+                            <p class="contact-cta__subtitle">
+                                葬儀に関するご質問やご不明な点など<br />
+                                まずはお気軽にお問い合わせください。
+                            </p>
+                        </div>
 
-                <div class="contact-forms__content">
-                    <!-- Contact Form -->
-                    <div class="contact-form-wrapper">
-                        <h3 class="form-title">
-                            <i class="fas fa-envelope"></i>
-                            お問い合わせフォーム
-                        </h3>
-                        <form class="contact-form" id="contactForm" novalidate>
-                            <div class="form-group">
-                                <label for="contact-name" class="form-label">
-                                    お名前 <span class="required">必須</span>
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="contact-name" 
-                                    name="name" 
-                                    class="form-input" 
-                                    required
-                                    placeholder="山田 太郎"
-                                    aria-required="true"
-                                >
-                                <span class="form-error" role="alert"></span>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="contact-phone" class="form-label">
-                                        電話番号 <span class="required">必須</span>
-                                    </label>
-                                    <input 
-                                        type="tel" 
-                                        id="contact-phone" 
-                                        name="phone" 
-                                        class="form-input" 
-                                        required
-                                        placeholder="090-1234-5678"
-                                        pattern="[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}"
-                                        aria-required="true"
-                                    >
-                                    <span class="form-error" role="alert"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="contact-email" class="form-label">
-                                        メールアドレス <span class="required">必須</span>
-                                    </label>
-                                    <input 
-                                        type="email" 
-                                        id="contact-email" 
-                                        name="email" 
-                                        class="form-input" 
-                                        required
-                                        placeholder="example@email.com"
-                                        aria-required="true"
-                                    >
-                                    <span class="form-error" role="alert"></span>
+                        <div class="contact-cta__options">
+                            <div class="contact-option">
+                                <h4 class="contact-option__title">お電話でのお問い合わせ</h4>
+                                <div class="contact-option__content">
+                                    <p class="contact-option__hours">24時間365日受付</p>
+                                    <a href="tel:0000-00-0000" class="contact-option__phone">
+                                        <i class="fas fa-phone"></i>
+                                        0000-00-0000
+                                    </a>
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="contact-type" class="form-label">
-                                    お問い合わせ種別
-                                </label>
-                                <select id="contact-type" name="type" class="form-select">
-                                    <option value="">選択してください</option>
-                                    <option value="consultation">事前相談</option>
-                                    <option value="emergency">緊急のご相談</option>
-                                    <option value="facility">施設見学</option>
-                                    <option value="price">費用について</option>
-                                    <option value="other">その他</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="contact-message" class="form-label">
-                                    お問い合わせ内容 <span class="required">必須</span>
-                                </label>
-                                <textarea 
-                                    id="contact-message" 
-                                    name="message" 
-                                    class="form-textarea" 
-                                    rows="5" 
-                                    required
-                                    placeholder="ご相談内容をご記入ください"
-                                    aria-required="true"
-                                ></textarea>
-                                <span class="form-error" role="alert"></span>
-                            </div>
-
-                            <!-- Honeypot for spam protection -->
-                            <div class="form-group honey" aria-hidden="true">
-                                <input type="text" name="website" tabindex="-1" autocomplete="off">
-                            </div>
-
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn--primary btn--large form-submit">
-                                    <i class="fas fa-paper-plane"></i>
-                                    送信する
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Request Form -->
-                    <div class="request-form-wrapper">
-                        <h3 class="form-title">
-                            <i class="fas fa-file-alt"></i>
-                            資料請求フォーム
-                        </h3>
-                        <form class="request-form" id="requestForm" novalidate>
-                            <div class="form-group">
-                                <label for="request-name" class="form-label">
-                                    お名前 <span class="required">必須</span>
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="request-name" 
-                                    name="name" 
-                                    class="form-input" 
-                                    required
-                                    placeholder="山田 太郎"
-                                    aria-required="true"
-                                >
-                                <span class="form-error" role="alert"></span>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="request-phone" class="form-label">
-                                        電話番号 <span class="required">必須</span>
-                                    </label>
-                                    <input 
-                                        type="tel" 
-                                        id="request-phone" 
-                                        name="phone" 
-                                        class="form-input" 
-                                        required
-                                        placeholder="090-1234-5678"
-                                        pattern="[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}"
-                                        aria-required="true"
-                                    >
-                                    <span class="form-error" role="alert"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="request-email" class="form-label">
-                                        メールアドレス <span class="required">必須</span>
-                                    </label>
-                                    <input 
-                                        type="email" 
-                                        id="request-email" 
-                                        name="email" 
-                                        class="form-input" 
-                                        required
-                                        placeholder="example@email.com"
-                                        aria-required="true"
-                                    >
-                                    <span class="form-error" role="alert"></span>
+                            <div class="contact-option">
+                                <h4 class="contact-option__title">WEBからのお問い合わせ</h4>
+                                <div class="contact-option__content">
+                                    <a href="contact.html" class="contact-option__button">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>お問い合わせフォームへ</span>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
                                 </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="request-postal" class="form-label">
-                                    郵便番号
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="request-postal" 
-                                    name="postal" 
-                                    class="form-input form-input--postal" 
-                                    placeholder="123-4567"
-                                    pattern="[0-9]{3}-[0-9]{4}"
-                                >
-                            </div>
-
-                            <div class="form-group">
-                                <label for="request-address" class="form-label">
-                                    ご住所
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="request-address" 
-                                    name="address" 
-                                    class="form-input" 
-                                    placeholder="○○県○○市○○町1-2-3"
-                                >
-                            </div>
-
-                            <div class="form-group">
-                                <label for="request-plan" class="form-label">
-                                    ご希望プラン
-                                </label>
-                                <select id="request-plan" name="plan" class="form-select">
-                                    <option value="">選択してください</option>
-                                    <option value="general-simple">一般葬（シンプル）</option>
-                                    <option value="general-standard">一般葬（スタンダード）</option>
-                                    <option value="small">小規模お葬式</option>
-                                    <option value="family">家族葬</option>
-                                    <option value="home">自宅葬</option>
-                                    <option value="direct">直葬</option>
-                                    <option value="hall">集会所葬</option>
-                                    <option value="temple">寺院葬</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="request-note" class="form-label">
-                                    ご要望・ご質問
-                                </label>
-                                <textarea 
-                                    id="request-note" 
-                                    name="note" 
-                                    class="form-textarea" 
-                                    rows="3" 
-                                    placeholder="その他ご要望がございましたらご記入ください"
-                                ></textarea>
-                            </div>
-
-                            <!-- Honeypot for spam protection -->
-                            <div class="form-group honey" aria-hidden="true">
-                                <input type="text" name="website" tabindex="-1" autocomplete="off">
-                            </div>
-
-                            <div class="form-checkbox">
-                                <input type="checkbox" id="request-privacy" name="privacy" required>
-                                <label for="request-privacy">
-                                    <a href="#" target="_blank">プライバシーポリシー</a>に同意する
-                                </label>
-                                <span class="form-error" role="alert"></span>
-                            </div>
-
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn--primary btn--large form-submit">
-                                    <i class="fas fa-download"></i>
-                                    資料請求する
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Form Success Message -->
-                <div class="form-success" id="formSuccess" aria-live="polite" aria-atomic="true">
-                    <div class="form-success__content">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>送信完了しました</h3>
-                        <p>お問い合わせありがとうございます。<br>
-                           担当者より折り返しご連絡させていただきます。</p>
-                        <button class="btn btn--secondary" onclick="location.reload()">
-                            フォームに戻る
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
