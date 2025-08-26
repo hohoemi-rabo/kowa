@@ -5787,6 +5787,7 @@ img {
   .form-select {
     font-size: 16px; /* Prevent zoom on iOS */
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
