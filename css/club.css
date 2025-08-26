@@ -284,231 +284,192 @@
   margin-bottom: 0;
 }
 
-/* CTA Section */
-.alpha-club__cta {
-  text-align: center;
-  padding: var(--spacing-16);
+/* Contact CTA Section */
+.alpha-club__contact-cta {
+  margin-top: var(--spacing-16);
   background: linear-gradient(
     135deg,
-    rgba(255, 215, 0, 0.08) 0%,
-    rgba(255, 215, 0, 0.02) 100%
+    rgba(30, 58, 138, 0.95) 0%,
+    rgba(30, 58, 138, 0.85) 50%,
+    rgba(37, 99, 235, 0.9) 100%
   );
   border-radius: var(--radius-2xl);
-  border: 2px solid rgba(218, 165, 32, 0.2);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.2);
 }
 
-.alpha-club__cta-text {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  color: var(--color-text);
-  margin-bottom: var(--spacing-8);
+.alpha-club__contact-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 25%,
+    rgba(255, 215, 0, 0.03) 25%,
+    rgba(255, 215, 0, 0.03) 50%,
+    transparent 50%,
+    transparent 75%,
+    rgba(255, 215, 0, 0.03) 75%
+  );
+  background-size: 40px 40px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.contact-cta__overlay {
+  padding: var(--spacing-20);
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-cta__header {
+  margin-bottom: var(--spacing-16);
+  padding-bottom: var(--spacing-8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-cta__title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--spacing-6);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.alpha-club__cta-text i {
-  color: #B8860B;
+.contact-cta__title i {
+  color: #FFD700;
+  font-size: 0.9em;
 }
 
-/* =====================================================
-   Club Contact Form Section
-   ===================================================== */
-.club-contact {
-  padding: var(--spacing-24) 0;
-  background: var(--color-background);
-  position: relative;
+.contact-cta__subtitle {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.club-contact__content {
+/* Contact Options */
+.contact-cta__options {
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr 1fr;
   gap: var(--spacing-12);
-  margin-top: var(--spacing-16);
 }
 
-/* Form Styles */
-.club-form {
-  background: white;
+.contact-option {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-xl);
-  padding: var(--spacing-12);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--color-border);
-}
-
-.club-form__section {
-  margin-bottom: var(--spacing-12);
-  padding-bottom: var(--spacing-12);
-  border-bottom: 2px solid var(--color-border);
-}
-
-.club-form__section:last-of-type {
-  border-bottom: none;
-  margin-bottom: var(--spacing-8);
-}
-
-.club-form__section-title {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  color: var(--color-text);
-  margin-bottom: var(--spacing-8);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-3);
-  padding-bottom: var(--spacing-4);
-  border-bottom: 3px solid #FFD700;
-}
-
-.club-form__section-title i {
-  color: #B8860B;
-}
-
-/* Form Radio & Checkbox Groups */
-.form-radio-group,
-.form-checkbox-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-4);
-}
-
-.form-radio,
-.form-checkbox {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-2);
-  cursor: pointer;
-  padding: var(--spacing-3) var(--spacing-4);
-  background: var(--color-background);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
+  padding: var(--spacing-10);
   transition: all 0.3s ease;
 }
 
-.form-radio:hover,
-.form-checkbox:hover {
-  border-color: #B8860B;
-  background: rgba(255, 215, 0, 0.05);
+.contact-option:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 215, 0, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
 }
 
-.form-radio input[type="radio"],
-.form-checkbox input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  accent-color: #B8860B;
-}
-
-.form-radio input[type="radio"]:checked + span,
-.form-checkbox input[type="checkbox"]:checked + span {
-  font-weight: 600;
-  color: #B8860B;
-}
-
-.form-checkbox--agreement {
-  background: rgba(255, 215, 0, 0.05);
-  border-color: rgba(218, 165, 32, 0.3);
-  padding: var(--spacing-4);
-}
-
-/* Sidebar */
-.club-contact__sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-8);
-}
-
-/* Info Cards */
-.club-info-card {
-  background: white;
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-8);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  border: 1px solid var(--color-border);
-}
-
-.club-info-card__title {
+.contact-option__title {
   font-size: var(--font-size-lg);
-  font-weight: 700;
-  color: var(--color-text);
+  font-weight: 600;
+  color: white;
   margin-bottom: var(--spacing-6);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-2);
-  padding-bottom: var(--spacing-3);
-  border-bottom: 2px solid #FFD700;
+  text-align: center;
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.club-info-card__title i {
-  color: #B8860B;
+.contact-option__content {
+  text-align: center;
 }
 
-.club-info-card__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.contact-option__hours {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--spacing-4);
+  font-weight: 400;
 }
 
-.club-info-card__list li {
-  display: flex;
+.contact-option__phone {
+  display: inline-flex;
   align-items: center;
   gap: var(--spacing-3);
-  padding: var(--spacing-3) 0;
-  color: var(--color-text-secondary);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.club-info-card__list li:last-child {
-  border-bottom: none;
-}
-
-.club-info-card__list i {
-  color: #B8860B;
-  font-size: var(--font-size-sm);
-}
-
-.club-info-card__phone {
-  text-align: center;
-  padding: var(--spacing-6) 0;
-}
-
-.club-info-card__phone a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.club-info-card__phone-number {
-  display: block;
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-2);
+  color: #FFD700;
+  text-decoration: none;
+  padding: var(--spacing-4) var(--spacing-6);
+  background: rgba(255, 215, 0, 0.1);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
 }
 
-.club-info-card__phone-hours {
-  display: block;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+.contact-option__phone:hover {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.6);
+  transform: scale(1.05);
+  color: #FFD700;
 }
 
-.club-info-card__text {
-  color: var(--color-text-secondary);
-  line-height: 1.8;
-  margin-bottom: var(--spacing-6);
+.contact-option__phone i {
+  font-size: 0.8em;
 }
+
+.contact-option__button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  color: white;
+  text-decoration: none;
+  padding: var(--spacing-5) var(--spacing-8);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.3);
+  min-height: 60px;
+}
+
+.contact-option__button:hover {
+  background: linear-gradient(135deg, #B8860B 0%, #8B6914 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+  color: white;
+}
+
+.contact-option__button span {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-option__button i:first-child {
+  font-size: 1.2em;
+}
+
+.contact-option__button i:last-child {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .club-contact__content {
-    grid-template-columns: 1fr;
-  }
-
-  .club-contact__sidebar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
-
 @media (max-width: 768px) {
   .alpha-features-grid {
     grid-template-columns: 1fr;
@@ -523,27 +484,40 @@
     margin: 0 auto;
   }
 
-  .club-form {
+  /* Contact CTA Responsive */
+  .contact-cta__overlay {
+    padding: var(--spacing-12);
+  }
+
+  .contact-cta__options {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  .contact-cta__title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .contact-cta__subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .contact-option {
     padding: var(--spacing-8);
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
+  .contact-option__phone {
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-3) var(--spacing-5);
+    letter-spacing: 1px;
   }
 
-  .club-contact__sidebar {
-    grid-template-columns: 1fr;
-  }
-
-  /* フォームボタンのスペース調整 */
-  .form-actions {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-4);
-  }
-
-  .form-actions button {
-    width: 100%;
+  .contact-option__button {
+    padding: var(--spacing-4) var(--spacing-6);
+    min-height: 50px;
+    font-size: var(--font-size-sm);
   }
 }
 
@@ -560,8 +534,7 @@
 }
 
 .alpha-benefit,
-.alpha-feature,
-.club-info-card {
+.alpha-feature {
   animation: fadeInUp 0.6s ease-out;
   animation-fill-mode: both;
 }

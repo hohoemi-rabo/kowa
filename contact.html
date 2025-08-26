@@ -68,7 +68,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/club.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -499,192 +499,332 @@
       </nav>
     </header>
 
-    <!-- 光和アルファ倶楽部のご案内 -->
+    <!--お問い合わせフォーム -->
     <section
-      class="alpha-club"
-      id="alpha-club"
-      aria-labelledby="alpha-club-title"
+      class="club-contact"
+      id="club-contact"
+      aria-labelledby="club-contact-title"
     >
       <div class="container">
-        <!-- ヒーローセクション -->
-        <div class="alpha-club__hero">
-          <div class="alpha-club__hero-content">
-            <h1 class="alpha-club__title" id="alpha-club-title">
-              <span class="alpha-club__title-sub">KOWA ALPHA CLUB</span>
-              <span class="alpha-club__title-main">光和アルファ倶楽部</span>
-            </h1>
-            <p class="alpha-club__hero-text">
-              生涯いちどの1万円で、まごころサポート。<br />
-              大切なご家族に、安心と信頼をお約束します。
-            </p>
-          </div>
-        </div>
-
-        <!-- 特典セクション -->
-        <div class="alpha-club__benefits">
-          <h2 class="alpha-club__section-title">
-            <i class="fas fa-gift"></i>
-            会員様限定特典
+        <header class="section-header">
+          <h2 class="section-title" id="club-contact-title">
+            <span class="section-title__main">お問い合わせ</span>
+            <span class="section-title__sub">Contact</span>
           </h2>
+          <p class="section-description">
+            光和アルファ倶楽部への入会や詳細について、お気軽にお問い合わせください。<br />
+            専門スタッフが丁寧にご説明いたします。
+          </p>
+        </header>
 
-          <!-- 特典1 -->
-          <div class="alpha-benefit">
-            <div class="alpha-benefit__header">
-              <span class="alpha-benefit__number">特典 01</span>
-              <h3 class="alpha-benefit__title">
-                葬儀基本料金の10%を「弔慰金」としてキャッシュバック
+        <div class="club-contact__content">
+          <form class="club-form" id="clubForm" novalidate>
+            <div class="club-form__section">
+              <h3 class="club-form__section-title">
+                <i class="fas fa-user"></i>
+                お客様情報
               </h3>
-            </div>
-            <div class="alpha-benefit__content">
-              <div class="alpha-benefit__icon">
-                <i class="fas fa-hand-holding-usd"></i>
-              </div>
-              <div class="alpha-benefit__text">
-                <p>
-                  会員ご本人か、入会申し込み時にご登録いただいた二親等以内の方が亡くなった場合、葬儀基本料金の10％を割引した後、同じく葬儀基本料金の10%を弔慰金として給付いたします。
-                </p>
-                <p class="alpha-benefit__note">
-                  ※葬儀基本料金とは、当社の規定に基づきます。
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <!-- 特典2 -->
-          <div class="alpha-benefit">
-            <div class="alpha-benefit__header">
-              <span class="alpha-benefit__number">特典 02</span>
-              <h3 class="alpha-benefit__title">
-                葬儀に関わる法律や各種手続き等の相談が受けられます
-              </h3>
-            </div>
-            <div class="alpha-benefit__content">
-              <div class="alpha-benefit__icon">
-                <i class="fas fa-balance-scale"></i>
+              <!-- お名前 -->
+              <div class="form-group">
+                <label for="club-name" class="form-label">
+                  お名前 <span class="required">必須</span>
+                </label>
+                <input
+                  type="text"
+                  id="club-name"
+                  name="name"
+                  class="form-input"
+                  required
+                  placeholder="山田 太郎"
+                  aria-required="true"
+                />
+                <span class="form-error" role="alert"></span>
               </div>
-              <div class="alpha-benefit__text">
-                <p>
-                  ご葬儀は当日だけで終わるものではありません。むしろ、ご葬儀後のさまざまな手続きのほうが大変です。
-                </p>
-                <p>
-                  遺言書の書き方といった事前の手続きはもちろん、相続財産の税額試算及び分割方法などについても、ご相談をお受けいたします。
-                </p>
-                <p class="alpha-benefit__note">
-                  ※内容によっては有料のサービスもございます。
-                </p>
+
+              <!-- フリガナ -->
+              <div class="form-group">
+                <label for="club-kana" class="form-label">
+                  フリガナ <span class="required">必須</span>
+                </label>
+                <input
+                  type="text"
+                  id="club-kana"
+                  name="kana"
+                  class="form-input"
+                  required
+                  placeholder="ヤマダ タロウ"
+                  aria-required="true"
+                  pattern="[\u30A0-\u30FF\s]+"
+                />
+                <span class="form-error" role="alert"></span>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- アルファの特徴 -->
-        <div class="alpha-club__features">
-          <h2 class="alpha-club__section-title">
-            <i class="fas fa-star"></i>
-            アルファ倶楽部の特徴
-          </h2>
-
-          <div class="alpha-features-grid">
-            <!-- 特徴1 -->
-            <div class="alpha-feature">
-              <div class="alpha-feature__icon">
-                <span class="alpha-feature__number">1</span>
+              <!-- 年齢 -->
+              <div class="form-group">
+                <label for="club-age" class="form-label"> 年齢 </label>
+                <select id="club-age" name="age" class="form-select">
+                  <option value="">選択してください</option>
+                  <option value="20-29">20代</option>
+                  <option value="30-39">30代</option>
+                  <option value="40-49">40代</option>
+                  <option value="50-59">50代</option>
+                  <option value="60-69">60代</option>
+                  <option value="70-79">70代</option>
+                  <option value="80+">80歳以上</option>
+                </select>
               </div>
-              <h3 class="alpha-feature__title">
-                すべてのサービスが受けられます
-              </h3>
-              <p class="alpha-feature__text">
-                光和ハートライフの全てのサービス・特典を受けることができます。
-              </p>
-            </div>
 
-            <!-- 特徴2 -->
-            <div class="alpha-feature">
-              <div class="alpha-feature__icon">
-                <span class="alpha-feature__number">2</span>
-              </div>
-              <h3 class="alpha-feature__title">
-                生涯いちどの1万円で、まごころサポート
-              </h3>
-              <p class="alpha-feature__text">
-                入会金の1万円をお支払いいただくだけで、生涯会員として登録されます。<br />
-                年会費や月会費も一切ありません。その上、生涯さまざまな特典がいつでも受けられます。
-              </p>
-            </div>
+              <div class="form-row">
+                <!-- 電話番号 -->
+                <div class="form-group">
+                  <label for="club-phone" class="form-label">
+                    電話番号 <span class="required">必須</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="club-phone"
+                    name="phone"
+                    class="form-input"
+                    required
+                    placeholder="090-1234-5678"
+                    pattern="[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}"
+                    aria-required="true"
+                  />
+                  <span class="form-error" role="alert"></span>
+                </div>
 
-            <!-- 特徴3 -->
-            <div class="alpha-feature">
-              <div class="alpha-feature__icon">
-                <span class="alpha-feature__number">3</span>
-              </div>
-              <h3 class="alpha-feature__title">
-                ひとりひとりの個性を尊重した「生前予約」を承ります
-              </h3>
-              <p class="alpha-feature__text">
-                葬儀料金はもちろんのこと、葬儀の規模や宗旨、祭壇の種類など葬儀（創儀）の式次第の選択や音楽葬・ガーデニング葬・花祭壇など、従来の形式のとらわれない今話題の自由葬も承ります。
-              </p>
-            </div>
-
-            <!-- 特徴4 -->
-            <div class="alpha-feature">
-              <div class="alpha-feature__icon">
-                <span class="alpha-feature__number">4</span>
-              </div>
-              <h3 class="alpha-feature__title">
-                身内に権利を継承することができます
-              </h3>
-              <p class="alpha-feature__text">
-                会員の方が亡くなった場合でも、名義変更により身内の方（二親等以内）に権利を譲渡することができます。<br />
-                この際、あらためて入会金を納める必要はありません。
-              </p>
-              <div class="alpha-feature__note">
-                <p><strong>二親等とは：</strong></p>
-                <p>
-                  本人または配偶者から数えて二世を隔てた関係にある人のことです。一親等にあたるのは本人および配偶者の両親か子供。二親等はもう一つの家系図をすすめたところにいる人達つまり祖父母、兄弟姉妹、そして孫です。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="alpha-club__contact-cta">
-          <div class="contact-cta__overlay">
-            <div class="contact-cta__header">
-              <h3 class="contact-cta__title">
-                <i class="fas fa-certificate"></i>
-                安心と信頼の生涯サポート
-              </h3>
-              <p class="contact-cta__subtitle">
-                入会に関するご質問やご不明な点など<br />
-                まずはお気軽にお問い合わせください。
-              </p>
-            </div>
-
-            <div class="contact-cta__options">
-              <div class="contact-option">
-                <h4 class="contact-option__title">お電話でのお問い合わせ</h4>
-                <div class="contact-option__content">
-                  <p class="contact-option__hours">24時間365日受付</p>
-                  <a href="tel:0000-00-0000" class="contact-option__phone">
-                    <i class="fas fa-phone"></i>
-                    0000-00-0000
-                  </a>
+                <!-- メールアドレス -->
+                <div class="form-group">
+                  <label for="club-email" class="form-label">
+                    メールアドレス <span class="required">必須</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="club-email"
+                    name="email"
+                    class="form-input"
+                    required
+                    placeholder="example@email.com"
+                    aria-required="true"
+                  />
+                  <span class="form-error" role="alert"></span>
                 </div>
               </div>
 
-              <div class="contact-option">
-                <h4 class="contact-option__title">WEBからのお問い合わせ</h4>
-                <div class="contact-option__content">
-                  <a href="contact.html" class="contact-option__button">
-                    <i class="fas fa-envelope"></i>
-                    <span>入会のお問い合わせフォームへ</span>
-                    <i class="fas fa-chevron-right"></i>
-                  </a>
+              <!-- 住所 -->
+              <div class="form-group">
+                <label for="club-postal" class="form-label"> 郵便番号 </label>
+                <input
+                  type="text"
+                  id="club-postal"
+                  name="postal"
+                  class="form-input form-input--postal"
+                  placeholder="123-4567"
+                  pattern="[0-9]{3}-[0-9]{4}"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="club-address" class="form-label"> ご住所 </label>
+                <input
+                  type="text"
+                  id="club-address"
+                  name="address"
+                  class="form-input"
+                  placeholder="長野県飯田市○○町1-2-3"
+                />
+              </div>
+            </div>
+
+            <div class="club-form__section">
+              <h3 class="club-form__section-title">
+                <i class="fas fa-comment-dots"></i>
+                お問い合わせ内容
+              </h3>
+
+              <!-- お問い合わせ種別 -->
+              <div class="form-group">
+                <label for="club-inquiry-type" class="form-label">
+                  お問い合わせ種別 <span class="required">必須</span>
+                </label>
+                <div class="form-radio-group">
+                  <label class="form-radio">
+                    <input
+                      type="radio"
+                      name="inquiry_type"
+                      value="join"
+                      required
+                    />
+                    <span>入会希望</span>
+                  </label>
+                  <label class="form-radio">
+                    <input
+                      type="radio"
+                      name="inquiry_type"
+                      value="info"
+                      required
+                    />
+                    <span>資料請求</span>
+                  </label>
+                  <label class="form-radio">
+                    <input
+                      type="radio"
+                      name="inquiry_type"
+                      value="question"
+                      required
+                    />
+                    <span>ご質問・ご相談</span>
+                  </label>
+                  <label class="form-radio">
+                    <input
+                      type="radio"
+                      name="inquiry_type"
+                      value="other"
+                      required
+                    />
+                    <span>その他</span>
+                  </label>
+                </div>
+                <span class="form-error" role="alert"></span>
+              </div>
+
+              <!-- ご質問・ご要望 -->
+              <div class="form-group">
+                <label for="club-message" class="form-label">
+                  ご質問・ご要望
+                </label>
+                <textarea
+                  id="club-message"
+                  name="message"
+                  class="form-textarea"
+                  rows="6"
+                  placeholder="光和アルファ倶楽部についてのご質問やご要望をお聞かせください"
+                ></textarea>
+              </div>
+
+              <!-- 希望連絡方法 -->
+              <div class="form-group">
+                <label class="form-label"> 希望連絡方法 </label>
+                <div class="form-checkbox-group">
+                  <label class="form-checkbox">
+                    <input
+                      type="checkbox"
+                      name="contact_method[]"
+                      value="phone"
+                    />
+                    <span>電話</span>
+                  </label>
+                  <label class="form-checkbox">
+                    <input
+                      type="checkbox"
+                      name="contact_method[]"
+                      value="email"
+                    />
+                    <span>メール</span>
+                  </label>
+                  <label class="form-checkbox">
+                    <input
+                      type="checkbox"
+                      name="contact_method[]"
+                      value="postal"
+                    />
+                    <span>郵送</span>
+                  </label>
                 </div>
               </div>
             </div>
-          </div>
+
+            <!-- プライバシーポリシー -->
+            <div class="form-group">
+              <label class="form-checkbox form-checkbox--agreement">
+                <input type="checkbox" name="privacy" required />
+                <span>
+                  <a href="#privacy" target="_blank">プライバシーポリシー</a
+                  >に同意する
+                  <span class="required">必須</span>
+                </span>
+              </label>
+              <span class="form-error" role="alert"></span>
+            </div>
+
+            <!-- 送信ボタン -->
+            <div class="form-actions">
+              <button type="reset" class="btn btn--outline">
+                <i class="fas fa-redo"></i>
+                リセット
+              </button>
+              <button
+                type="submit"
+                class="btn btn--primary btn--large form-submit"
+              >
+                <i class="fas fa-paper-plane"></i>
+                送信する
+              </button>
+            </div>
+          </form>
+
+          <!-- サイドバー情報 -->
+          <aside class="club-contact__sidebar">
+            <div class="club-info-card">
+              <h3 class="club-info-card__title">
+                <i class="fas fa-info-circle"></i>
+                入会のメリット
+              </h3>
+              <ul class="club-info-card__list">
+                <li>
+                  <i class="fas fa-check"></i>
+                  生涯会員制（年会費不要）
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  葬儀基本料金10%割引
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  弔慰金10%給付
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  法律相談サービス
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  権利継承可能
+                </li>
+              </ul>
+            </div>
+
+            <div class="club-info-card">
+              <h3 class="club-info-card__title">
+                <i class="fas fa-phone-alt"></i>
+                お電話でのお問い合わせ
+              </h3>
+              <div class="club-info-card__phone">
+                <a href="tel:0000-00-0000">
+                  <span class="club-info-card__phone-number">0000-00-0000</span>
+                  <span class="club-info-card__phone-hours"
+                    >受付時間: 9:00〜18:00</span
+                  >
+                </a>
+              </div>
+            </div>
+
+            <div class="club-info-card">
+              <h3 class="club-info-card__title">
+                <i class="fas fa-map-marker-alt"></i>
+                ご来店でのご相談
+              </h3>
+              <p class="club-info-card__text">
+                直接のご相談も承っております。<br />
+                事前にお電話でご予約いただくと、スムーズにご案内できます。
+              </p>
+              <a href="#access" class="btn btn--outline btn--sm">
+                <i class="fas fa-map"></i>
+                アクセス情報
+              </a>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
