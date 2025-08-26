@@ -2784,7 +2784,7 @@ img {
 .hall-card__content {
   padding: var(--spacing-8);
   background: linear-gradient(to bottom, #ffffff 0%, #fcfcfd 100%);
-  position: relative;
+  /* position: relative; */
 }
 
 .hall-card__content::before {
@@ -3049,7 +3049,8 @@ img {
   }
 
   .hall-card__content {
-    padding: var(--spacing-32);
+    /* padding: var(--spacing-28); */
+    padding: 7rem 2rem;
   }
 
   .equipment-grid {
