@@ -67,8 +67,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contact.css" />
+    <!-- Modular CSS Architecture -->
+    <link rel="stylesheet" href="css/base/variables.css" />
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/layout/container.css" />
+    <link rel="stylesheet" href="css/layout/header.css" />
+    <link rel="stylesheet" href="css/layout/footer.css" />
+    <link rel="stylesheet" href="css/layout/sidebar.css" />
+    <link rel="stylesheet" href="css/layout/mobile-bar.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/components/forms.css" />
+    <link rel="stylesheet" href="css/components/animations.css" />
+    <link rel="stylesheet" href="css/components/accessibility.css" />
+    <link rel="stylesheet" href="css/pages/contact.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -215,28 +227,6 @@
       role="toolbar"
       aria-label="アクセシビリティ設定"
     >
-      <button
-        class="accessibility-btn font-size-btn"
-        data-size="small"
-        aria-label="文字サイズを小さくする"
-      >
-        小
-      </button>
-      <button
-        class="accessibility-btn font-size-btn"
-        data-size="medium"
-        aria-label="文字サイズを標準にする"
-        aria-pressed="true"
-      >
-        中
-      </button>
-      <button
-        class="accessibility-btn font-size-btn"
-        data-size="large"
-        aria-label="文字サイズを大きくする"
-      >
-        大
-      </button>
       <button
         class="accessibility-btn motion-toggle-btn"
         aria-label="アニメーションを停止/再生する"

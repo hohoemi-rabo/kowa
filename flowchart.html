@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="メモリアルホール光和は、長野県飯田市で「ご葬儀からご創儀へ」をコンセプトに、心を込めた葬儀サービスを提供しています。24時間365日対応、各種葬儀プランをご用意しております。"
+      content="メモリアルホール光和の葬儀の流れをご紹介します。ご逝去から葬儀・告別式、火葬まで、丁寧にご説明いたします。"
     />
     <meta
       name="keywords"
@@ -67,9 +67,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/flowchart.css" />
+    <!-- Modular CSS Architecture -->
+    <link rel="stylesheet" href="css/base/variables.css" />
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/layout/container.css" />
+    <link rel="stylesheet" href="css/layout/header.css" />
+    <link rel="stylesheet" href="css/layout/footer.css" />
+    <link rel="stylesheet" href="css/layout/sidebar.css" />
+    <link rel="stylesheet" href="css/layout/mobile-bar.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/components/forms.css" />
+    <link rel="stylesheet" href="css/components/animations.css" />
+    <link rel="stylesheet" href="css/components/accessibility.css" />
+    <link rel="stylesheet" href="css/pages/flowchart.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -216,28 +227,6 @@
       role="toolbar"
       aria-label="アクセシビリティ設定"
     >
-      <button
-        class="accessibility-btn font-size-btn"
-        data-size="small"
-        aria-label="文字サイズを小さくする"
-      >
-        小
-      </button>
-      <button
-        class="accessibility-btn font-size-btn"
-        data-size="medium"
-        aria-label="文字サイズを標準にする"
-        aria-pressed="true"
-      >
-        中
-      </button>
-      <button
-        class="accessibility-btn font-size-btn"
-        data-size="large"
-        aria-label="文字サイズを大きくする"
-      >
-        大
-      </button>
       <button
         class="accessibility-btn motion-toggle-btn"
         aria-label="アニメーションを停止/再生する"
@@ -507,11 +496,13 @@
         <div class="container">
           <div class="flowchart-hero__content">
             <h1 id="flowchart-hero-title" class="flowchart-hero__title">
-              <span class="flowchart-hero__subtitle">Funeral Process Guide</span>
+              <span class="flowchart-hero__subtitle"
+                >Funeral Process Guide</span
+              >
               <span class="flowchart-hero__maintitle">葬儀の流れ</span>
             </h1>
             <p class="flowchart-hero__text">
-              大切な方を見送る葬儀の準備から終了まで、<br>
+              大切な方を見送る葬儀の準備から終了まで、<br />
               各段階で必要なことを分かりやすくご説明いたします。
             </p>
           </div>
@@ -519,7 +510,11 @@
       </section>
 
       <!-- 葬儀の流れ詳細 Section -->
-      <section class="funeral-flow" id="funeral-flow" aria-labelledby="funeral-flow-title">
+      <section
+        class="funeral-flow"
+        id="funeral-flow"
+        aria-labelledby="funeral-flow-title"
+      >
         <div class="container">
           <div class="section__header">
             <h2 id="funeral-flow-title" class="section__title">
@@ -723,7 +718,11 @@
       </section>
 
       <!-- 葬儀プラン比較表 Section -->
-      <section class="funeral-plans" id="funeral-plans" aria-labelledby="funeral-plans-title">
+      <section
+        class="funeral-plans"
+        id="funeral-plans"
+        aria-labelledby="funeral-plans-title"
+      >
         <div class="container">
           <div class="section__header">
             <h2 id="funeral-plans-title" class="section__title">
@@ -810,8 +809,10 @@
                       <i class="fas fa-times text-muted"></i>
                     </td>
                     <td class="table-cell">精進落とし</td>
-                    <td class="table-cell">通夜振る舞い<br>精進落とし</td>
-                    <td class="table-cell">通夜振る舞い<br>精進落とし<br>※ケータリング対応</td>
+                    <td class="table-cell">通夜振る舞い<br />精進落とし</td>
+                    <td class="table-cell">
+                      通夜振る舞い<br />精進落とし<br />※ケータリング対応
+                    </td>
                   </tr>
                   <tr>
                     <td class="table-cell-label">返礼品</td>
@@ -819,8 +820,10 @@
                       <i class="fas fa-times text-muted"></i>
                     </td>
                     <td class="table-cell">即日返し</td>
-                    <td class="table-cell">即日返し<br>後日返し</td>
-                    <td class="table-cell">即日返し<br>後日返し<br>※カタログギフト対応</td>
+                    <td class="table-cell">即日返し<br />後日返し</td>
+                    <td class="table-cell">
+                      即日返し<br />後日返し<br />※カタログギフト対応
+                    </td>
                   </tr>
                   <tr>
                     <td class="table-cell-label">価格帯（目安）</td>
@@ -840,19 +843,19 @@
                   <tr>
                     <td class="table-cell-label">特徴</td>
                     <td class="table-cell feature">
-                      火葬のみのシンプルなお別れ。<br>
+                      火葬のみのシンプルなお別れ。<br />
                       費用を抑えたい方に。
                     </td>
                     <td class="table-cell feature">
-                      親族中心の温かなお別れ。<br>
+                      親族中心の温かなお別れ。<br />
                       最も選ばれているプラン。
                     </td>
                     <td class="table-cell feature">
-                      友人・知人も参列。<br>
+                      友人・知人も参列。<br />
                       伝統的な葬儀形式。
                     </td>
                     <td class="table-cell feature">
-                      会社関係者も含む大規模葬。<br>
+                      会社関係者も含む大規模葬。<br />
                       格式高い葬儀。
                     </td>
                   </tr>
@@ -863,7 +866,7 @@
             <div class="plans-note">
               <i class="fas fa-info-circle"></i>
               <p>
-                ※価格は目安です。実際の費用は、選択されるオプションや参列者数により変動します。<br>
+                ※価格は目安です。実際の費用は、選択されるオプションや参列者数により変動します。<br />
                 詳しくはお見積もりをご依頼ください。
               </p>
             </div>
@@ -872,7 +875,11 @@
       </section>
 
       <!-- Contact CTA Section -->
-      <section class="flowchart-cta" id="contact" aria-labelledby="contact-title">
+      <section
+        class="flowchart-cta"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
         <div class="container">
           <div class="alpha-club__contact-cta">
             <div class="contact-cta__overlay">
