@@ -5521,7 +5521,7 @@ img {
 }
 
 .contact-cta__title i {
-  color: #FFD700;
+  color: #ffd700;
   font-size: 0.9em;
 }
 
@@ -5583,7 +5583,7 @@ img {
   gap: var(--spacing-3);
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  color: #FFD700;
+  color: #ffd700;
   text-decoration: none;
   padding: var(--spacing-4) var(--spacing-6);
   background: rgba(255, 215, 0, 0.1);
@@ -5597,7 +5597,7 @@ img {
   background: rgba(255, 215, 0, 0.2);
   border-color: rgba(255, 215, 0, 0.6);
   transform: scale(1.05);
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .contact-option__phone i {
@@ -5608,7 +5608,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-3);
-  background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
   color: white;
   text-decoration: none;
   padding: var(--spacing-5) var(--spacing-8);
@@ -5621,7 +5621,7 @@ img {
 }
 
 .contact-option__button:hover {
-  background: linear-gradient(135deg, #B8860B 0%, #8B6914 100%);
+  background: linear-gradient(135deg, #b8860b 0%, #8b6914 100%);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
   color: white;

@@ -214,3 +214,41 @@
   border-color: var(--color-primary);
   transform: translateY(-2px);
 }
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: var(--spacing-6);
+  right: var(--spacing-6);
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateY(10px) scale(0.8);
+  transition: var(--transition-all);
+  z-index: var(--z-fixed);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+  background: var(--color-primary-600);
+  transform: translateY(0) scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.back-to-top:active {
+  transform: translateY(0) scale(0.95);
+}

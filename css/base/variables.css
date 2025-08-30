@@ -206,6 +206,7 @@
 :root {
   --color-text-secondary: var(--color-text-muted);
   --color-background: var(--color-bg-secondary);
+  --color-surface: var(--color-bg-primary);
   --color-border: var(--color-border-light);
   --container-max-width: var(--container-desktop);
 }
