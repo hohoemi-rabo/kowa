@@ -1,0 +1,191 @@
+/* =====================================================
+   Reset & Base Styles
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-lg); /* 高齢者向けに18px */
+  color: var(--color-text);
+  line-height: var(--line-height-relaxed);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-secondary) 0%,
+    var(--color-primary-100) 100%
+  );
+  min-height: 100vh;
+}
+
+/* Typography Scale - 和モダンに適した階層 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-5xl));
+  margin-bottom: var(--spacing-6);
+  letter-spacing: -0.025em;
+}
+h2 {
+  font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+  margin-bottom: var(--spacing-5);
+  letter-spacing: -0.025em;
+}
+h3 {
+  font-size: clamp(var(--font-size-xl), 3vw, var(--font-size-3xl));
+  margin-bottom: var(--spacing-4);
+}
+h4 {
+  font-size: clamp(var(--font-size-lg), 2.5vw, var(--font-size-2xl));
+  font-weight: var(--font-weight-semibold);
+}
+h5 {
+  font-size: clamp(var(--font-size-base), 2vw, var(--font-size-xl));
+  font-weight: var(--font-weight-semibold);
+}
+h6 {
+  font-size: clamp(var(--font-size-sm), 1.5vw, var(--font-size-lg));
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-light);
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 767px) {
+  body {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .section__title {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+  }
+
+  .section__description {
+    text-align: center;
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section__title {
+    margin-bottom: var(--spacing-8);
+  }
+}
+
+/* Text Elements */
+p {
+  margin-bottom: var(--spacing-4);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-lead {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-light);
+}
+
+.text-small {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+.text-base {
+  font-size: var(--font-size-base);
+}
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+.text-2xl {
+  font-size: var(--font-size-2xl);
+}
+.text-3xl {
+  font-size: var(--font-size-3xl);
+}
+.text-4xl {
+  font-size: var(--font-size-4xl);
+}
+.text-5xl {
+  font-size: var(--font-size-5xl);
+}
+.text-6xl {
+  font-size: var(--font-size-6xl);
+}
+
+/* Font Weights */
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+.font-normal {
+  font-weight: var(--font-weight-normal);
+}
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--color-primary);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.text-gold {
+  color: var(--color-gold-600);
+}
+.text-muted {
+  color: var(--color-text-muted);
+}
+.text-inverse {
+  color: var(--color-text-inverse);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

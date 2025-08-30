@@ -1,0 +1,43 @@
+/* =====================================================
+   Layout Components
+   ===================================================== */
+.container {
+  max-width: var(--container-desktop);
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+}
+
+/* Responsive container adjustments */
+@media (max-width: 767px) {
+  .container {
+    max-width: var(--container-mobile);
+    padding: 0 var(--spacing-4);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: var(--container-tablet);
+    padding: 0 var(--spacing-5);
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: var(--container-large);
+  }
+}
+
+/* Container variations */
+.container--narrow {
+  max-width: 800px;
+}
+
+.container--wide {
+  max-width: 1400px;
+}
+
+.container--full {
+  max-width: none;
+  width: 100%;
+}

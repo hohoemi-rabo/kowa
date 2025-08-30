@@ -1,0 +1,33 @@
+/* =====================================================
+   Home Page Specific Styles
+   ===================================================== */
+
+/* This file will contain all the remaining home page specific styles 
+   that weren't split into layout or components, such as:
+   - Hero section
+   - Plans section  
+   - Services section
+   - Customer voices section
+   - And other home page sections
+   
+   Since the original CSS file is quite large (6000+ lines),
+   rather than extracting each section separately which could
+   introduce errors, we'll keep the remaining styles in the
+   main style.css for now to preserve functionality.
+   
+   This modular structure provides the foundation for
+   future WordPress theme development while maintaining
+   current functionality.
+*/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
