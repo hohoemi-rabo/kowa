@@ -252,3 +252,15 @@
 .back-to-top:active {
   transform: translateY(0) scale(0.95);
 }
+
+/* Progress Bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  z-index: var(--z-fixed);
+  transition: width 0.1s ease;
+}

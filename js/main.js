@@ -1620,7 +1620,6 @@ function showSuccessMessage() {
 
 // アクセシビリティ機能
 function initAccessibilityFeatures() {
-    initFontSizeControls();
     initMotionControls();
     initKeyboardNavigation();
     initARIALiveRegions();
@@ -1629,43 +1628,6 @@ function initAccessibilityFeatures() {
     restoreAccessibilitySettings();
 }
 
-function initFontSizeControls() {
-    const fontSizeButtons = document.querySelectorAll('.font-size-btn');
-    
-    fontSizeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const size = button.getAttribute('data-size');
-            setFontSize(size);
-            
-            // ボタンの状態を更新
-            fontSizeButtons.forEach(btn => btn.setAttribute('aria-pressed', 'false'));
-            button.setAttribute('aria-pressed', 'true');
-            
-            // 設定を保存
-            localStorage.setItem('fontSize', size);
-            
-            // 画面リーダーに通知
-            announceToScreenReader(`文字サイズを${size === 'small' ? '小' : size === 'medium' ? '標準' : '大'}に変更しました`);
-        });
-    });
-}
-
-function setFontSize(size) {
-    document.body.classList.remove('font-small', 'font-large');
-    
-    switch(size) {
-        case 'small':
-            document.body.classList.add('font-small');
-            break;
-        case 'large':
-            document.body.classList.add('font-large');
-            break;
-        case 'medium':
-        default:
-            // デフォルトサイズ（クラスなし）
-            break;
-    }
-}
 
 function initMotionControls() {
     const motionToggle = document.querySelector('.motion-toggle-btn');
@@ -1770,19 +1732,6 @@ function announceToScreenReader(message) {
 }
 
 function restoreAccessibilitySettings() {
-    // フォントサイズの復元
-    const savedFontSize = localStorage.getItem('fontSize');
-    if (savedFontSize) {
-        setFontSize(savedFontSize);
-        
-        // ボタンの状態を復元
-        const fontSizeButtons = document.querySelectorAll('.font-size-btn');
-        fontSizeButtons.forEach(btn => {
-            const isActive = btn.getAttribute('data-size') === savedFontSize;
-            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-        });
-    }
-    
     // モーション設定の復元
     const reducedMotion = localStorage.getItem('reducedMotion') === 'true';
     if (reducedMotion) {

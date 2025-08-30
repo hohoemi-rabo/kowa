@@ -225,7 +225,7 @@
 }
 
 /* スクロール進捗表示（TOPボタン用） */
-.fixed-sidebar__item--scroll::before {
+/* .fixed-sidebar__item--scroll::before {
   content: '';
   position: absolute;
   top: 0;
@@ -239,6 +239,18 @@
     transparent var(--scroll-progress, 0%)
   );
   transition: background 0.1s ease;
+} */
+
+.fixed-sidebar__item--scroll::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--scroll-progress, 0%);
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: 1px;
+  transition: width 0.3s ease;
 }
 
 /* =====================================================
