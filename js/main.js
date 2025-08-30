@@ -81,8 +81,10 @@ function initMobileMenu() {
         if (mobileMenu && mobileMenuOverlay) {
             mobileMenu.classList.add('show');
             mobileMenuOverlay.classList.add('show');
-            toggleBtn.setAttribute('aria-expanded', 'true');
-            toggleBtn.setAttribute('aria-label', 'メニューを閉じる');
+            if (toggleBtn) {
+                toggleBtn.setAttribute('aria-expanded', 'true');
+                toggleBtn.setAttribute('aria-label', 'メニューを閉じる');
+            }
             
             // スクロールを無効化
             document.body.style.overflow = 'hidden';
@@ -100,14 +102,21 @@ function initMobileMenu() {
         if (mobileMenu && mobileMenuOverlay) {
             mobileMenu.classList.remove('show');
             mobileMenuOverlay.classList.remove('show');
-            toggleBtn.setAttribute('aria-expanded', 'false');
-            toggleBtn.setAttribute('aria-label', 'メニューを開く');
+            if (toggleBtn) {
+                toggleBtn.setAttribute('aria-expanded', 'false');
+                toggleBtn.setAttribute('aria-label', 'メニューを開く');
+            }
             
             // スクロールを有効化
             document.body.style.overflow = '';
             
-            // フォーカスをトグルボタンに戻す
-            toggleBtn.focus();
+            // フォーカスをトグルボタンに戻す（存在する場合）
+            if (toggleBtn) {
+                toggleBtn.focus();
+            } else if (bottomToggle) {
+                // 下部のトグルボタンにフォーカス
+                bottomToggle.focus();
+            }
         }
     }
     
@@ -126,7 +135,7 @@ function initMobileMenu() {
     // 下部バーのメニューボタン
     if (bottomToggle) {
         bottomToggle.addEventListener('click', function() {
-            const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+            const isExpanded = mobileMenu && mobileMenu.classList.contains('show');
             if (isExpanded) {
                 closeMobileMenu();
             } else {
@@ -194,15 +203,7 @@ function initMobileMenu() {
     const menuLinks = document.querySelectorAll('.mobile-menu__link:not(.mobile-menu__expand-toggle), .mobile-submenu__link');
     menuLinks.forEach(link => {
         link.addEventListener('click', function() {
-            if (mobileMenu && mobileMenuOverlay) {
-                mobileMenu.classList.remove('show');
-                mobileMenuOverlay.classList.remove('show');
-                toggleBtn.setAttribute('aria-expanded', 'false');
-                toggleBtn.setAttribute('aria-label', 'メニューを開く');
-                
-                // スクロールを有効化
-                document.body.style.overflow = '';
-            }
+            closeMobileMenu();
         });
     });
 }
