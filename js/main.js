@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initDropdownMenu();
     initScrollToTop();
     initSmoothScroll();
-    initSkipLinks();
+    // initSkipLinks(); // スキップリンク機能を無効化
     
     // 追加機能の初期化
     if (typeof initCTATracking === 'function') {
@@ -500,32 +500,7 @@ function isDesktop() {
     return window.innerWidth >= breakpoints.desktop;
 }
 
-/**
- * スキップリンクの初期化
- */
-function initSkipLinks() {
-    // スキップリンクを動的に追加
-    const skipLinks = document.createElement('div');
-    skipLinks.className = 'skip-links';
-    skipLinks.innerHTML = `
-        <a href="#main-content" class="skip-link">メインコンテンツへ移動</a>
-        <a href="#header-nav" class="skip-link">ナビゲーションへ移動</a>
-    `;
-    
-    document.body.insertBefore(skipLinks, document.body.firstChild);
-    
-    // メインコンテンツにIDを追加
-    const mainContent = document.querySelector('main');
-    if (mainContent && !mainContent.id) {
-        mainContent.id = 'main-content';
-    }
-    
-    // ヘッダーナビにIDを追加
-    const headerNav = document.querySelector('.header__nav');
-    if (headerNav && !headerNav.id) {
-        headerNav.id = 'header-nav';
-    }
-}
+// スキップリンク機能は削除されました
 
 /**
  * 現在のページに対応するナビゲーションアイテムをハイライト

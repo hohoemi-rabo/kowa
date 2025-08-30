@@ -2,46 +2,6 @@
    Accessibility Features
    ===================================================== */
 
-/* Skip Links */
-.skip-links {
-  position: absolute;
-  top: -100px;
-  left: var(--spacing-4);
-  z-index: var(--z-tooltip);
-}
-
-.skip-links:focus-within {
-  top: var(--spacing-4);
-}
-
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: var(--spacing-4);
-  display: inline-block;
-  padding: var(--spacing-2) var(--spacing-4);
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
-  text-decoration: none;
-  border-radius: var(--radius-md);
-  font-weight: var(--font-weight-medium);
-  z-index: var(--z-tooltip);
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: var(--transition-all);
-  margin-right: var(--spacing-2);
-  white-space: nowrap;
-}
-
-.skip-link:focus,
-.skip-link:focus-visible {
-  top: var(--spacing-4);
-  opacity: 1;
-  transform: translateY(0);
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-}
-
 /* Accessibility Controls */
 .accessibility-controls {
   position: fixed;
@@ -136,10 +96,6 @@ body.reduced-motion *::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .skip-link {
-    transition: none;
-  }
-  
   .accessibility-btn {
     transition: none;
   }
