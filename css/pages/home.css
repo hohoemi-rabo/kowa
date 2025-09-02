@@ -1641,7 +1641,8 @@
   background: var(--color-border);
 }
 
-/* Timeline Flow */
+/* Timeline Flow - 未使用のためコメントアウト */
+/*
 .timeline-flow {
   display: flex;
   flex-wrap: wrap;
@@ -1699,7 +1700,6 @@
   line-height: 1.4;
 }
 
-/* Separation line for specific items */
 .timeline-flow__item--separation::after {
   content: '';
   position: absolute;
@@ -1710,6 +1710,7 @@
   height: 40px;
   background: var(--color-primary-light);
 }
+*/
 
 /* P-Flow Design */
 .p-flow__header {
@@ -2114,6 +2115,8 @@
   .timeline-header__phase:not(:last-child)::after {
     display: none;
   }
+  /* Timeline Flow - コメントアウト */
+  /*
   .timeline-flow {
     gap: var(--spacing-3);
     padding: var(--spacing-4) 0;
@@ -2128,6 +2131,7 @@
   .timeline-flow__item--separation::after {
     display: none;
   }
+  */
   .funeral-info__timeline,
   .funeral-info__manners,
   .funeral-info__faq {
@@ -2136,12 +2140,15 @@
 }
 
 @media (min-width: 1024px) {
+  /* Timeline Flow - コメントアウト */
+  /*
   .timeline-flow {
     gap: var(--spacing-5);
   }
   .timeline-flow__item {
     min-width: 140px;
   }
+  */
 }
 
 /* =====================================================
