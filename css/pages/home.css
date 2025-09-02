@@ -1046,6 +1046,519 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* 一般葬プランセクション */
+.plans__general-section {
+  grid-column: 1 / -1;
+  margin-bottom: var(--spacing-12);
+  padding: var(--spacing-8);
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.6) 100%);
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+}
+
+.plans__general-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--spacing-2);
+  position: relative;
+}
+
+.plans__general-title::after {
+  content: '';
+  position: absolute;
+  bottom: -var(--spacing-2);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-radius: var(--radius-full);
+}
+
+.plans__general-subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-8);
+  font-style: italic;
+}
+
+.plans__general-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* 一般葬プランカード */
+.plans__general-section .plan-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(226, 232, 240, 0.5);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.plans__general-section .plan-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 40px rgba(30, 58, 138, 0.15);
+}
+
+.plans__general-section .plan-card__image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: var(--color-bg-secondary);
+  position: relative;
+}
+
+.plans__general-section .plan-card__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
+  z-index: 1;
+}
+
+.plans__general-section .plan-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-all);
+}
+
+.plans__general-section .plan-card:hover .plan-card__image img {
+  transform: scale(1.03);
+}
+
+/* 一般葬プランの価格表示 */
+.plans__general-section .plan-card__price {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.plan-card__price-member {
+  padding: var(--spacing-4) var(--spacing-5);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #4c6ef5 100%);
+  border-radius: var(--radius-xl);
+  color: var(--color-text-inverse);
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.25);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.plan-card__price-member::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.plan-card__price-regular {
+  padding: var(--spacing-3) var(--spacing-4);
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(203, 213, 225, 0.4);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
+  text-align: center;
+  position: relative;
+}
+
+.plan-card__price-label {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plan-card__price-member .plan-card__price-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.plan-card__price-regular .plan-card__price-label {
+  color: var(--color-text-muted);
+}
+
+/* 価格詳細レイアウト */
+.plan-card__price-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.plan-card__price-main {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-1);
+}
+
+.plan-card__price-tax {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-1);
+}
+
+/* 会員価格のスタイル */
+.plan-card__price-member .plan-card__amount {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-inverse);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card__price-member .plan-card__amount-tax {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-inverse);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card__price-member .plan-card__unit,
+.plan-card__price-member .plan-card__unit-tax {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 一般価格のスタイル */
+.plan-card__price-regular .plan-card__amount {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+}
+
+.plan-card__price-regular .plan-card__amount-tax {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.plan-card__price-regular .plan-card__unit,
+.plan-card__price-regular .plan-card__unit-tax {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* プランカテゴリー */
+.plan-card__category {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #4c6ef5 100%);
+  color: var(--color-text-inverse);
+  text-align: center;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.5px;
+  position: relative;
+  margin-bottom: var(--spacing-1);
+}
+
+.plan-card__category::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--color-primary);
+}
+
+/* プランタイトルの強化 */
+.plans__general-section .plan-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-2);
+  position: relative;
+  line-height: var(--line-height-tight);
+}
+
+.plans__general-section .plan-card__title::after {
+  content: '';
+  position: absolute;
+  bottom: var(--spacing-1);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  opacity: 0.6;
+}
+
+/* プラン内容アイコン */
+.plan-card__features-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: var(--spacing-4) 0;
+  padding: var(--spacing-3) var(--spacing-1);
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.6) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+}
+
+.plan-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  max-width: 16.666%;
+}
+
+.plan-feature-icon {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  border: 2px solid rgba(30, 58, 138, 0.2);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-bottom: 2px;
+}
+
+.plan-feature-icon i {
+  font-size: 12px;
+  color: var(--color-primary);
+}
+
+.plan-feature-text {
+  font-size: 9px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.plan-feature-item:hover .plan-feature-icon {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #4c6ef5 100%);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+
+.plan-feature-item:hover .plan-feature-icon i {
+  color: var(--color-text-inverse);
+}
+
+.plan-feature-item:hover .plan-feature-text {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* カード内詳しく見るボタン */
+.plan-card__cta {
+  text-align: center;
+  margin-top: var(--spacing-4);
+  padding-top: var(--spacing-3);
+  border-top: 1px solid rgba(203, 213, 225, 0.2);
+}
+
+.plan-card__details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #4c6ef5 100%);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card__details-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+
+.plan-card__details-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+  background: linear-gradient(135deg, #4c6ef5 0%, var(--color-primary) 100%);
+}
+
+.plan-card__details-btn:active {
+  transform: translateY(-1px);
+}
+
+.plan-card__details-btn i:first-child {
+  font-size: var(--font-size-xs);
+}
+
+.plan-card__details-btn i:last-child {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.plan-card__details-btn:hover i:last-child {
+  transform: translateX(2px);
+}
+
+
+/* 詳しく見るボタン */
+.plans__general-cta {
+  text-align: center;
+  margin-top: var(--spacing-10);
+  padding-top: var(--spacing-8);
+  border-top: 1px solid rgba(203, 213, 225, 0.3);
+}
+
+.plans__general-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4) var(--spacing-8);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #4c6ef5 100%);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  border-radius: var(--radius-2xl);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plans__general-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+
+.plans__general-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(30, 58, 138, 0.4);
+  background: linear-gradient(135deg, #4c6ef5 0%, var(--color-primary) 100%);
+}
+
+.plans__general-btn:active {
+  transform: translateY(-2px);
+}
+
+.plans__general-btn i:first-child {
+  font-size: var(--font-size-base);
+}
+
+.plans__general-btn i:last-child {
+  font-size: var(--font-size-sm);
+  transition: transform 0.3s ease;
+}
+
+.plans__general-btn:hover i:last-child {
+  transform: translateX(4px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .plans__general-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  .plans__general-section .plan-card__image {
+    height: 180px;
+  }
+  
+  .plans__general-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .plans__general-btn {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-3) var(--spacing-6);
+  }
+  
+  /* モバイル時のプラン内容調整 */
+  .plan-feature-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .plan-feature-icon i {
+    font-size: 10px;
+  }
+  
+  .plan-feature-text {
+    font-size: 8px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .plan-card__features-icons {
+    padding: var(--spacing-2) 4px;
+  }
+  
+  .plan-feature-item {
+    gap: 2px;
+  }
+  
+  .plan-feature-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .plan-feature-icon i {
+    font-size: 9px;
+  }
+  
+  .plan-feature-text {
+    font-size: 7px;
+  }
+}
+
 /* =====================================================
    Facilities Section
    ===================================================== */

@@ -572,379 +572,267 @@
                 </header>
 
                 <div class="plans__grid">
-                    <!-- ①一般葬（シンプル）プラン -->
-                    <article class="plan-card" data-plan="general-simple">
-                        <div class="plan-card__header">
-                            <h3 class="plan-card__title">一般葬<br><small>（シンプル）</small></h3>
-                            <div class="plan-card__price">
-                                <span class="plan-card__amount">80万円</span>
-                                <span class="plan-card__unit">〜（税込）</span>
-                            </div>
-                        </div>
-                        <div class="plan-card__content">
-                            <p class="plan-card__description">
-                                基本的な一般葬
-                            </p>
-                            <ul class="plan-card__features">
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>ご遺体お迎え・安置</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>通夜・告別式</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>祭壇・供花・返礼品</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>会葬礼状・受付用品</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="plan-card__actions">
-                            <button class="btn btn--secondary plan-card__btn-details" 
-                                    data-modal="general-simple-plan"
-                                    aria-haspopup="dialog">
-                                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                詳細を見る
-                            </button>
-                            <a href="#contact" class="btn btn--primary plan-card__btn-contact">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                資料請求
-                            </a>
-                        </div>
-                    </article>
 
-                    <!-- ②一般葬（スタンダード）プラン -->
-                    <article class="plan-card plan-card--premium" data-plan="general-standard">
-                        <div class="plan-card__badge">
-                            <span class="plan-card__badge-text">おすすめ</span>
-                        </div>
-                        <div class="plan-card__header">
-                            <h3 class="plan-card__title">一般葬<br><small>（スタンダード）</small></h3>
-                            <div class="plan-card__price">
-                                <span class="plan-card__amount">100万円</span>
-                                <span class="plan-card__unit">〜（税込）</span>
-                            </div>
-                        </div>
-                        <div class="plan-card__content">
-                            <p class="plan-card__description">
-                                充実した一般葬
-                            </p>
-                            <ul class="plan-card__features">
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>ご遺体お迎え・安置</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>通夜・告別式</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>豪華祭壇・供花・返礼品</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>司会・進行サポート</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="plan-card__actions">
-                            <button class="btn btn--secondary plan-card__btn-details" 
-                                    data-modal="general-standard-plan"
-                                    aria-haspopup="dialog">
-                                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                詳細を見る
-                            </button>
-                            <a href="#contact" class="btn btn--primary plan-card__btn-contact">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                資料請求
-                            </a>
-                        </div>
-                    </article>
+                    <!-- 一般葬プラン -->
+                    <div class="plans__general-section">
+                        <p class="plans__general-subtitle">故人様に相応しい、心のこもったお見送りをお選びください</p>
+                        <div class="plans__general-grid">
+                            
+                            <!-- 雪月花プラン -->
+                            <article class="plan-card" data-plan="setugekka">
+                                <div class="plan-card__image">
+                                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop&crop=center" alt="雪月花プランの祭壇" loading="lazy">
+                                </div>
+                                <div class="plan-card__category">一般葬プラン</div>
+                                <div class="plan-card__header">
+                                    <h4 class="plan-card__title">雪月花</h4>
+                                    
+                                    <!-- プラン内容 -->
+                                    <div class="plan-card__features-icons">
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-praying-hands" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">お迎え</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-home" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">ご安置</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-hands-praying" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">お通夜</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-seedling" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">火葬</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-heart" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">告別式</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-praying-hands" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">葬儀</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-member">
+                                            <span class="plan-card__price-label">会員価格</span>
+                                            <div class="plan-card__price-details">
+                                                <div class="plan-card__price-main">
+                                                    <span class="plan-card__amount">705,000</span>
+                                                    <span class="plan-card__unit">円（税抜）～</span>
+                                                </div>
+                                                <div class="plan-card__price-tax">
+                                                    <span class="plan-card__amount-tax">775,500</span>
+                                                    <span class="plan-card__unit-tax">円（税込）～</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan-card__price-regular">
+                                            <span class="plan-card__price-label">一般価格</span>
+                                            <div class="plan-card__price-details">
+                                                <div class="plan-card__price-main">
+                                                    <span class="plan-card__amount">800,000</span>
+                                                    <span class="plan-card__unit">円（税抜）～</span>
+                                                </div>
+                                                <div class="plan-card__price-tax">
+                                                    <span class="plan-card__amount-tax">880,000</span>
+                                                    <span class="plan-card__unit-tax">円（税込）～</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 詳しく見るボタン -->
+                                    <div class="plan-card__cta">
+                                        <a href="#contact" class="btn btn--hero plan-card__details-btn">
+                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                            詳しく見る
+                                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
 
-                    <!-- ③小規模お葬式プラン -->
-                    <article class="plan-card" data-plan="small">
-                        <div class="plan-card__header">
-                            <h3 class="plan-card__title">小規模<br>お葬式</h3>
-                            <div class="plan-card__price">
-                                <span class="plan-card__amount">65万円</span>
-                                <span class="plan-card__unit">〜（税込）</span>
-                            </div>
-                        </div>
-                        <div class="plan-card__content">
-                            <p class="plan-card__description">
-                                親しい方々とのお別れ
-                            </p>
-                            <ul class="plan-card__features">
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>ご遺体お迎え・安置</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>通夜・告別式</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>祭壇・供花</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>霊柩車・火葬場利用料</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="plan-card__actions">
-                            <button class="btn btn--secondary plan-card__btn-details" 
-                                    data-modal="small-plan"
-                                    aria-haspopup="dialog">
-                                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                詳細を見る
-                            </button>
-                            <a href="#contact" class="btn btn--primary plan-card__btn-contact">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                資料請求
-                            </a>
-                        </div>
-                    </article>
+                            <!-- 花水木プラン -->
+                            <article class="plan-card" data-plan="hanamizuki">
+                                <div class="plan-card__image">
+                                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop&crop=center" alt="花水木プランの祭壇" loading="lazy">
+                                </div>
+                                <div class="plan-card__category">家族葬</div>
+                                <div class="plan-card__header">
+                                    <h4 class="plan-card__title">光プラン</h4>
+                                    
+                                    <!-- プラン内容 -->
+                                    <div class="plan-card__features-icons">
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-praying-hands" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">お迎え</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-home" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">ご安置</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-hands-praying" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">お通夜</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-seedling" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">火葬</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-praying-hands" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">葬儀</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-member">
+                                            <span class="plan-card__price-label">会員価格</span>
+                                            <div class="plan-card__price-details">
+                                                <div class="plan-card__price-main">
+                                                    <span class="plan-card__amount">425,000</span>
+                                                    <span class="plan-card__unit">円（税抜）～</span>
+                                                </div>
+                                                <div class="plan-card__price-tax">
+                                                    <span class="plan-card__amount-tax">467,500</span>
+                                                    <span class="plan-card__unit-tax">円（税込）～</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan-card__price-regular">
+                                            <span class="plan-card__price-label">一般価格</span>
+                                            <div class="plan-card__price-details">
+                                                <div class="plan-card__price-main">
+                                                    <span class="plan-card__amount">500,000</span>
+                                                    <span class="plan-card__unit">円（税抜）～</span>
+                                                </div>
+                                                <div class="plan-card__price-tax">
+                                                    <span class="plan-card__amount-tax">550,000</span>
+                                                    <span class="plan-card__unit-tax">円（税込）～</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 詳しく見るボタン -->
+                                    <div class="plan-card__cta">
+                                        <a href="#contact" class="btn btn--hero plan-card__details-btn">
+                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                            詳しく見る
+                                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
 
-                    <!-- ④家族葬プラン -->
-                    <article class="plan-card plan-card--popular" data-plan="family">
-                        <div class="plan-card__badge">
-                            <span class="plan-card__badge-text">人気</span>
-                        </div>
-                        <div class="plan-card__header">
-                            <h3 class="plan-card__title">家族葬</h3>
-                            <div class="plan-card__price">
-                                <span class="plan-card__amount">50万円</span>
-                                <span class="plan-card__unit">〜（税込）</span>
-                            </div>
-                        </div>
-                        <div class="plan-card__content">
-                            <p class="plan-card__description">
-                                ご家族・親族でのお別れ
-                            </p>
-                            <ul class="plan-card__features">
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>ご遺体お迎え・安置</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>納棺・お棺・骨壷</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>祭壇・お花</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>霊柩車・火葬場利用料</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="plan-card__actions">
-                            <button class="btn btn--secondary plan-card__btn-details" 
-                                    data-modal="family-plan"
-                                    aria-haspopup="dialog">
-                                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                詳細を見る
-                            </button>
-                            <a href="#contact" class="btn btn--primary plan-card__btn-contact">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                資料請求
-                            </a>
-                        </div>
-                    </article>
+                            <!-- 胡蝶蘭プラン -->
+                            <article class="plan-card" data-plan="kochouran">
+                                <div class="plan-card__image">
+                                    <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=400&h=300&fit=crop&crop=center" alt="胡蝶蘭プランの祭壇" loading="lazy">
+                                </div>
+                                <div class="plan-card__category">火葬プラン</div>
+                                <div class="plan-card__header">
+                                    <h4 class="plan-card__title">火葬のみ行うプラン</h4>
+                                    
+                                    <!-- プラン内容 -->
+                                    <div class="plan-card__features-icons">
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-heart" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">ご逝去</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-home" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">お迎え・安置</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-comments" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">お打ち合わせ</span>
+                                        </div>
+                                        <div class="plan-feature-item">
+                                            <div class="plan-feature-icon">
+                                                <i class="fas fa-seedling" aria-hidden="true"></i>
+                                            </div>
+                                            <span class="plan-feature-text">納棺・出棺・荼毘</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-member">
+                                            <span class="plan-card__price-label">会員価格</span>
+                                            <div class="plan-card__price-details">
+                                                <div class="plan-card__price-main">
+                                                    <span class="plan-card__amount">200,000</span>
+                                                    <span class="plan-card__unit">円（税抜）～</span>
+                                                </div>
+                                                <div class="plan-card__price-tax">
+                                                    <span class="plan-card__amount-tax">220,000</span>
+                                                    <span class="plan-card__unit-tax">円（税込）～</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="plan-card__price-regular">
+                                            <span class="plan-card__price-label">一般価格</span>
+                                            <div class="plan-card__price-details">
+                                                <div class="plan-card__price-main">
+                                                    <span class="plan-card__amount">250,000</span>
+                                                    <span class="plan-card__unit">円（税抜）～</span>
+                                                </div>
+                                                <div class="plan-card__price-tax">
+                                                    <span class="plan-card__amount-tax">275,000</span>
+                                                    <span class="plan-card__unit-tax">円（税込）～</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 詳しく見るボタン -->
+                                    <div class="plan-card__cta">
+                                        <a href="#contact" class="btn btn--hero plan-card__details-btn">
+                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                            詳しく見る
+                                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
 
-                    <!-- ⑤自宅葬プラン -->
-                    <article class="plan-card" data-plan="home">
-                        <div class="plan-card__header">
-                            <h3 class="plan-card__title">自宅葬</h3>
-                            <div class="plan-card__price">
-                                <span class="plan-card__amount">35万円</span>
-                                <span class="plan-card__unit">〜（税込）</span>
-                            </div>
-                        </div>
-                        <div class="plan-card__content">
-                            <p class="plan-card__description">
-                                ご自宅での心温まるお別れ
-                            </p>
-                            <ul class="plan-card__features">
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>ご自宅での安置</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>納棺・お棺・骨壷</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>自宅用祭壇</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>霊柩車・火葬場利用料</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="plan-card__actions">
-                            <button class="btn btn--secondary plan-card__btn-details" 
-                                    data-modal="home-plan"
-                                    aria-haspopup="dialog">
-                                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                詳細を見る
-                            </button>
-                            <a href="#contact" class="btn btn--primary plan-card__btn-contact">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                資料請求
-                            </a>
-                        </div>
-                    </article>
 
-                    <!-- ⑥直葬プラン -->
-                    <article class="plan-card" data-plan="direct">
-                        <div class="plan-card__header">
-                            <h3 class="plan-card__title">直葬</h3>
-                            <div class="plan-card__price">
-                                <span class="plan-card__amount">20万円</span>
-                                <span class="plan-card__unit">〜（税込）</span>
-                            </div>
                         </div>
-                        <div class="plan-card__content">
-                            <p class="plan-card__description">
-                                火葬のみのシンプルなお別れ
-                            </p>
-                            <ul class="plan-card__features">
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>火葬場での最後のお別れ</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>納棺・お棺・骨壷</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>火葬場利用料</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>スタッフ付き添い</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="plan-card__actions">
-                            <button class="btn btn--secondary plan-card__btn-details" 
-                                    data-modal="direct-plan"
-                                    aria-haspopup="dialog">
-                                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                詳細を見る
-                            </button>
-                            <a href="#contact" class="btn btn--primary plan-card__btn-contact">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                資料請求
-                            </a>
-                        </div>
-                    </article>
+                        
+                    </div>
 
-                    <!-- ⑦集会所葬プラン -->
-                    <article class="plan-card" data-plan="community">
-                        <div class="plan-card__header">
-                            <h3 class="plan-card__title">集会所葬</h3>
-                            <div class="plan-card__price">
-                                <span class="plan-card__amount">45万円</span>
-                                <span class="plan-card__unit">〜（税込）</span>
-                            </div>
-                        </div>
-                        <div class="plan-card__content">
-                            <p class="plan-card__description">
-                                地域の集会所でのお別れ
-                            </p>
-                            <ul class="plan-card__features">
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>ご遺体お迎え・安置</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>集会所での葬儀</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>祭壇・供花</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>会場設営サポート</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="plan-card__actions">
-                            <button class="btn btn--secondary plan-card__btn-details" 
-                                    data-modal="community-plan"
-                                    aria-haspopup="dialog">
-                                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                詳細を見る
-                            </button>
-                            <a href="#contact" class="btn btn--primary plan-card__btn-contact">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                資料請求
-                            </a>
-                        </div>
-                    </article>
 
-                    <!-- ⑧寺院葬プラン -->
-                    <article class="plan-card plan-card--consultation" data-plan="temple">
-                        <div class="plan-card__header">
-                            <h3 class="plan-card__title">寺院葬</h3>
-                            <div class="plan-card__price">
-                                <span class="plan-card__amount">要相談</span>
-                                <span class="plan-card__unit"></span>
-                            </div>
-                        </div>
-                        <div class="plan-card__content">
-                            <p class="plan-card__description">
-                                寺院でのご供養
-                            </p>
-                            <ul class="plan-card__features">
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>ご遺体お迎え・安置</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>寺院での通夜・告別式</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>読経・戒名授与</span>
-                                </li>
-                                <li class="plan-card__feature">
-                                    <i class="fas fa-check" aria-hidden="true"></i>
-                                    <span>寺院との連携サポート</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="plan-card__actions">
-                            <button class="btn btn--secondary plan-card__btn-details" 
-                                    data-modal="temple-plan"
-                                    aria-haspopup="dialog">
-                                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                詳細を見る
-                            </button>
-                            <a href="#contact" class="btn btn--primary plan-card__btn-contact">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                資料請求
-                            </a>
-                        </div>
-                    </article>
                 </div>
 
                 <div class="plans__footer">
