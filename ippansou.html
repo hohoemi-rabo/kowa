@@ -80,7 +80,7 @@
     <link rel="stylesheet" href="css/components/forms.css" />
     <link rel="stylesheet" href="css/components/animations.css" />
     <link rel="stylesheet" href="css/components/accessibility.css" />
-    <link rel="stylesheet" href="css/pages/flower.css" />
+    <link rel="stylesheet" href="css/pages/ippansou.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -217,7 +217,20 @@
     </script>
   </head>
   <body>
-    <!-- 一般葬の詳細 -->
+    <!-- Accessibility Controls -->
+    <div
+      class="accessibility-controls"
+      role="toolbar"
+      aria-label="アクセシビリティ設定"
+    >
+      <button
+        class="accessibility-btn motion-toggle-btn"
+        aria-label="アニメーションを停止/再生する"
+        aria-pressed="false"
+      >
+        <i class="fas fa-pause" aria-hidden="true"></i>
+      </button>
+    </div>
 
     <!-- Header -->
     <header class="header" role="banner">
@@ -472,7 +485,298 @@
       </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- 光和アルファ倶楽部のご案内 -->
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__background">
+        <div class="hero__overlay"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+          alt="静寂で美しい日本庭園" 
+          class="hero__image"
+        />
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title">一般葬プラン</h1>
+        <p class="hero__subtitle">故人様に相応しい、心のこもったお見送り</p>
+        <div class="hero__scroll-indicator">
+          <span class="hero__scroll-text">プランをご覧ください</span>
+          <div class="hero__scroll-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan Cards Section -->
+    <section class="plans">
+      <div class="container">
+        <div class="plans__header">
+          <h2 class="section-title">葬儀プラン一覧</h2>
+          <p class="section-description">お客様のご要望に合わせて、最適なプランをお選びいただけます</p>
+        </div>
+        
+        <div class="plans__grid">
+          <!-- 雪月花プラン -->
+          <div class="plan-card plan-card--premium">
+            <div class="plan-card__header">
+              <div class="plan-card__image">
+                <img 
+                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  alt="雪月花プラン" 
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="plan-card__title">雪月花</h3>
+              <p class="plan-card__subtitle">最高品質のお見送り</p>
+            </div>
+            
+            <div class="plan-card__content">
+              <div class="plan-card__features">
+                <div class="feature-item">
+                  <i class="fas fa-flower-daffodil"></i>
+                  <span>高級祭壇・豪華装花</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-utensils"></i>
+                  <span>精進落とし会食</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-car"></i>
+                  <span>送迎車・霊柩車手配</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-book"></i>
+                  <span>司会進行・式典サポート</span>
+                </div>
+              </div>
+              
+              <div class="plan-card__pricing">
+                <div class="pricing-tier pricing-tier--alpha">
+                  <div class="pricing-tier__label">アルファ会員様</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">1,200,000</div>
+                    <div class="price price--tax">（税込1,320,000円）</div>
+                  </div>
+                </div>
+                <div class="pricing-tier pricing-tier--heart">
+                  <div class="pricing-tier__label">ハートライフ会員様</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">1,350,000</div>
+                    <div class="price price--tax">（税込1,485,000円）</div>
+                  </div>
+                </div>
+                <div class="pricing-tier pricing-tier--general">
+                  <div class="pricing-tier__label">一般</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">1,500,000</div>
+                    <div class="price price--tax">（税込1,650,000円）</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 花水木プラン -->
+          <div class="plan-card plan-card--standard">
+            <div class="plan-card__header">
+              <div class="plan-card__image">
+                <img 
+                  src="https://images.unsplash.com/photo-1574681862928-2c73de287f61?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  alt="花水木プラン" 
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="plan-card__title">花水木</h3>
+              <p class="plan-card__subtitle">バランスの取れたプラン</p>
+            </div>
+            
+            <div class="plan-card__content">
+              <div class="plan-card__features">
+                <div class="feature-item">
+                  <i class="fas fa-flower-tulip"></i>
+                  <span>品質装花・祭壇</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-users"></i>
+                  <span>適正規模の会場</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-car"></i>
+                  <span>霊柩車手配</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-hands-praying"></i>
+                  <span>基本式典サポート</span>
+                </div>
+              </div>
+              
+              <div class="plan-card__pricing">
+                <div class="pricing-tier pricing-tier--alpha">
+                  <div class="pricing-tier__label">アルファ会員様</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">800,000</div>
+                    <div class="price price--tax">（税込880,000円）</div>
+                  </div>
+                </div>
+                <div class="pricing-tier pricing-tier--heart">
+                  <div class="pricing-tier__label">ハートライフ会員様</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">900,000</div>
+                    <div class="price price--tax">（税込990,000円）</div>
+                  </div>
+                </div>
+                <div class="pricing-tier pricing-tier--general">
+                  <div class="pricing-tier__label">一般</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">1,000,000</div>
+                    <div class="price price--tax">（税込1,100,000円）</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 胡蝶蘭プラン -->
+          <div class="plan-card plan-card--basic">
+            <div class="plan-card__header">
+              <div class="plan-card__image">
+                <img 
+                  src="https://images.unsplash.com/photo-1520637836862-4d197d17c80a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  alt="胡蝶蘭プラン" 
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="plan-card__title">胡蝶蘭</h3>
+              <p class="plan-card__subtitle">シンプルで上品なプラン</p>
+            </div>
+            
+            <div class="plan-card__content">
+              <div class="plan-card__features">
+                <div class="feature-item">
+                  <i class="fas fa-spa"></i>
+                  <span>シンプル装花</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-building"></i>
+                  <span>適切な会場</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-car"></i>
+                  <span>霊柩車手配</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-clipboard-check"></i>
+                  <span>基本進行サポート</span>
+                </div>
+              </div>
+              
+              <div class="plan-card__pricing">
+                <div class="pricing-tier pricing-tier--alpha">
+                  <div class="pricing-tier__label">アルファ会員様</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">500,000</div>
+                    <div class="price price--tax">（税込550,000円）</div>
+                  </div>
+                </div>
+                <div class="pricing-tier pricing-tier--heart">
+                  <div class="pricing-tier__label">ハートライフ会員様</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">600,000</div>
+                    <div class="price price--tax">（税込660,000円）</div>
+                  </div>
+                </div>
+                <div class="pricing-tier pricing-tier--general">
+                  <div class="pricing-tier__label">一般</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">700,000</div>
+                    <div class="price price--tax">（税込770,000円）</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 花なしプラン -->
+          <div class="plan-card plan-card--minimal">
+            <div class="plan-card__header">
+              <div class="plan-card__image">
+                <img 
+                  src="https://images.unsplash.com/photo-1604881991720-f91add269bed?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  alt="花なしプラン" 
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="plan-card__title">花なし</h3>
+              <p class="plan-card__subtitle">必要最小限のプラン</p>
+            </div>
+            
+            <div class="plan-card__content">
+              <div class="plan-card__features">
+                <div class="feature-item">
+                  <i class="fas fa-circle-minus"></i>
+                  <span>装花なし</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-home"></i>
+                  <span>小規模会場</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-car"></i>
+                  <span>霊柩車手配</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-clock"></i>
+                  <span>短時間進行</span>
+                </div>
+              </div>
+              
+              <div class="plan-card__pricing">
+                <div class="pricing-tier pricing-tier--alpha">
+                  <div class="pricing-tier__label">アルファ会員様</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">300,000</div>
+                    <div class="price price--tax">（税込330,000円）</div>
+                  </div>
+                </div>
+                <div class="pricing-tier pricing-tier--heart">
+                  <div class="pricing-tier__label">ハートライフ会員様</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">400,000</div>
+                    <div class="price price--tax">（税込440,000円）</div>
+                  </div>
+                </div>
+                <div class="pricing-tier pricing-tier--general">
+                  <div class="pricing-tier__label">一般</div>
+                  <div class="pricing-tier__prices">
+                    <div class="price price--main">500,000</div>
+                    <div class="price price--tax">（税込550,000円）</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta__content">
+          <h2 class="cta__title">24時間いつでもご相談ください</h2>
+          <p class="cta__description">専門スタッフが丁寧にご対応いたします</p>
+          <div class="cta__actions">
+            <a href="tel:0120-000-000" class="btn btn--primary btn--lg">
+              <i class="fas fa-phone"></i>
+              <span>0120-000-000</span>
+            </a>
+            <a href="#contact" class="btn btn--secondary btn--lg">
+              <i class="fas fa-envelope"></i>
+              <span>お問い合わせ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Fixed CTA Sidebar (PC) -->
     <aside
