@@ -1,11 +1,10 @@
 /* =====================================================
    御供花・御供物ページ専用CSS
    ===================================================== */
-
 /* =====================================================
-   Hero Section
+   sub Hero Section
    ===================================================== */
-.flower-hero {
+.sub-hero {
   padding: var(--spacing-24) 0 var(--spacing-20);
   background: linear-gradient(
     135deg,
@@ -16,7 +15,7 @@
   overflow: hidden;
 }
 
-.flower-hero::before {
+.sub-hero::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -31,7 +30,7 @@
   pointer-events: none;
 }
 
-.flower-hero__content {
+.sub-hero__content {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
@@ -39,11 +38,11 @@
   z-index: 1;
 }
 
-.flower-hero__title {
+.sub-hero__title {
   margin-bottom: var(--spacing-8);
 }
 
-.flower-hero__subtitle {
+.sub-hero__subtitle {
   display: block;
   font-size: var(--font-size-lg);
   font-weight: 400;
@@ -54,7 +53,7 @@
   opacity: 0.8;
 }
 
-.flower-hero__maintitle {
+.sub-hero__maintitle {
   display: block;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
@@ -68,13 +67,13 @@
   background-clip: text;
 }
 
-.flower-hero__text {
+.sub-hero__text {
   font-size: var(--font-size-lg);
   color: var(--color-text-secondary);
   line-height: 1.8;
 }
 
-.flower-hero__highlight {
+.sub-hero__highlight {
   display: inline-block;
   margin-top: var(--spacing-4);
   padding: var(--spacing-3) var(--spacing-6);
@@ -89,11 +88,10 @@
   font-weight: 600;
 }
 
-.flower-hero__highlight i {
+.sub-hero__highlight i {
   color: #ffd700;
   margin-right: var(--spacing-2);
 }
-
 /* =====================================================
    Flower Section
    ===================================================== */
