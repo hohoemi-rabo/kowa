@@ -421,16 +421,15 @@
 }
 
 /* =====================================================
-   CTA Section
+   Contact CTA Section
    ===================================================== */
-.flowchart-cta {
+.contact-cta-section {
   padding: var(--spacing-24) 0;
   background: var(--color-background);
 }
 
-/* Contact CTA Section */
 .alpha-club__contact-cta {
-  margin-top: var(--spacing-16);
+  margin-top: 0;
   background: linear-gradient(
     135deg,
     rgba(30, 58, 138, 0.95) 0%,
@@ -610,6 +609,17 @@
 .contact-option__button i:last-child {
   font-size: 0.9em;
   opacity: 0.8;
+}
+
+/* Responsive for Contact CTA */
+@media (max-width: 768px) {
+  .contact-cta__overlay {
+    padding: var(--spacing-12);
+  }
+  .contact-cta__options {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
 }
 
 /* =====================================================

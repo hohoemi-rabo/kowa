@@ -66,11 +66,7 @@
   display: block;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  background: linear-gradient(
-    135deg,
-    #FFD700 0%,
-    #B8860B 100%
-  );
+  background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -101,7 +97,7 @@
 }
 
 .alpha-club__section-title i {
-  color: #FFD700;
+  color: #ffd700;
   font-size: var(--font-size-xl);
 }
 
@@ -125,11 +121,7 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    #FFD700 0%,
-    #B8860B 100%
-  );
+  background: linear-gradient(180deg, #ffd700 0%, #b8860b 100%);
 }
 
 .alpha-benefit:hover {
@@ -143,7 +135,7 @@
 
 .alpha-benefit__number {
   display: inline-block;
-  background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
   color: white;
   padding: var(--spacing-2) var(--spacing-4);
   border-radius: var(--radius-full);
@@ -170,7 +162,11 @@
 .alpha-benefit__icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1) 0%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
   border-radius: var(--radius-xl);
   display: flex;
   align-items: center;
@@ -180,7 +176,7 @@
 
 .alpha-benefit__icon i {
   font-size: 2.5rem;
-  color: #B8860B;
+  color: #b8860b;
 }
 
 .alpha-benefit__text {
@@ -236,7 +232,7 @@
 .alpha-feature__icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -284,9 +280,16 @@
   margin-bottom: 0;
 }
 
-/* Contact CTA Section */
+/* =====================================================
+   Contact CTA Section
+   ===================================================== */
+.contact-cta-section {
+  padding: var(--spacing-24) 0;
+  background: var(--color-background);
+}
+
 .alpha-club__contact-cta {
-  margin-top: var(--spacing-16);
+  margin-top: 0;
   background: linear-gradient(
     135deg,
     rgba(30, 58, 138, 0.95) 0%,
@@ -348,7 +351,7 @@
 }
 
 .contact-cta__title i {
-  color: #FFD700;
+  color: #ffd700;
   font-size: 0.9em;
 }
 
@@ -410,7 +413,7 @@
   gap: var(--spacing-3);
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  color: #FFD700;
+  color: #ffd700;
   text-decoration: none;
   padding: var(--spacing-4) var(--spacing-6);
   background: rgba(255, 215, 0, 0.1);
@@ -424,7 +427,7 @@
   background: rgba(255, 215, 0, 0.2);
   border-color: rgba(255, 215, 0, 0.6);
   transform: scale(1.05);
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .contact-option__phone i {
@@ -435,7 +438,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-3);
-  background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
   color: white;
   text-decoration: none;
   padding: var(--spacing-5) var(--spacing-8);
@@ -448,7 +451,7 @@
 }
 
 .contact-option__button:hover {
-  background: linear-gradient(135deg, #B8860B 0%, #8B6914 100%);
+  background: linear-gradient(135deg, #b8860b 0%, #8b6914 100%);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
   color: white;
@@ -468,6 +471,16 @@
   opacity: 0.8;
 }
 
+/* Responsive for Contact CTA */
+@media (max-width: 768px) {
+  .contact-cta__overlay {
+    padding: var(--spacing-12);
+  }
+  .contact-cta__options {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
