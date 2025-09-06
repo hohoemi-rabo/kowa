@@ -763,6 +763,39 @@
   line-height: 1.6;
 }
 
+/* Plan Includes Section */
+.plan-includes {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.plan-includes__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.plan-includes__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.plan-includes__image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+}
+
+.plan-includes__image:hover {
+  transform: scale(1.02);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
@@ -827,6 +860,10 @@
   .recommendation__points {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .plan-includes__content {
     padding: 0 1rem;
   }
 }
