@@ -188,8 +188,19 @@
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
-.plan-card--premium .plan-card__header {
+/* ippansou.html用の元の色設定 */
+.page-ippansou .plan-card--premium {
+  border-color: #ea580c;
+}
+.page-ippansou .plan-card--premium .plan-card__header {
   background: linear-gradient(135deg, #fef3c7 0%, #f59e0b 20%, #ea580c 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* family.html用の新しい色設定 */
+.page-family .plan-card--premium .plan-card__header {
+  background: linear-gradient(135deg, #ecfdf5 0%, #10b981 20%, #059669 100%);
   position: relative;
   overflow: hidden;
 }
@@ -228,8 +239,35 @@
 }
 
 /* 花水木プラン - ブルー系 */
-.plan-card--standard .plan-card__header {
+/* ippansou.html用の元の色設定 */
+.page-ippansou .plan-card--standard {
+  border-color: #1d4ed8;
+}
+.page-ippansou .plan-card--standard .plan-card__header {
   background: linear-gradient(135deg, #dbeafe 0%, #3b82f6 20%, #1d4ed8 100%);
+  position: relative;
+  overflow: hidden;
+}
+.page-ippansou .plan-card--basic {
+  border-color: #7c3aed;
+}
+.page-ippansou .plan-card--basic .plan-card__header {
+  background: linear-gradient(135deg, #f3e8ff 0%, #8b5cf6 20%, #7c3aed 100%);
+  position: relative;
+  overflow: hidden;
+}
+.page-ippansou .plan-card--minimal {
+  border-color: #1f2937;
+}
+.page-ippansou .plan-card--minimal .plan-card__header {
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 20%, #94a3b8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* family.html用の新しい色設定 */
+.page-family .plan-card--standard .plan-card__header {
+  background: linear-gradient(135deg, #fdf2f8 0%, #ec4899 20%, #db2777 100%);
   position: relative;
   overflow: hidden;
 }
@@ -383,6 +421,16 @@
   position: relative;
 }
 
+.plan-card--premium .pricing-tier--alpha {
+  background: linear-gradient(135deg, #05966910 0%, #05966920 100%);
+  border-color: #059669;
+}
+
+.plan-card--standard .pricing-tier--alpha {
+  background: linear-gradient(135deg, #db277710 0%, #db277720 100%);
+  border-color: #db2777;
+}
+
 .pricing-tier--alpha::before {
   content: '最安';
   position: absolute;
@@ -394,6 +442,46 @@
   border-radius: 4px;
   font-size: 0.7rem;
   font-weight: 700;
+}
+
+/* ippansou.html用の最安バッジ色 */
+.page-ippansou .plan-card--premium .pricing-tier--alpha {
+  background: linear-gradient(135deg, #ea580c10 0%, #ea580c20 100%);
+  border-color: #ea580c;
+}
+.page-ippansou .plan-card--premium .pricing-tier--alpha::before {
+  background: #ea580c;
+}
+
+.page-ippansou .plan-card--standard .pricing-tier--alpha {
+  background: linear-gradient(135deg, #1d4ed810 0%, #1d4ed820 100%);
+  border-color: #1d4ed8;
+}
+.page-ippansou .plan-card--standard .pricing-tier--alpha::before {
+  background: #1d4ed8;
+}
+.page-ippansou .plan-card--basic .pricing-tier--alpha {
+  background: linear-gradient(135deg, #7c3aed10 0%, #7c3aed20 100%);
+  border-color: #7c3aed;
+}
+.page-ippansou .plan-card--basic .pricing-tier--alpha::before {
+  background: #7c3aed;
+}
+.page-ippansou .plan-card--minimal .pricing-tier--alpha {
+  background: linear-gradient(135deg, #1f293710 0%, #1f293720 100%);
+  border-color: #1f2937;
+}
+.page-ippansou .plan-card--minimal .pricing-tier--alpha::before {
+  background: #1f2937;
+}
+
+/* family.html用の最安バッジ色 */
+.page-family .plan-card--premium .pricing-tier--alpha::before {
+  background: #059669;
+}
+
+.page-family .plan-card--standard .pricing-tier--alpha::before {
+  background: #db2777;
 }
 
 .pricing-tier__label {
@@ -429,6 +517,30 @@
   font-size: 1.25rem;
   color: #ea580c;
   font-weight: 800;
+}
+
+/* ippansou.html用の価格色 */
+.page-ippansou .plan-card--premium .price--main {
+  color: #ea580c;
+}
+
+.page-ippansou .plan-card--standard .price--main {
+  color: #1d4ed8;
+}
+.page-ippansou .plan-card--basic .price--main {
+  color: #7c3aed;
+}
+.page-ippansou .plan-card--minimal .price--main {
+  color: #1f2937;
+}
+
+/* family.html用の価格色 */
+.page-family .plan-card--premium .price--main {
+  color: #059669;
+}
+
+.page-family .plan-card--standard .price--main {
+  color: #db2777;
 }
 
 .price--main::after {
@@ -754,6 +866,109 @@
   font-size: 2rem;
   color: #667eea;
   margin-bottom: 0.5rem;
+}
+
+/* Plan Card Services (カード内のサービスアイコン) */
+.plan-card__services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  justify-content: center;
+}
+
+.plan-card__services .service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1rem 0.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  flex: 0 0 calc(33.333% - 0.5rem);
+  max-width: 75px;
+  min-width: 60px;
+  transition: all 0.2s ease;
+}
+
+.plan-card__services .service-item:hover {
+  background: linear-gradient(135deg, #ea580c10 0%, #ea580c20 100%);
+  transform: translateY(-2px);
+}
+
+.plan-card__services .service-item i {
+  font-size: 1.2rem;
+  color: #ea580c;
+}
+
+/* ippansou.html用のサービスアイコン色 */
+.page-ippansou .plan-card--premium .plan-card__services .service-item i {
+  color: #ea580c;
+}
+.page-ippansou .plan-card--standard .plan-card__services .service-item i {
+  color: #1d4ed8;
+}
+
+/* family.html用のサービスアイコン色 */
+.page-family .plan-card--premium .plan-card__services .service-item i {
+  color: #059669;
+}
+.page-family .plan-card--standard .plan-card__services .service-item i {
+  color: #db2777;
+}
+
+.plan-card__services .service-item span {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 600;
+  text-align: center;
+}
+
+.plan-card__services .service-arrow {
+  display: flex;
+  align-items: center;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  margin: 0 -0.25rem;
+}
+
+/* Plan Card Included Section */
+.plan-card__included {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan-card__included-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.plan-card__included-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.plan-card--premium .plan-card__included-image {
+  border: 2px solid #059669;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.2);
+}
+
+.plan-card--standard .plan-card__included-image {
+  border: 2px solid #db2777;
+  box-shadow: 0 2px 8px rgba(219, 39, 119, 0.2);
 }
 
 .flow-item__title {
