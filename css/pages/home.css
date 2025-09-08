@@ -643,7 +643,7 @@
 }
 
 /* お知らせセクション */
-.news-section {
+/* .news-section {
   padding: var(--spacing-16) 0;
   background: var(--color-bg-secondary);
 }
@@ -775,7 +775,7 @@
   .news-item__date {
     min-width: auto;
   }
-}
+} */
 
 /* =====================================================
    Plans Section
@@ -2828,6 +2828,32 @@
   font-size: var(--font-size-lg);
   color: var(--color-text-muted);
   margin-bottom: var(--spacing-8);
+}
+
+.faq-contact__certification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-6);
+  padding: var(--spacing-4) var(--spacing-8);
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, rgba(255, 193, 7, 0.02) 100%);
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-contact__certification i {
+  font-size: var(--font-size-2xl);
+  color: #ffc107;
+}
+
+.faq-contact__certification-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* =====================================================
