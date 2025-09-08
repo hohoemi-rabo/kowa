@@ -148,6 +148,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-8);
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .flower-grid--two {
@@ -220,8 +223,17 @@
 .flower-card__name {
   font-size: var(--font-size-xl);
   font-weight: 700;
-  color: var(--color-text);
+  color: white;
   margin-bottom: var(--spacing-3);
+  text-align: center;
+  background-color: #dc2626;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-3) auto;
 }
 
 .flower-card__description {
@@ -253,7 +265,7 @@
 .price-member {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .price-label {
@@ -265,10 +277,11 @@
 }
 
 .price-member .price-label {
-  color: #b8860b;
+  color: var(--color-text-muted);
   display: flex;
   align-items: center;
   gap: var(--spacing-1);
+  margin-right: var(--spacing-3);
 }
 
 .price-member .price-label i {
@@ -282,8 +295,9 @@
 }
 
 .price-member .price-amount {
-  font-size: var(--font-size-2xl);
-  color: #b8860b;
+  font-size: var(--font-size-3xl);
+  color: var(--color-text);
+  font-weight: 900;
 }
 
 .price-regular .price-amount {
@@ -298,6 +312,67 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
   margin-left: var(--spacing-1);
+}
+
+.price-including-tax {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  margin-top: 2px;
+}
+
+.price-including-tax .price-amount {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+/* Flower Grid Section Header */
+.flower-grid__section-header {
+  grid-column: 1 / -1;
+  margin: var(--spacing-8) 0 var(--spacing-4) 0;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-6);
+}
+
+.flower-grid__section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  position: relative;
+  padding: var(--spacing-4) var(--spacing-8);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(30, 58, 138, 0.2);
+}
+
+.flower-grid__section-title i {
+  font-size: var(--font-size-xl);
+}
+
+/* Section Note */
+.flower-section__note {
+  margin-top: var(--spacing-8);
+  padding: var(--spacing-4);
+  background: var(--color-background-alt);
+  border-radius: var(--radius-md);
+}
+
+.flower-section__note p {
+  margin: 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-align: center;
 }
 
 /* Button */
