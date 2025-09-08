@@ -11,7 +11,7 @@
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
+  animation: fadeIn 1.8s ease-in-out forwards;
 }
 
 /* フェードイン＆アップ */

@@ -176,6 +176,27 @@
   color: #00c300;
 }
 
+/* Member item styling */
+.fixed-sidebar__item--member {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 193, 7, 0.08) 0%,
+    rgba(255, 193, 7, 0.03) 100%
+  );
+}
+
+.fixed-sidebar__item--member:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 193, 7, 0.15) 0%,
+    rgba(255, 193, 7, 0.08) 100%
+  );
+}
+
+.fixed-sidebar__item--member .fixed-sidebar__icon {
+  color: #ffc107;
+}
+
 /* Document item styling */
 .fixed-sidebar__item--document .fixed-sidebar__icon {
   color: var(--color-accent-600);

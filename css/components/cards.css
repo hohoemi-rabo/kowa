@@ -45,6 +45,9 @@
   overflow: hidden;
   transition: var(--transition-all);
   position: relative;
+  /* アニメーション前の初期状態 */
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .plan-card:hover {

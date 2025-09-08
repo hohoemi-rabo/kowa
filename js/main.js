@@ -2,6 +2,11 @@
  * メモリアルホール光和 - メインJavaScript
  */
 
+// ブラウザのスクロール復元を無効化
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 // DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
@@ -18,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof initCTAHighlight === 'function') {
         initCTAHighlight();
     }
-    if (typeof initHeroAnimations === 'function') {
-        initHeroAnimations();
-    }
+    // if (typeof initHeroAnimations === 'function') {
+    //     initHeroAnimations();
+    // }
     if (typeof initPlanCardAnimations === 'function') {
         initPlanCardAnimations();
     }
@@ -342,11 +347,9 @@ function initScrollToTop() {
         // デバッグ情報
         console.log('Sidebar initialized');
         
-        // スクロール位置に応じて表示/非表示（最適化版）
+        // スクロール位置に応じてサイドバーを表示/非表示
         const handleScroll = throttle(() => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
             
             // 300px以上スクロールしたらサイドバー全体を表示
             if (scrollTop > 300) {
@@ -361,12 +364,6 @@ function initScrollToTop() {
                     console.log('Removing show class from sidebar');
                     sidebar.classList.remove('show');
                 }
-            }
-            
-            // スクロール進捗に基づいて視覚的フィードバック
-            const scrollProgress = (scrollTop / (documentHeight - windowHeight)) * 100;
-            if (scrollProgress > 10) {
-                backToTopBtn.style.setProperty('--scroll-progress', `${Math.min(scrollProgress, 100)}%`);
             }
         }, 100);
         
@@ -607,28 +604,27 @@ function initCTAHighlight() {
         });
     }, 10000); // 10秒後に実行
     
-    // スクロール深度に応じたCTA強調
-    let hasHighlighted = false;
-    window.addEventListener('scroll', throttle(() => {
-        if (!hasHighlighted) {
-            const scrollDepth = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    // スクロール深度に応じたCTA強調は無効化
+    // window.addEventListener('scroll', throttle(() => {
+    //     if (!hasHighlighted) {
+    //         const scrollDepth = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             
-            if (scrollDepth > 50) { // 50%スクロールしたら
-                const ctaButtons = document.querySelectorAll('.fixed-sidebar__item, .fixed-bottom-bar__item');
-                ctaButtons.forEach(button => {
-                    button.classList.add('scroll-highlight');
-                });
-                hasHighlighted = true;
+    //         if (scrollDepth > 50) { // 50%スクロールしたら
+    //             const ctaButtons = document.querySelectorAll('.fixed-sidebar__item, .fixed-bottom-bar__item');
+    //             ctaButtons.forEach(button => {
+    //                 button.classList.add('scroll-highlight');
+    //             });
+    //             hasHighlighted = true;
                 
-                // 3秒後に停止
-                setTimeout(() => {
-                    ctaButtons.forEach(button => {
-                        button.classList.remove('scroll-highlight');
-                    });
-                }, 3000);
-            }
-        }
-    }, 500), { passive: true });
+    //             // 3秒後に停止
+    //             setTimeout(() => {
+    //                 ctaButtons.forEach(button => {
+    //                     button.classList.remove('scroll-highlight');
+    //                 });
+    //             }, 3000);
+    //         }
+    //     }
+    // }, 500), { passive: true });
 }
 
 /**
@@ -636,7 +632,6 @@ function initCTAHighlight() {
  */
 function initHeroAnimations() {
     const heroElements = {
-        main: document.querySelector('.hero'),
         title: document.querySelector('.hero__title'),
         subtitle: document.querySelector('.hero__subtitle'),
         description: document.querySelector('.hero__description'),
@@ -674,51 +669,34 @@ function initHeroAnimations() {
         }
     });
 
-    // パララックス効果（パフォーマンス重視版）
-    let ticking = false;
-    function updateParallax() {
-        const scrolled = window.pageYOffset;
-        const heroHeight = heroElements.main ? heroElements.main.offsetHeight : 0;
-        
-        if (scrolled < heroHeight) {
-            const rate = scrolled * -0.5;
-            if (heroElements.main) {
-                heroElements.main.style.transform = `translate3d(0, ${rate}px, 0)`;
-            }
-        }
-        ticking = false;
-    }
-
-    function requestParallaxUpdate() {
-        if (!ticking && heroElements.main) {
-            requestAnimationFrame(updateParallax);
-            ticking = true;
-        }
-    }
-
-    // スクロール時のパララックス効果
-    window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
-
-    // レスポンシブ対応: モバイルではパララックスを無効化
-    function toggleParallaxOnResize() {
-        if (isMobile()) {
-            window.removeEventListener('scroll', requestParallaxUpdate);
-            if (heroElements.main) {
-                heroElements.main.style.transform = 'none';
-            }
-        } else {
-            window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
-        }
-    }
-
-    window.addEventListener('resize', debounce(toggleParallaxOnResize, 250));
-    toggleParallaxOnResize(); // 初期設定
+    // パララックス効果は hero 要素のアニメーションと同様に削除
 }
 
 /**
  * プランカードのスクロールアニメーション
  */
 function initPlanCardAnimations() {
+    // セクションタイトルのアニメーション
+    const planSectionTitle = document.querySelector('#plans-title');
+    if (planSectionTitle) {
+        planSectionTitle.style.opacity = '0';
+        planSectionTitle.style.transform = 'translateY(20px)';
+        
+        const titleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    titleObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '-50px 0px'
+        });
+        
+        titleObserver.observe(planSectionTitle);
+    }
+    
     const planCards = document.querySelectorAll('.plan-card');
     
     if (planCards.length === 0) return;
@@ -857,6 +835,27 @@ function openLightbox(imageSrc, imageAlt) {
  * 施設セクションのアニメーション
  */
 function initFacilityAnimations() {
+    // セクションタイトルのアニメーション
+    const facilitiesSectionTitle = document.querySelector('#facilities-title');
+    if (facilitiesSectionTitle) {
+        facilitiesSectionTitle.style.opacity = '0';
+        facilitiesSectionTitle.style.transform = 'translateY(20px)';
+        
+        const titleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    titleObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '-50px 0px'
+        });
+        
+        titleObserver.observe(facilitiesSectionTitle);
+    }
+    
     // ホールカードのアニメーション
     const hallCards = document.querySelectorAll('.hall-card');
     const equipmentItems = document.querySelectorAll('.equipment-item');
@@ -932,7 +931,7 @@ function initFacilityAnimations() {
     const titleObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
+                entry.target.classList.add('animate-fade-in-up');
                 titleObserver.unobserve(entry.target);
             }
         });
@@ -951,6 +950,27 @@ function initFacilityAnimations() {
 
 // 葬儀情報セクションの初期化
 function initFuneralInfo() {
+    // セクションタイトルのアニメーション
+    const funeralInfoTitle = document.querySelector('#funeral-info-title');
+    if (funeralInfoTitle) {
+        funeralInfoTitle.style.opacity = '0';
+        funeralInfoTitle.style.transform = 'translateY(20px)';
+        
+        const titleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    titleObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '-50px 0px'
+        });
+        
+        titleObserver.observe(funeralInfoTitle);
+    }
+    
     const timelineItems = document.querySelectorAll('.timeline-flow__item');
     const mannerCards = document.querySelectorAll('.manner-card');
     const faqItems = document.querySelectorAll('.faq-item');
@@ -1193,6 +1213,27 @@ function initCompanyInfo() {
 
 // お客様の声セクションの初期化
 function initCustomerVoices() {
+    // セクションタイトルのアニメーション
+    const customerVoicesTitle = document.querySelector('#customer-voices-title');
+    if (customerVoicesTitle) {
+        customerVoicesTitle.style.opacity = '0';
+        customerVoicesTitle.style.transform = 'translateY(20px)';
+        
+        const titleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    titleObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '-50px 0px'
+        });
+        
+        titleObserver.observe(customerVoicesTitle);
+    }
+    
     const voiceCards = document.querySelectorAll('.voice-card');
     
     if (voiceCards.length === 0) return;
