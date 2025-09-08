@@ -1,4 +1,4 @@
-/* Ippansou Page Styles */
+/* Plan Page Styles */
 
 /* =====================================================
    sub Hero Section
@@ -212,7 +212,12 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
   animation: shimmer 3s infinite;
 }
 
@@ -227,13 +232,13 @@
 
 .plan-card--premium .plan-card__title {
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
 }
 
 .plan-card--premium .plan-card__subtitle {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   position: relative;
   z-index: 2;
 }
@@ -279,19 +284,24 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
   animation: shimmer 3s infinite;
 }
 
 .plan-card--standard .plan-card__title {
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
 }
 
 .plan-card--standard .plan-card__subtitle {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   position: relative;
   z-index: 2;
 }
@@ -310,19 +320,24 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
   animation: shimmer 3s infinite;
 }
 
 .plan-card--basic .plan-card__title {
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
 }
 
 .plan-card--basic .plan-card__subtitle {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   position: relative;
   z-index: 2;
 }
@@ -1191,13 +1206,13 @@
       transform: translateY(5px) rotate(90deg);
     }
   }
-  
+
   .recommendation__points {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 0 1rem;
   }
-  
+
   .plan-includes__content {
     padding: 0 1rem;
   }
