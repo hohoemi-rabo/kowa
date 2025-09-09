@@ -120,6 +120,26 @@
   color: #00c300;
 }
 
+.fixed-bottom-bar__item--member {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 193, 7, 0.05) 0%,
+    rgba(255, 193, 7, 0.02) 100%
+  );
+}
+
+.fixed-bottom-bar__item--member:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 193, 7, 0.15) 0%,
+    rgba(255, 193, 7, 0.08) 100%
+  );
+}
+
+.fixed-bottom-bar__item--member .fixed-bottom-bar__icon {
+  color: #ffc107;
+}
+
 .fixed-bottom-bar__item--document .fixed-bottom-bar__icon {
   color: var(--color-accent-600);
 }

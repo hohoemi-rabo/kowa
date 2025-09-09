@@ -2,9 +2,9 @@
  * メモリアルホール光和 - メインJavaScript
  */
 
-// ブラウザのスクロール復元を無効化
+// ブラウザのスクロール復元を有効化
 if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
+    history.scrollRestoration = 'auto';
 }
 
 // DOMContentLoaded event listener
