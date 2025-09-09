@@ -43,6 +43,16 @@
 /* Main Column */
 .footer__column--main {
   padding-right: var(--spacing-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo-image {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: var(--spacing-4);
 }
 
 .footer__brand {
