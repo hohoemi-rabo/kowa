@@ -100,7 +100,7 @@
             "logo": "https://memorial-kowa.example.com/images/logo.png",
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+81-0000-00-0000",
+              "telephone": "+81-0120-077-508",
               "contactType": "customer service",
               "availableLanguage": "Japanese",
               "areaServed": "JP"
@@ -124,7 +124,7 @@
             "name": "メモリアルホール光和",
             "description": "長野県飯田市の葬儀場。「ご葬儀からご創儀へ」をコンセプトに、心を込めた葬儀サービスを提供しています。",
             "url": "https://memorial-kowa.example.com/",
-            "telephone": "+81-0000-00-0000",
+            "telephone": "+81-0120-077-508",
             "priceRange": "¥¥¥",
             "address": {
               "@type": "PostalAddress",
@@ -239,12 +239,19 @@
           <!-- Logo -->
           <div class="header__logo">
             <a
-              href="/"
+              href="index.html"
               class="logo"
               aria-label="メモリアルホール光和 ホームページ"
             >
-              <span class="logo__main">メモリアルホール</span>
-              <span class="logo__sub">光和</span>
+              <img
+                src="images/logo.png"
+                alt="メモリアルホール光和ロゴ"
+                class="logo__image"
+              />
+              <div class="logo__text">
+                <span class="logo__main">メモリアルホール</span>
+                <span class="logo__sub">光和</span>
+              </div>
             </a>
           </div>
 
@@ -257,7 +264,7 @@
           >
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="/" class="nav__link" aria-current="page">
+                <a href="index.html" class="nav__link" aria-current="page">
                   <i class="fas fa-home nav__icon" aria-hidden="true"></i>
                   <span>トップ</span>
                 </a>
@@ -298,6 +305,16 @@
                   aria-labelledby="funeral-info"
                 >
                   <li class="dropdown__item" role="none">
+                    <a
+                      href="soudan.html"
+                      class="dropdown__link"
+                      role="menuitem"
+                    >
+                      <i class="fas fa-user-tie" aria-hidden="true"></i>
+                      <span>事前相談</span>
+                    </a>
+                  </li>
+                  <li class="dropdown__item" role="none">
                     <a href="#flow" class="dropdown__link" role="menuitem">
                       <i class="fas fa-route" aria-hidden="true"></i>
                       <span>葬儀の流れ</span>
@@ -317,58 +334,20 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav__item nav__item--dropdown">
-                <button
-                  class="nav__link nav__dropdown-toggle"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  data-dropdown="company"
-                >
+              <li class="nav__item">
+                <a href="flower.html" class="nav__link">
+                  <i class="fas fa-seedling nav__icon" aria-hidden="true"></i>
+                  <span>供花・生花</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="company.html" class="nav__link">
                   <i class="fas fa-users nav__icon" aria-hidden="true"></i>
                   <span>会社案内</span>
-                  <i
-                    class="fas fa-chevron-down nav__arrow"
-                    aria-hidden="true"
-                  ></i>
-                </button>
-                <ul
-                  class="dropdown"
-                  id="company-dropdown"
-                  role="menu"
-                  aria-labelledby="company"
-                >
-                  <li class="dropdown__item" role="none">
-                    <a
-                      href="#company-info"
-                      class="dropdown__link"
-                      role="menuitem"
-                    >
-                      <i class="fas fa-building-columns" aria-hidden="true"></i>
-                      <span>企業情報</span>
-                    </a>
-                  </li>
-                  <li class="dropdown__item" role="none">
-                    <a href="#staff" class="dropdown__link" role="menuitem">
-                      <i class="fas fa-user-tie" aria-hidden="true"></i>
-                      <span>スタッフ紹介</span>
-                    </a>
-                  </li>
-                </ul>
+                </a>
               </li>
             </ul>
           </nav>
-
-          <!-- Mobile Menu Toggle -->
-          <button
-            class="mobile-menu-toggle"
-            aria-label="メニューを開く"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <span class="mobile-menu-toggle__line"></span>
-            <span class="mobile-menu-toggle__line"></span>
-            <span class="mobile-menu-toggle__line"></span>
-          </button>
         </div>
       </div>
 
@@ -390,7 +369,7 @@
         </div>
         <ul class="mobile-menu__list">
           <li class="mobile-menu__item">
-            <a href="/" class="mobile-menu__link" aria-current="page">
+            <a href="index.html" class="mobile-menu__link" aria-current="page">
               <i class="fas fa-home" aria-hidden="true"></i>
               <span>トップ</span>
             </a>
@@ -422,6 +401,12 @@
             </button>
             <ul class="mobile-submenu" id="funeral-submenu">
               <li class="mobile-submenu__item">
+                <a href="soudan.html" class="mobile-submenu__link">
+                  <i class="fas fa-user-tie" aria-hidden="true"></i>
+                  <span>事前相談</span>
+                </a>
+              </li>
+              <li class="mobile-submenu__item">
                 <a href="#flow" class="mobile-submenu__link">
                   <i class="fas fa-route" aria-hidden="true"></i>
                   <span>葬儀の流れ</span>
@@ -441,46 +426,30 @@
               </li>
             </ul>
           </li>
-          <li class="mobile-menu__item mobile-menu__item--expandable">
-            <button
-              class="mobile-menu__link mobile-menu__expand-toggle"
-              aria-expanded="false"
-              data-target="company-submenu"
-            >
+          <li class="mobile-menu__item">
+            <a href="flower.html" class="mobile-menu__link">
+              <i class="fas fa-seedling" aria-hidden="true"></i>
+              <span>供花・生花</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="company.html" class="mobile-menu__link">
               <i class="fas fa-users" aria-hidden="true"></i>
               <span>会社案内</span>
-              <i
-                class="fas fa-chevron-down mobile-menu__arrow"
-                aria-hidden="true"
-              ></i>
-            </button>
-            <ul class="mobile-submenu" id="company-submenu">
-              <li class="mobile-submenu__item">
-                <a href="#company-info" class="mobile-submenu__link">
-                  <i class="fas fa-building-columns" aria-hidden="true"></i>
-                  <span>企業情報</span>
-                </a>
-              </li>
-              <li class="mobile-submenu__item">
-                <a href="#staff" class="mobile-submenu__link">
-                  <i class="fas fa-user-tie" aria-hidden="true"></i>
-                  <span>スタッフ紹介</span>
-                </a>
-              </li>
-            </ul>
+            </a>
           </li>
         </ul>
 
         <!-- Mobile Menu CTA -->
         <div class="mobile-menu__cta">
-          <a href="tel:0000-00-0000" class="btn btn--primary btn--lg">
+          <a href="tel:0120-077-508" class="btn btn--primary btn--lg">
             <i class="fas fa-phone" aria-hidden="true"></i>
             <span>今すぐ相談</span>
           </a>
-          <a href="#contact" class="btn btn--secondary btn--lg">
-            <i class="fas fa-file-alt" aria-hidden="true"></i>
-            <span>資料請求</span>
-          </a>
+          <!-- <a href="#contact" class="btn btn--secondary btn--lg">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <span>資料請求</span>
+                </a> -->
         </div>
       </nav>
     </header>
@@ -698,9 +667,9 @@
                     </h4>
                     <div class="contact-option__content">
                       <p class="contact-option__hours">24時間365日受付</p>
-                      <a href="tel:0000-00-0000" class="contact-option__phone">
+                      <a href="tel:0120-077-508" class="contact-option__phone">
                         <i class="fas fa-phone"></i>
-                        0000-00-0000
+                        0120-077-508
                       </a>
                     </div>
                   </div>
@@ -722,7 +691,6 @@
         </section>
       </div>
     </section>
-
     <!-- Fixed CTA Sidebar (PC) -->
     <aside
       class="fixed-sidebar"
@@ -734,9 +702,9 @@
       </div>
 
       <a
-        href="tel:0000-00-0000"
+        href="tel:0120-077-508"
         class="fixed-sidebar__item fixed-sidebar__item--phone"
-        aria-label="今すぐお電話 0000-00-0000"
+        aria-label="今すぐお電話 0120-077-508"
       >
         <div class="fixed-sidebar__icon">
           <i class="fas fa-phone"></i>
@@ -744,21 +712,21 @@
         </div>
         <div class="fixed-sidebar__content">
           <span class="fixed-sidebar__label">電話相談</span>
-          <span class="fixed-sidebar__phone">0000-00-0000</span>
+          <span class="fixed-sidebar__phone">0120-077-508</span>
         </div>
       </a>
 
       <a
-        href="https://line.me/R/ti/p/@example"
-        class="fixed-sidebar__item fixed-sidebar__item--line"
-        aria-label="LINEで相談"
+        href="member.html"
+        class="fixed-sidebar__item fixed-sidebar__item--member"
+        aria-label="会員登録"
       >
         <div class="fixed-sidebar__icon">
-          <i class="fab fa-line"></i>
+          <i class="fas fa-crown"></i>
         </div>
         <div class="fixed-sidebar__content">
-          <span class="fixed-sidebar__label">LINE相談</span>
-          <span class="fixed-sidebar__sub">気軽に相談</span>
+          <span class="fixed-sidebar__label">会員登録</span>
+          <span class="fixed-sidebar__sub">特典多数</span>
         </div>
       </a>
 
@@ -819,7 +787,7 @@
       aria-label="モバイル固定アクションバー"
     >
       <a
-        href="tel:0000-00-0000"
+        href="tel:0120-077-508"
         class="fixed-bottom-bar__item fixed-bottom-bar__item--phone"
         aria-label="今すぐ電話"
       >
@@ -831,14 +799,14 @@
       </a>
 
       <a
-        href="https://line.me/R/ti/p/@example"
-        class="fixed-bottom-bar__item fixed-bottom-bar__item--line"
-        aria-label="LINEで相談"
+        href="member.html"
+        class="fixed-bottom-bar__item fixed-bottom-bar__item--member"
+        aria-label="会員登録"
       >
         <div class="fixed-bottom-bar__icon">
-          <i class="fab fa-line"></i>
+          <i class="fas fa-crown"></i>
         </div>
-        <span class="fixed-bottom-bar__label">LINE</span>
+        <span class="fixed-bottom-bar__label">会員登録</span>
       </a>
 
       <a
@@ -871,35 +839,39 @@
             <!-- Company Info -->
             <div class="footer__column footer__column--main">
               <div class="footer__logo">
-                <h2 class="footer__brand">メモリアルホール光和</h2>
+                <img
+                  src="images/logo_2.png"
+                  alt="メモリアルホール光和ロゴ"
+                  class="footer__logo-image"
+                />
               </div>
               <p class="footer__description">
                 心を込めて、最期のお別れをお手伝いいたします。<br />
                 24時間365日、皆様のご相談をお待ちしております。
               </p>
               <div class="footer__contact-info">
-                <a href="tel:0120-000-000" class="footer__phone">
+                <a href="tel:0120-077-508" class="footer__phone">
                   <i class="fas fa-phone-alt"></i>
                   <span>
-                    <strong>0120-000-000</strong>
+                    <strong>0120-077-508</strong>
                     <small>24時間365日受付</small>
                   </span>
                 </a>
               </div>
-              <div class="footer__social">
-                <a href="#" class="footer__social-link" aria-label="Facebook">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="footer__social-link" aria-label="Twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="footer__social-link" aria-label="Instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="footer__social-link" aria-label="LINE">
-                  <i class="fab fa-line"></i>
-                </a>
-              </div>
+              <!-- <div class="footer__social">
+                            <a href="#" class="footer__social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="LINE">
+                                <i class="fab fa-line"></i>
+                            </a>
+                        </div> -->
             </div>
 
             <!-- Services -->
@@ -913,8 +885,7 @@
                 <li><a href="#facilities">式場・施設案内</a></li>
                 <li><a href="#flow">葬儀の流れ</a></li>
                 <li><a href="#manner">葬儀のマナー</a></li>
-                <li><a href="#emergency">緊急の方はこちら</a></li>
-                <li><a href="#consultation">事前相談</a></li>
+                <li><a href="soudan.html">事前相談</a></li>
               </ul>
             </div>
 
@@ -925,12 +896,11 @@
                 会社情報
               </h3>
               <ul class="footer__links">
-                <li><a href="#company-info">会社概要</a></li>
-                <li><a href="#staff">スタッフ紹介</a></li>
-                <li><a href="#access">アクセス・地図</a></li>
-                <li><a href="#news">お知らせ</a></li>
-                <li><a href="#recruit">採用情報</a></li>
-                <li><a href="#privacy">プライバシーポリシー</a></li>
+                <li><a href="company.html">会社概要</a></li>
+                <li><a href="company.html">スタッフ紹介</a></li>
+                <li><a href="company.html">アクセス・地図</a></li>
+                <!-- <li><a href="#news">お知らせ</a></li> -->
+                <li><a href="privacy.html">プライバシーポリシー</a></li>
               </ul>
             </div>
 
@@ -943,9 +913,9 @@
               <ul class="footer__links">
                 <li><a href="#faq">よくあるご質問</a></li>
                 <li><a href="#customer-voices">お客様の声</a></li>
-                <li><a href="#blog">葬儀の豆知識</a></li>
+                <li><a href="#manner">葬儀の豆知識</a></li>
                 <li><a href="#contact">お問い合わせ</a></li>
-                <li><a href="#document">資料請求</a></li>
+                <li><a href="#contact">資料請求</a></li>
                 <li><a href="#sitemap">サイトマップ</a></li>
               </ul>
             </div>
@@ -967,7 +937,7 @@
             <div class="footer__feature">
               <i class="fas fa-award"></i>
               <div>
-                <strong>厚生労働省認定</strong>
+                <strong>経済産業大臣認可</strong>
                 <span>優良葬祭事業者</span>
               </div>
             </div>
@@ -994,10 +964,10 @@
         <div class="container">
           <div class="footer__bottom-content">
             <div class="footer__copyright">
-              <p>&copy; 2024 メモリアルホール光和. All rights reserved.</p>
+              <p>&copy; 2025 メモリアルホール光和. All rights reserved.</p>
               <p class="footer__address">
                 <i class="fas fa-map-marker-alt"></i>
-                〒123-4567 東京都渋谷区○○1-2-3
+                〒395-0821 長野県飯田市松尾新井6544-1
               </p>
             </div>
             <div class="footer__certifications">
@@ -1007,7 +977,6 @@
         </div>
       </div>
     </footer>
-
     <!-- JavaScript - Deferred Loading -->
     <script src="js/main.js" defer></script>
   </body>
