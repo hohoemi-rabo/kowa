@@ -49,6 +49,27 @@
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/components/animations.css'); ?>">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/components/accessibility.css'); ?>">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/pages/home.css'); ?>">
+
+    <!-- 葬儀プランページ -->
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/pages/plan.css'); ?>">
+
+    <!-- 供花・生花ページ -->
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/pages/flower.css'); ?>" />
+
+    <!-- 会員登録ページ -->
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/pages/member.css'); ?>" />
+
+    <!-- 相談ページ -->
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/pages/soudan.css'); ?>" />
+
+    <!-- 会社案内ページ -->
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/pages/company.css'); ?>" />
+
+    <!-- お問い合わせページ -->
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/pages/contact.css'); ?>" />
+
+    <!-- プライバシーポリシーページ -->
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/pages/privacy.css'); ?>" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
