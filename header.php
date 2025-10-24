@@ -168,13 +168,7 @@
 </head>
 <body>
     <?php wp_body_open(); ?>
-    <!-- Accessibility Controls -->
-    <div class="accessibility-controls" role="toolbar" aria-label="アクセシビリティ設定">
-        <button class="accessibility-btn motion-toggle-btn" aria-label="アニメーションを停止/再生する" aria-pressed="false">
-            <i class="fas fa-pause" aria-hidden="true"></i>
-        </button>
-    </div>
-    
+
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
@@ -193,12 +187,12 @@
                 <!-- Desktop Navigation -->
                 <nav id="nav" class="header__nav" role="navigation" aria-label="メインナビゲーション">
                     <ul class="nav__list">
-                        <li class="nav__item">
+                        <!-- <li class="nav__item">
                             <a href="<?php echo home_url('/') ?>" class="nav__link" aria-current="page">
                                 <i class="fas fa-home nav__icon" aria-hidden="true"></i>
                                 <span>トップ</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav__item">
                             <a href="<?php echo home_url('/#plans'); ?>" class="nav__link">
                                 <i class="fas fa-list-alt nav__icon" aria-hidden="true"></i>
@@ -277,12 +271,12 @@
                 </button>
             </div>
             <ul class="mobile-menu__list">
-                <li class="mobile-menu__item">
+                <!-- <li class="mobile-menu__item">
                     <a href="<?php echo home_url('/') ?>" class="mobile-menu__link" aria-current="page">
                         <i class="fas fa-home" aria-hidden="true"></i>
                         <span>トップ</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="mobile-menu__item">
                     <a href="<?php echo home_url('/#plans'); ?>" class="mobile-menu__link">
                         <i class="fas fa-list-alt" aria-hidden="true"></i>

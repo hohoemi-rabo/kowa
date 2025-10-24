@@ -6,11 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 メモリアルホール光和の公式 Web サイト - 長野県飯田市の葬儀場向けの WordPress テーマ。「ご葬儀からご創儀へ」をコンセプトとした和モダンデザイン。
 
-**プロジェクトステータス:** 静的 HTML サイトから WordPress への移行中
+**プロジェクトステータス:** 静的 HTML サイトから WordPress への移行完了（HTML→PHP移行済み）
 
 **技術スタック:**
 
-- WordPress Theme (カスタムテーマ開発中)
+- WordPress Theme (カスタムテーマ)
 - HTML5 (セマンティックマークアップ、構造化データ、OGP 完備)
 - CSS3 (モジュール構造、カスタムプロパティ、アニメーション)
 - Vanilla JavaScript ES6+ (モジュールなし、単一 main.js)
@@ -20,14 +20,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **ターゲット:** 50-60 代以上、高齢者にも配慮した大きめのフォントサイズと視認性の高いデザイン
 
+**重要な実装状況:**
+- ✅ functions.php: CSS/JS enqueue機能実装済み（WordPress標準に準拠）
+- ✅ 全HTMLページ: WordPressテンプレート（page-*.php）に移行完了
+- ✅ アンカーリンク: 別ページからトップページのセクションへのリンク対応済み
+- ✅ タイトルタグ: WordPress自動生成に切り替え済み（ページごとに動的変更）
+
 ## WordPress テーマアーキテクチャ
 
 ### テーマ構成の特徴
 
-このプロジェクトは**ハイブリッド構成**です：
+このプロジェクトは**完全なWordPress構成**です：
 
-- **WordPress テンプレート**: `header.php`, `footer.php`, `sidebar.php`, `front-page.php`, `index.php`, `functions.php`
-- **静的 HTML ファイル**: `family.html`, `ippansou.html`, `flowchart.html`, `flower.html`, `soudan.html`, `member.html`, `company.html`, `contact.html`, `privacy.html` (移行待ち)
+- **共通テンプレート**: `header.php`, `footer.php`, `sidebar.php`, `front-page.php`, `index.php`, `functions.php`
+- **固定ページテンプレート**: `page-family.php`, `page-ippansou.php`, `page-flower.php`, `page-soudan.php`, `page-member.php`, `page-company.php`, `page-contact.php`, `page-privacy.php`
+- **静的 HTML ファイル**: `*.html` (参照用として残存、実際には使用されない)
 
 ### 現在のテンプレート構造
 
@@ -68,30 +75,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `<?php get_footer(); ?>` - フッター読み込み (line 1334)
 - `<?php echo get_theme_file_uri('images/...'); ?>` - 画像パス取得
 
-### 重要: functions.php は現在空
+### functions.php の実装済み機能
 
-`functions.php` は存在するが、現在コンテンツがありません。以下の実装が必要です：
+`functions.php` には以下の機能が実装されています：
 
-```php
-<?php
-// テーマサポート機能
-function kowa_theme_support() {
-    add_theme_support('title-tag');
-    add_theme_support('post-thumbnails');
-}
-add_action('after_setup_theme', 'kowa_theme_support');
+**1. テーマサポート機能** (`kowa_theme_support`)
+- `title-tag`: WordPressによる自動タイトルタグ生成
+- `post-thumbnails`: アイキャッチ画像サポート
+- `html5`: HTML5マークアップサポート
 
-// CSS/JSの読み込み
-function kowa_enqueue_assets() {
-    // 既存のCSSモジュール構造を維持
-    wp_enqueue_style('kowa-variables', get_theme_file_uri('css/base/variables.css'));
-    wp_enqueue_style('kowa-reset', get_theme_file_uri('css/base/reset.css'));
-    // ... (その他のCSS)
+**2. CSS/JS読み込み** (`kowa_enqueue_assets`)
+- 共通CSS（base、layout、components）を全ページで読み込み
+- ページ固有CSSを条件分岐で読み込み（`is_front_page()`, `is_page('slug')`）
+- キャッシュバスティング：`filemtime()`でファイル更新時に自動的にバージョン更新
+- CDNリソース（Google Fonts、Font Awesome）
 
-    wp_enqueue_script('kowa-main', get_theme_file_uri('js/main.js'), array(), null, true);
-}
-add_action('wp_enqueue_scripts', 'kowa_enqueue_assets');
-```
+**3. DNS Prefetch** (`kowa_dns_prefetch`)
+- 外部リソースのDNSプリフェッチでパフォーマンス向上
+
+**重要:** header.phpとfooter.phpからCSS/JS読み込みは削除済み。全て`wp_enqueue_*`で管理。
 
 ## WordPress 開発ワークフロー
 
@@ -132,20 +134,21 @@ add_action('wp_enqueue_scripts', 'kowa_enqueue_assets');
    - header.php にページ固有の CSS 追加、または
    - functions.php で条件分岐して enqueue
 
-### ページ構造（移行ステータス）
+### ページ構造（移行完了）
 
 ```
-✅ front-page.php        # トップページ (index.html から移行済み)
-⏳ page-family.php       # 家族葬プラン (family.html 移行待ち)
-⏳ page-ippansou.php     # 一般葬プラン (ippansou.html 移行待ち)
-⏳ page-flowchart.php    # 葬儀の流れ (flowchart.html 移行待ち)
-⏳ page-flower.php       # 献花・供花 (flower.html 移行待ち)
-⏳ page-soudan.php       # 事前相談 (soudan.html 移行待ち)
-⏳ page-member.php       # 会員登録 (member.html 移行待ち)
-⏳ page-company.php      # 会社案内 (company.html 移行待ち)
-⏳ page-contact.php      # お問い合わせ (contact.html 移行待ち)
-⏳ page-privacy.php      # プライバシーポリシー (privacy.html 移行待ち)
+✅ front-page.php        # トップページ
+✅ page-family.php       # 家族葬プラン
+✅ page-ippansou.php     # 一般葬プラン
+✅ page-flower.php       # 献花・供花
+✅ page-soudan.php       # 事前相談
+✅ page-member.php       # 会員登録
+✅ page-company.php      # 会社案内
+✅ page-contact.php      # お問い合わせ
+✅ page-privacy.php      # プライバシーポリシー
 ```
+
+**注意:** `page-flowchart.php`（葬儀の流れ）は、トップページの`#flow`セクションで表示されるため、個別ページテンプレートは存在しません。
 
 ### CSS アーキテクチャ (モジュール構造)
 
@@ -249,20 +252,22 @@ sidebar.php には 3 つの固定 UI 要素が含まれています：
 1. **固定サイドバー（PC 版 768px 以上）** - `.fixed-sidebar`
 
    - 電話相談: `tel:0120-077-508`
-   - 会員登録: `member.html` へのリンク
-   - 資料請求: `#contact` アンカーリンク
-   - プラン一覧: `#plans` アンカーリンク
+   - 会員登録: `<?php echo home_url('/member/'); ?>` へのリンク
+   - 資料請求: `<?php echo home_url('/#contact'); ?>` アンカーリンク（トップページ）
+   - プラン一覧: `<?php echo home_url('/#plans'); ?>` アンカーリンク（トップページ）
    - TOP へ戻る: `#backToTop` ボタン（300px 以上スクロールで表示）
 
 2. **プログレスバー** - `.progress-bar` (スクロール進行度表示)
 
 3. **固定下部バー（モバイル版 767px 以下）** - `.fixed-bottom-bar`
    - 電話: `tel:0120-077-508`
-   - 会員登録: `member.html` へのリンク
-   - 資料請求: `#contact` アンカーリンク
+   - 会員登録: `<?php echo home_url('/member/'); ?>` へのリンク
+   - 資料請求: `<?php echo home_url('/#contact'); ?>` アンカーリンク（トップページ）
    - メニュー: `.mobile-menu-toggle-bottom` (モバイルメニュー開閉)
 
-**重要:** `sidebar.php`は`get_sidebar()`で読み込まれ、すべてのページで表示されます。
+**重要:**
+- `sidebar.php`は`get_sidebar()`で読み込まれ、すべてのページで表示されます
+- アンカーリンクは`home_url('/#section')`形式で、別ページからでもトップページのセクションに移動可能
 
 ## アクセシビリティ実装
 
@@ -466,15 +471,10 @@ images/
 
    **修正が必要:** これらの行では、静的URLとPHP関数が混在している。完全にPHPに変換するか、静的URLに統一する必要がある
 
-2. **静的リンクの残存**
-
-   - header.php と footer.php に `xxx.html` への静的リンクが多数残っている
-   - WordPress の固定ページ作成後、`get_permalink(page_id)` または `home_url('/page-slug/')` に変更が必要
-
-3. **functions.php が空**
-   - CSS/JS の enqueue が実装されていない
-   - テーマサポート機能が未実装
-   - 現在は header.php で CDN/直接読み込みしているが、WordPress 標準に従うべき
+2. **header.phpのナビゲーション**
+   - デスクトップナビゲーション: 「トップ」リンクはコメントアウト済み（ロゴクリックでトップに戻る想定）
+   - モバイルメニュー: 「トップ」リンクはコメントアウト済み
+   - アクセシビリティコントロール（アニメーション停止ボタン）: 削除済み
 
 ### 本番環境への注意
 
@@ -485,11 +485,13 @@ images/
 5. **プレースホルダー画像:** 本番前に実画像に差し替え（plan-card\_\_image--placeholder クラスを削除）
 6. **宿泊不可:** 近隣に宿泊施設なし、調べて案内可能。お迎えサービスは提供していない
 
-### パフォーマンスの注意
+### 完了済みの最適化
 
-- CSS は現在 header.php で個別に読み込まれているが、本来は functions.php で`wp_enqueue_style()`を使用すべき
-- JavaScript は footer.php で defer 属性付きで読み込まれているが、`wp_enqueue_script()`を使用すべき
-- CDN (Font Awesome, Google Fonts) は現在直接読み込み - これは許容される
+- ✅ **CSS/JS読み込み**: functions.phpの`wp_enqueue_*`で管理（WordPress標準に準拠）
+- ✅ **キャッシュバスティング**: `filemtime()`でファイル更新時に自動的にバージョン管理
+- ✅ **ページ固有CSS**: 条件分岐で必要なページのみ読み込み（パフォーマンス向上）
+- ✅ **DNS Prefetch**: 外部リソース（Google Fonts、Font Awesome、CDN）のDNSプリフェッチ実装
+- ✅ **タイトルタグ**: WordPressによる自動生成（SEO最適化）
 
 ## クイックリファレンス
 
@@ -537,13 +539,13 @@ get_footer();
 - `wp_footer()` - フッターフック（JS が出力される）
 - `wp_body_open()` - body 開始タグ直後に実行するフック
 
-### ファイル編集の優先順位
+### 開発時の重要なポイント
 
-1. **functions.php を先に実装** - テーマの基本機能を定義
-2. **header.php の PHP エラー修正** - 不正な閉じタグを修正
-3. **残りの HTML ページを順次移行** - page-\*.php テンプレート作成
-4. **静的リンクを WordPress リンクに変換** - `xxx.html` → WordPress パーマリンク
-5. **CSS/JS enqueue を functions.php に移行** - WordPress 標準に準拠
+1. **アンカーリンクの形式**: 別ページからトップページのセクションへのリンクは`<?php echo home_url('/#section'); ?>`形式を使用
+2. **CSS/JSの追加**: 新しいCSS/JSファイルを追加する場合は、必ずfunctions.phpの`kowa_enqueue_assets()`に追加
+3. **ページ固有CSS**: 新しい固定ページを作成する場合、functions.phpに条件分岐（`is_page('slug')`）を追加
+4. **タイトルタグ**: header.phpに手動で`<title>`タグを追加しない（WordPressが自動生成）
+5. **パスの統一**: 画像やアセットのパスは必ず`get_theme_file_uri()`を使用
 
 ### テスト手順
 

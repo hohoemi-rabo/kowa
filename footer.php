@@ -76,8 +76,8 @@
                             <li><a href="<?php echo home_url('/#faq'); ?>">よくあるご質問</a></li>
                             <li><a href="<?php echo home_url('/#customer-voices'); ?>">お客様の声</a></li>
                             <li><a href="<?php echo home_url('/#manner'); ?>">葬儀の豆知識</a></li>
-                            <li><a href="<?php echo home_url('/#contact'); ?>">お問い合わせ</a></li>
-                            <li><a href="<?php echo home_url('/#contact'); ?>">資料請求</a></li>
+                            <li><a href="<?php echo home_url('/contact/') ?>">お問い合わせ</a></li>
+                            <li><a href="<?php echo home_url('/contact/') ?>">資料請求</a></li>
                             <!-- <li><a href="#sitemap">サイトマップ</a></li> -->
                         </ul>
                     </div>
