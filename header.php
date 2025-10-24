@@ -200,7 +200,7 @@
             <div class="header__inner">
                 <!-- Logo -->
                 <div class="header__logo">
-                    <a href="index.html" class="logo" aria-label="メモリアルホール光和 ホームページ">
+                    <a href="<?php echo home_url('/') ?>" class="logo" aria-label="メモリアルホール光和 ホームページ">
                         <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="メモリアルホール光和ロゴ" class="logo__image">
                         <div class="logo__text">
                             <span class="logo__main">メモリアルホール</span>
@@ -213,7 +213,7 @@
                 <nav id="nav" class="header__nav" role="navigation" aria-label="メインナビゲーション">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="index.html" class="nav__link" aria-current="page">
+                            <a href="<?php echo home_url('/') ?>" class="nav__link" aria-current="page">
                                 <i class="fas fa-home nav__icon" aria-hidden="true"></i>
                                 <span>トップ</span>
                             </a>
@@ -241,7 +241,7 @@
                             </button>
                             <ul class="dropdown" id="funeral-info-dropdown" role="menu" aria-labelledby="funeral-info">
                                 <li class="dropdown__item" role="none">
-                                    <a href="soudan.html" class="dropdown__link" role="menuitem">
+                                    <a href="<?php echo home_url('/soudan/') ?>" class="dropdown__link" role="menuitem">
                                         <i class="fas fa-user-tie" aria-hidden="true"></i>
                                         <span>事前相談</span>
                                     </a>
@@ -267,13 +267,13 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="flower.html" class="nav__link">
+                            <a href="<?php echo home_url('/flower/') ?>" class="nav__link">
                                 <i class="fas fa-seedling nav__icon" aria-hidden="true"></i>
                                 <span>供花・生花</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="company.html" class="nav__link">
+                            <a href="<?php echo home_url('/company/') ?>" class="nav__link">
                                 <i class="fas fa-users nav__icon" aria-hidden="true"></i>
                                 <span>会社案内</span>
                             </a>
@@ -297,7 +297,7 @@
             </div>
             <ul class="mobile-menu__list">
                 <li class="mobile-menu__item">
-                    <a href="index.html" class="mobile-menu__link" aria-current="page">
+                    <a href="<?php echo home_url('/') ?>" class="mobile-menu__link" aria-current="page">
                         <i class="fas fa-home" aria-hidden="true"></i>
                         <span>トップ</span>
                     </a>
@@ -324,7 +324,7 @@
                     </button>
                     <ul class="mobile-submenu" id="funeral-submenu">
                         <li class="mobile-submenu__item">
-                            <a href="soudan.html" class="mobile-submenu__link">
+                            <a href="<?php echo home_url('/soudan/') ?>" class="mobile-submenu__link">
                                 <i class="fas fa-user-tie" aria-hidden="true"></i>
                                 <span>事前相談</span>
                             </a>
@@ -350,13 +350,13 @@
                     </ul>
                 </li>
                 <li class="mobile-menu__item">
-                    <a href="flower.html" class="mobile-menu__link">
+                    <a href="<?php echo home_url('/flower/') ?>" class="mobile-menu__link">
                         <i class="fas fa-seedling" aria-hidden="true"></i>
                         <span>供花・生花</span>
                     </a>
                 </li>
                 <li class="mobile-menu__item">
-                    <a href="company.html" class="mobile-menu__link">
+                    <a href="<?php echo home_url('/company/') ?>" class="mobile-menu__link">
                         <i class="fas fa-users" aria-hidden="true"></i>
                         <span>会社案内</span>
                     </a>

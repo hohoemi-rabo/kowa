@@ -48,7 +48,7 @@
                             <li><a href="#facilities">式場・施設案内</a></li>
                             <li><a href="#flow">葬儀の流れ</a></li>
                             <li><a href="#manner">葬儀のマナー</a></li>
-                            <li><a href="soudan.html">事前相談</a></li>
+                            <li><a href="<?php echo home_url('/soudan/') ?>">事前相談</a></li>
                         </ul>
                     </div>
 
@@ -59,11 +59,10 @@
                             会社情報
                         </h3>
                         <ul class="footer__links">
-                            <li><a href="company.html">会社概要</a></li>
-                            <li><a href="company.html">スタッフ紹介</a></li>
-                            <li><a href="company.html">アクセス・地図</a></li>
+                            <li><a href="<?php echo home_url('/company/') ?>">会社概要</a></li>
+                            <li><a href="<?php echo home_url('/company/') ?>">アクセス・地図</a></li>
                             <!-- <li><a href="#news">お知らせ</a></li> -->
-                            <li><a href="privacy.html">プライバシーポリシー</a></li>
+                            <li><a href="<?php echo home_url('/privacy/') ?>">プライバシーポリシー</a></li>
                         </ul>
                     </div>
 

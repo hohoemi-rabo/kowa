@@ -15,7 +15,7 @@
             </div>
         </a>
 
-        <a href="member.html" class="fixed-sidebar__item fixed-sidebar__item--member" aria-label="会員登録">
+        <a href="<?php echo home_url('/member/') ?>" class="fixed-sidebar__item fixed-sidebar__item--member" aria-label="会員登録">
             <div class="fixed-sidebar__icon">
                 <i class="fas fa-crown"></i>
             </div>
@@ -73,7 +73,7 @@
             <span class="fixed-bottom-bar__label">電話</span>
         </a>
 
-        <a href="member.html" class="fixed-bottom-bar__item fixed-bottom-bar__item--member" aria-label="会員登録">
+        <a href="<?php echo home_url('/member/') ?>" class="fixed-bottom-bar__item fixed-bottom-bar__item--member" aria-label="会員登録">
             <div class="fixed-bottom-bar__icon">
                 <i class="fas fa-crown"></i>
             </div>
