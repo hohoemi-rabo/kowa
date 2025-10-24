@@ -275,7 +275,7 @@
                                     
                                     <!-- 詳しく見るボタン -->
                                     <div class="plan-card__cta">
-                                        <a href="ippansou.html" class="btn btn--hero plan-card__details-btn">
+                                        <a href="<?php echo home_url('/ippansou/') ?>" class="btn btn--hero plan-card__details-btn">
                                             <i class="fas fa-search" aria-hidden="true"></i>
                                             詳しく見る
                                             <i class="fas fa-chevron-right" aria-hidden="true"></i>
