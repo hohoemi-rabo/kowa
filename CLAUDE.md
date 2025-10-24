@@ -314,7 +314,7 @@ sidebar.php には 3 つの固定 UI 要素が含まれています：
 
 ### ローカル開発環境
 
-このテーマは `/var/www/html/wordpress/wp-content/themes/kowa` にあります。
+このテーマは `/home/masayuki/wordpress/kowa/wp-content/themes/kowa_theme` にあります。
 
 **WordPress URL 構造:**
 
@@ -459,12 +459,12 @@ images/
 
 1. **header.php の不完全な変数置換**
 
-   - Line 18: `<?php echo get_theme_file_uri('images/og-image.jpg'); ?>` の閉じタグが不正
-   - Line 29: 同様の問題
-   - Line 55: `<?php echo get_theme_file_uri('apple-touch-icon.png'); ?>` の閉じタグが不正
-   - Line 68: `<?php echo get_theme_file_uri('images/logo.png'); ?>` の閉じタグが不正
+   - Line 18: OGP画像のメタタグが不正 - `content="https://memorial-kowa.example.com/images/og-image.jpg'); ?>"` となっている
+   - Line 29: Twitter Card画像も同様
+   - Line 55: Apple Touch Iconのパスが不正 - `href="/apple-touch-icon.png'); ?>"` となっている
+   - Line 68: JSON-LD内のロゴパスが不正 - `"logo": "https://memorial-kowa.example.com/images/logo.png'); ?>"` となっている
 
-   **修正が必要:** これらの行は `'); ?>` となっているが、正しくは `'); ?>` または適切な構文に修正
+   **修正が必要:** これらの行では、静的URLとPHP関数が混在している。完全にPHPに変換するか、静的URLに統一する必要がある
 
 2. **静的リンクの残存**
 
