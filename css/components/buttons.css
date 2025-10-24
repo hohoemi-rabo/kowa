@@ -1,0 +1,266 @@
+/* =====================================================
+   Button Components
+   ===================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3) var(--spacing-6);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: var(--transition-all);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn:focus {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Primary Button - 主要アクション用 */
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Secondary Button - セカンダリアクション用 */
+.btn--secondary {
+  background: var(--color-bg-primary);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Outline Button - テキストリンク的な用途 */
+.btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-border-medium);
+}
+
+.btn--outline:hover:not(:disabled) {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary);
+}
+
+/* Ghost Button - 背景なし */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: transparent;
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--color-primary-50);
+}
+
+/* Accent Button - 特別なアクション用 */
+.btn--accent {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-400),
+    var(--color-accent-600)
+  );
+  color: var(--color-text-inverse);
+  border-color: var(--color-accent-500);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--accent:hover:not(:disabled) {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-500),
+    var(--color-accent-700)
+  );
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Gold Button - 高級感のあるアクション用 */
+.btn--gold {
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-300),
+    var(--color-gold-500)
+  );
+  color: var(--color-text);
+  border-color: var(--color-gold-400);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--gold:hover:not(:disabled) {
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-400),
+    var(--color-gold-600)
+  );
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Button Sizes */
+.btn--xs {
+  padding: var(--spacing-1-5) var(--spacing-3);
+  font-size: var(--font-size-xs);
+}
+
+.btn--sm {
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+}
+
+.btn--lg {
+  padding: var(--spacing-4) var(--spacing-8);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-xl);
+}
+
+.btn--xl {
+  padding: var(--spacing-5) var(--spacing-10);
+  font-size: var(--font-size-xl);
+  border-radius: var(--radius-2xl);
+}
+
+/* Button with Icons */
+.btn i {
+  margin-right: var(--spacing-2);
+  font-size: 1.1em;
+}
+
+.btn--icon-only {
+  padding: var(--spacing-3);
+  aspect-ratio: 1;
+}
+
+.btn--icon-only i {
+  margin-right: 0;
+}
+
+/* Special Phone Button */
+.btn--phone .phone-number {
+  display: block;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--spacing-1);
+  line-height: var(--line-height-tight);
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.btn-group--center {
+  justify-content: center;
+}
+
+.btn-group--vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* ヒーローセクション内のボタンホバー時の修正 */
+.hero__cta-btn.btn--secondary {
+  transition: all 0.5s ease;
+}
+
+.hero__cta-btn.btn--secondary:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.hero__cta-btn.btn--outline {
+  transition: all 0.5s ease;
+}
+
+.hero__cta-btn.btn--outline:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: var(--spacing-6);
+  right: var(--spacing-6);
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateY(10px) scale(0.8);
+  transition: var(--transition-all);
+  z-index: var(--z-fixed);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+  background: var(--color-primary-600);
+  transform: translateY(0) scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.back-to-top:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* Progress Bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  z-index: var(--z-fixed);
+  transition: width 0.1s ease;
+}

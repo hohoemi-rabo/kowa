@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="メモリアルホール光和は、長野県飯田市で「ご葬儀からご創儀へ」をコンセプトに、心を込めた葬儀サービスを提供しています。24時間365日対応、各種葬儀プランをご用意しております。">
+    <meta name="keywords" content="葬儀,葬儀場,メモリアルホール,光和,飯田市,長野県,家族葬,一般葬,直葬,24時間対応,創儀">
+    <meta name="author" content="メモリアルホール光和">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://memorial-kowa.example.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://memorial-kowa.example.com/">
+    <meta property="og:title" content="メモリアルホール光和 | 長野県飯田市の葬儀場 - ご葬儀からご創儀へ">
+    <meta property="og:description" content="メモリアルホール光和は、長野県飯田市で「ご葬儀からご創儀へ」をコンセプトに、心を込めた葬儀サービスを提供しています。24時間365日対応、各種葬儀プランをご用意しております。">
+    <meta property="og:image" content="https://memorial-kowa.example.com/images/og-image.jpg'); ?>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="メモリアルホール光和">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://memorial-kowa.example.com/">
+    <meta name="twitter:title" content="メモリアルホール光和 | 長野県飯田市の葬儀場 - ご葬儀からご創儀へ">
+    <meta name="twitter:description" content="メモリアルホール光和は、長野県飯田市で「ご葬儀からご創儀へ」をコンセプトに、心を込めた葬儀サービスを提供しています。24時間365日対応、各種葬儀プランをご用意しております。">
+    <meta name="twitter:image" content="https://memorial-kowa.example.com/images/og-image.jpg'); ?>">
+    
+    <title>メモリアルホール光和 | 長野県飯田市の葬儀場 - ご葬儀からご創儀へ</title>
+    
+    <!-- CSS Resources - Standard Loading to prevent FOUC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Modular CSS Architecture -->
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/base/variables.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/base/reset.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/layout/container.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/layout/header.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/layout/footer.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/layout/sidebar.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/layout/mobile-bar.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/components/buttons.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/components/cards.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/components/forms.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/components/animations.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/components/accessibility.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('css/pages/home.css'); ?>">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png'); ?>">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://memorial-kowa.example.com/#organization",
+                "name": "メモリアルホール光和",
+                "alternateName": "光和",
+                "url": "https://memorial-kowa.example.com/",
+                "logo": "https://memorial-kowa.example.com/images/logo.png'); ?>",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+81-0120-077-508",
+                    "contactType": "customer service",
+                    "availableLanguage": "Japanese",
+                    "areaServed": "JP"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "JP",
+                    "addressRegion": "長野県",
+                    "addressLocality": "飯田市",
+                    "streetAddress": "飯田市○○町○○番地",
+                    "postalCode": "000-0000"
+                },
+                "sameAs": [
+                    "https://www.facebook.com/memorial-kowa",
+                    "https://www.instagram.com/memorial_kowa"
+                ]
+            },
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://memorial-kowa.example.com/#localbusiness",
+                "name": "メモリアルホール光和",
+                "description": "長野県飯田市の葬儀場。「ご葬儀からご創儀へ」をコンセプトに、心を込めた葬儀サービスを提供しています。",
+                "url": "https://memorial-kowa.example.com/",
+                "telephone": "+81-0120-077-508",
+                "priceRange": "¥¥¥",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "JP",
+                    "addressRegion": "長野県",
+                    "addressLocality": "飯田市",
+                    "streetAddress": "飯田市○○町○○番地",
+                    "postalCode": "000-0000"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 35.5,
+                    "longitude": 137.8
+                },
+                "openingHours": "Mo-Su 00:00-23:59",
+                "serviceArea": {
+                    "@type": "GeoCircle",
+                    "geoMidpoint": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 35.5,
+                        "longitude": 137.8
+                    },
+                    "geoRadius": "50000"
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "葬儀プラン",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "一般葬",
+                                "description": "伝統的な葬儀形式で、多くの参列者をお迎えする葬儀プラン"
+                            }
+                        },
+                        {
+                            "@type": "Offer", 
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "家族葬",
+                                "description": "ご家族・親族中心の温かく静かなお別れの時間を大切にした葬儀プラン"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service", 
+                                "name": "直葬",
+                                "description": "シンプルで経済的な、火葬のみを行う葬儀プラン"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://memorial-kowa.example.com/#website",
+                "url": "https://memorial-kowa.example.com/",
+                "name": "メモリアルホール光和",
+                "description": "長野県飯田市の葬儀場。「ご葬儀からご創儀へ」をコンセプトに、心を込めた葬儀サービスを提供しています。",
+                "publisher": {
+                    "@id": "https://memorial-kowa.example.com/#organization"
+                },
+                "potentialAction": [
+                    {
+                        "@type": "SearchAction",
+                        "target": {
+                            "@type": "EntryPoint",
+                            "urlTemplate": "https://memorial-kowa.example.com/search?q={search_term_string}"
+                        },
+                        "query-input": "required name=search_term_string"
+                    }
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://memorial-kowa.example.com/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "ホーム",
+                        "item": "https://memorial-kowa.example.com/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+<?php wp_head(); ?>
+</head>
+<body>
+    <?php wp_body_open(); ?>
+    <!-- Accessibility Controls -->
+    <div class="accessibility-controls" role="toolbar" aria-label="アクセシビリティ設定">
+        <button class="accessibility-btn motion-toggle-btn" aria-label="アニメーションを停止/再生する" aria-pressed="false">
+            <i class="fas fa-pause" aria-hidden="true"></i>
+        </button>
+    </div>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Logo -->
+                <div class="header__logo">
+                    <a href="index.html" class="logo" aria-label="メモリアルホール光和 ホームページ">
+                        <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="メモリアルホール光和ロゴ" class="logo__image">
+                        <div class="logo__text">
+                            <span class="logo__main">メモリアルホール</span>
+                            <span class="logo__sub">光和</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav id="nav" class="header__nav" role="navigation" aria-label="メインナビゲーション">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link" aria-current="page">
+                                <i class="fas fa-home nav__icon" aria-hidden="true"></i>
+                                <span>トップ</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#plans" class="nav__link">
+                                <i class="fas fa-list-alt nav__icon" aria-hidden="true"></i>
+                                <span>葬儀プラン</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#facilities" class="nav__link">
+                                <i class="fas fa-building nav__icon" aria-hidden="true"></i>
+                                <span>式場・施設案内</span>
+                            </a>
+                        </li>
+                        <li class="nav__item nav__item--dropdown">
+                            <button class="nav__link nav__dropdown-toggle" 
+                                    aria-expanded="false" 
+                                    aria-haspopup="true"
+                                    data-dropdown="funeral-info">
+                                <i class="fas fa-info-circle nav__icon" aria-hidden="true"></i>
+                                <span>葬儀について</span>
+                                <i class="fas fa-chevron-down nav__arrow" aria-hidden="true"></i>
+                            </button>
+                            <ul class="dropdown" id="funeral-info-dropdown" role="menu" aria-labelledby="funeral-info">
+                                <li class="dropdown__item" role="none">
+                                    <a href="soudan.html" class="dropdown__link" role="menuitem">
+                                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                                        <span>事前相談</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown__item" role="none">
+                                    <a href="#flow" class="dropdown__link" role="menuitem">
+                                        <i class="fas fa-route" aria-hidden="true"></i>
+                                        <span>葬儀の流れ</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown__item" role="none">
+                                    <a href="#manner" class="dropdown__link" role="menuitem">
+                                        <i class="fas fa-hand-peace" aria-hidden="true"></i>
+                                        <span>葬儀のマナー</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown__item" role="none">
+                                    <a href="#faq" class="dropdown__link" role="menuitem">
+                                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                                        <span>よくある質問</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="flower.html" class="nav__link">
+                                <i class="fas fa-seedling nav__icon" aria-hidden="true"></i>
+                                <span>供花・生花</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="company.html" class="nav__link">
+                                <i class="fas fa-users nav__icon" aria-hidden="true"></i>
+                                <span>会社案内</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+        
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="モバイルメニュー">
+            <div class="mobile-menu__header">
+                <span class="mobile-menu__title">メニュー</span>
+                <button class="mobile-menu__close" aria-label="メニューを閉じる">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a href="index.html" class="mobile-menu__link" aria-current="page">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <span>トップ</span>
+                    </a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#plans" class="mobile-menu__link">
+                        <i class="fas fa-list-alt" aria-hidden="true"></i>
+                        <span>葬儀プラン</span>
+                    </a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#facilities" class="mobile-menu__link">
+                        <i class="fas fa-building" aria-hidden="true"></i>
+                        <span>式場・施設案内</span>
+                    </a>
+                </li>
+                <li class="mobile-menu__item mobile-menu__item--expandable">
+                    <button class="mobile-menu__link mobile-menu__expand-toggle" 
+                            aria-expanded="false"
+                            data-target="funeral-submenu">
+                        <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        <span>葬儀について</span>
+                        <i class="fas fa-chevron-down mobile-menu__arrow" aria-hidden="true"></i>
+                    </button>
+                    <ul class="mobile-submenu" id="funeral-submenu">
+                        <li class="mobile-submenu__item">
+                            <a href="soudan.html" class="mobile-submenu__link">
+                                <i class="fas fa-user-tie" aria-hidden="true"></i>
+                                <span>事前相談</span>
+                            </a>
+                        </li>
+                        <li class="mobile-submenu__item">
+                            <a href="#flow" class="mobile-submenu__link">
+                                <i class="fas fa-route" aria-hidden="true"></i>
+                                <span>葬儀の流れ</span>
+                            </a>
+                        </li>
+                        <li class="mobile-submenu__item">
+                            <a href="#manner" class="mobile-submenu__link">
+                                <i class="fas fa-hand-peace" aria-hidden="true"></i>
+                                <span>葬儀のマナー</span>
+                            </a>
+                        </li>
+                        <li class="mobile-submenu__item">
+                            <a href="#faq" class="mobile-submenu__link">
+                                <i class="fas fa-question-circle" aria-hidden="true"></i>
+                                <span>よくある質問</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="flower.html" class="mobile-menu__link">
+                        <i class="fas fa-seedling" aria-hidden="true"></i>
+                        <span>供花・生花</span>
+                    </a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="company.html" class="mobile-menu__link">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <span>会社案内</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Mobile Menu CTA -->
+            <div class="mobile-menu__cta">
+                <a href="tel:0120-077-508" class="btn btn--primary btn--lg">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span>今すぐ相談</span>
+                </a>
+                <!-- <a href="#contact" class="btn btn--secondary btn--lg">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <span>資料請求</span>
+                </a> -->
+            </div>
+        </nav>
+    </header>

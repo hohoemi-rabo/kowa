@@ -1,0 +1,286 @@
+/* =====================================================
+   御供花・御供物ページ専用CSS
+   ===================================================== */
+/* =====================================================
+   sub Hero Section
+   ===================================================== */
+.sub-hero {
+  padding: var(--spacing-24) 0 var(--spacing-20);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.03) 0%,
+    rgba(37, 99, 235, 0.01) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.sub-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.sub-hero__content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sub-hero__title {
+  margin-bottom: var(--spacing-8);
+}
+
+.sub-hero__subtitle {
+  display: block;
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  color: var(--color-primary);
+  letter-spacing: 3px;
+  margin-bottom: var(--spacing-2);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.sub-hero__maintitle {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sub-hero__text {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.sub-hero__highlight {
+  display: inline-block;
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-6);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1) 0%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--radius-full);
+  color: #b8860b;
+  font-weight: 600;
+}
+
+.sub-hero__highlight i {
+  color: #ffd700;
+  margin-right: var(--spacing-2);
+}
+
+/* =====================================================
+   Privacy Policy Styles
+   ===================================================== */
+.privacy-policy {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-8) 0;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+.privacy-section {
+  margin-bottom: var(--spacing-16);
+  padding: var(--spacing-8);
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border-light);
+}
+
+.privacy-section h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-6);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 2px solid rgba(30, 58, 138, 0.1);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.privacy-section h2::before {
+  content: counter(privacy-counter);
+  counter-increment: privacy-counter;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-700) 100%
+  );
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.privacy-policy {
+  counter-reset: privacy-counter;
+}
+
+.privacy-section p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-4);
+}
+
+.privacy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-list {
+  margin: var(--spacing-6) 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.privacy-list li {
+  position: relative;
+  padding-left: var(--spacing-8);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.privacy-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.privacy-contact {
+  margin-top: var(--spacing-20);
+  padding: var(--spacing-12);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.05) 0%,
+    rgba(37, 99, 235, 0.02) 100%
+  );
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+  text-align: center;
+}
+
+.privacy-contact h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+}
+
+.privacy-contact h3 i {
+  color: var(--color-primary-400);
+  font-size: 0.9em;
+}
+
+.privacy-contact p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-6);
+}
+
+.privacy-contact strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.privacy-date {
+  margin-top: var(--spacing-16);
+  padding: var(--spacing-8);
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.privacy-date p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-2);
+  font-weight: 500;
+}
+
+.privacy-date p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design for Privacy Policy */
+@media (max-width: 768px) {
+  .privacy-policy {
+    padding: var(--spacing-6) var(--spacing-4);
+  }
+
+  .privacy-section {
+    padding: var(--spacing-6);
+    margin-bottom: var(--spacing-12);
+  }
+
+  .privacy-section h2 {
+    font-size: var(--font-size-lg);
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-2);
+  }
+
+  .privacy-section h2::before {
+    align-self: center;
+  }
+
+  .privacy-contact {
+    padding: var(--spacing-8);
+    margin-top: var(--spacing-16);
+  }
+
+  .privacy-contact h3 {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-list li {
+    padding-left: var(--spacing-6);
+  }
+
+  .privacy-section {
+    margin-bottom: var(--spacing-8);
+  }
+}
