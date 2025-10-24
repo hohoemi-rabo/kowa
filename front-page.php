@@ -72,11 +72,11 @@
                             <i class="fas fa-list-alt" aria-hidden="true"></i>
                             <span>プラン・料金を見る</span>
                         </a>
-                        <a href="#contact" class="btn btn--secondary btn--lg hero__cta-btn">
+                        <a href="<?php echo home_url('/contact/') ?>" class="btn btn--secondary btn--lg hero__cta-btn">
                             <i class="fas fa-file-alt" aria-hidden="true"></i>
                             <span>無料資料請求</span>
                         </a>
-                        <a href="member.html" class="btn btn--outline btn--lg hero__cta-btn">
+                        <a href="<?php echo home_url('/member/') ?>" class="btn btn--outline btn--lg hero__cta-btn">
                             <i class="fas fa-crown" aria-hidden="true"></i>
                             <span>会員制度について</span>
                         </a>
@@ -359,7 +359,7 @@
                                     
                                     <!-- 詳しく見るボタン -->
                                     <div class="plan-card__cta">
-                                        <a href="family.html" class="btn btn--hero plan-card__details-btn">
+                                        <a href="<?php echo home_url('/family/') ?>" class="btn btn--hero plan-card__details-btn">
                                             <i class="fas fa-search" aria-hidden="true"></i>
                                             詳しく見る
                                             <i class="fas fa-chevron-right" aria-hidden="true"></i>
@@ -1315,7 +1315,7 @@
                             <div class="contact-option">
                                 <h4 class="contact-option__title">WEBからのお問い合わせ</h4>
                                 <div class="contact-option__content">
-                                    <a href="contact.html" class="contact-option__button">
+                                    <a href="<?php echo home_url('/contact/') ?>" class="contact-option__button">
                                         <i class="fas fa-envelope"></i>
                                         <span>お問い合わせフォームへ</span>
                                         <i class="fas fa-chevron-right"></i>
