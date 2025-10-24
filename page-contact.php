@@ -230,7 +230,7 @@
               <label class="form-checkbox form-checkbox--agreement">
                 <input type="checkbox" name="privacy" required />
                 <span>
-                  <a href="#privacy" target="_blank">プライバシーポリシー</a
+                  <a href="<?php echo home_url('/privacy/'); ?>" target="_blank">プライバシーポリシー</a
                   >に同意する
                   <span class="required">必須</span>
                 </span>

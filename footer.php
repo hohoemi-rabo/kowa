@@ -44,10 +44,10 @@
                             サービス
                         </h3>
                         <ul class="footer__links">
-                            <li><a href="#plans">葬儀プラン一覧</a></li>
-                            <li><a href="#facilities">式場・施設案内</a></li>
-                            <li><a href="#flow">葬儀の流れ</a></li>
-                            <li><a href="#manner">葬儀のマナー</a></li>
+                            <li><a href="<?php echo home_url('/#plans'); ?>">葬儀プラン一覧</a></li>
+                            <li><a href="<?php echo home_url('/#facilities'); ?>">式場・施設案内</a></li>
+                            <li><a href="<?php echo home_url('/#flow'); ?>">葬儀の流れ</a></li>
+                            <li><a href="<?php echo home_url('/#manner'); ?>">葬儀のマナー</a></li>
                             <li><a href="<?php echo home_url('/soudan/') ?>">事前相談</a></li>
                         </ul>
                     </div>
@@ -73,11 +73,11 @@
                             お役立ち情報
                         </h3>
                         <ul class="footer__links">
-                            <li><a href="#faq">よくあるご質問</a></li>
-                            <li><a href="#customer-voices">お客様の声</a></li>
-                            <li><a href="#manner">葬儀の豆知識</a></li>
-                            <li><a href="#contact">お問い合わせ</a></li>
-                            <li><a href="#contact">資料請求</a></li>
+                            <li><a href="<?php echo home_url('/#faq'); ?>">よくあるご質問</a></li>
+                            <li><a href="<?php echo home_url('/#customer-voices'); ?>">お客様の声</a></li>
+                            <li><a href="<?php echo home_url('/#manner'); ?>">葬儀の豆知識</a></li>
+                            <li><a href="<?php echo home_url('/#contact'); ?>">お問い合わせ</a></li>
+                            <li><a href="<?php echo home_url('/#contact'); ?>">資料請求</a></li>
                             <!-- <li><a href="#sitemap">サイトマップ</a></li> -->
                         </ul>
                     </div>
@@ -140,8 +140,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript - Deferred Loading -->
-    <script src="<?php echo get_theme_file_uri('js/main.js'); ?>" defer></script>
-<?php wp_footer(); ?>    
+<?php wp_footer(); ?>
 </body>
 </html>
