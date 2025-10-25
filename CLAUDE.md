@@ -45,10 +45,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ├── sidebar.php             # 固定サイドバー・モバイルバー
 ├── front-page.php          # トップページ (index.html から移行済み)
 ├── index.php               # メインテンプレート (空)
-├── functions.php           # テーマ機能 (現在空)
+├── functions.php           # テーマ機能（CSS/JS enqueue実装済み）
 ├── style.css               # テーマ定義ファイル (Theme Name: kowa)
 │
-├── *.html                  # 移行待ち静的HTMLファイル
+├── *.html                  # 参照用静的HTMLファイル（実際には使用されない）
 │
 ├── css/                    # モジュール化されたCSS
 ├── js/                     # JavaScript (main.js)
@@ -282,10 +282,19 @@ sidebar.php には 3 つの固定 UI 要素が含まれています：
 
 **実装済みフォーム:**
 
-- お問い合わせフォーム (`#contactForm`)
-- 資料請求フォーム (`#requestForm`)
+- お問い合わせフォーム (`page-contact.php`) - Contact Form 7実装済み
+- 資料請求フォーム (`#requestForm`) - トップページに実装
+- 会員登録フォーム (`page-member.php`)
+- 事前相談フォーム (`page-soudan.php`)
 
-**バリデーション:**
+**Contact Form 7 統合（page-contact.php）:**
+
+- ショートコード: `[contact-form-7 id="2017a2e" title="お問い合わせ"]`
+- 既存のCSSデザインを維持（`.club-form`, `.form-group`, `.btn`クラス）
+- バリデーションはContact Form 7のデフォルト機能を使用
+- 必須項目: 名前、フリガナ、メール、電話、お問い合わせ内容、プライバシーポリシー同意
+
+**カスタムバリデーション（js/main.js）:**
 
 - リアルタイム検証（`input`、`blur` イベント）
 - メール形式チェック（正規表現）
@@ -481,7 +490,7 @@ images/
 1. **画像パス:** 本番環境では `/images/` を `get_theme_file_uri('images/')` に完全変換
 2. **電話番号:** `0120-077-508` は実際の番号
 3. **住所情報:** `〒395-0821 長野県飯田市松尾新井6544-1`
-4. **フォーム送信:** 現在はコンソールログのみ、Contact Form 7 または独自実装が必要
+4. **フォーム送信:** Contact Form 7 を使用（page-contact.php実装済み）、その他のフォームは独自実装が必要
 5. **プレースホルダー画像:** 本番前に実画像に差し替え（plan-card\_\_image--placeholder クラスを削除）
 6. **宿泊不可:** 近隣に宿泊施設なし、調べて案内可能。お迎えサービスは提供していない
 
@@ -492,6 +501,8 @@ images/
 - ✅ **ページ固有CSS**: 条件分岐で必要なページのみ読み込み（パフォーマンス向上）
 - ✅ **DNS Prefetch**: 外部リソース（Google Fonts、Font Awesome、CDN）のDNSプリフェッチ実装
 - ✅ **タイトルタグ**: WordPressによる自動生成（SEO最適化）
+- ✅ **Contact Form 7統合**: お問い合わせページにContact Form 7実装済み（既存デザイン維持）
+- ✅ **ヒーロー画像**: flower/companyページにbackground-image + オーバーレイ実装
 
 ## クイックリファレンス
 
@@ -546,6 +557,8 @@ get_footer();
 3. **ページ固有CSS**: 新しい固定ページを作成する場合、functions.phpに条件分岐（`is_page('slug')`）を追加
 4. **タイトルタグ**: header.phpに手動で`<title>`タグを追加しない（WordPressが自動生成）
 5. **パスの統一**: 画像やアセットのパスは必ず`get_theme_file_uri()`を使用
+6. **Contact Form 7**: フォーム実装時は既存のCSSクラス（`.club-form`, `.form-group`, `.btn`）を使用して統一感を維持
+7. **ヒーロー画像**: 背景画像を使用する場合は`::before`疑似要素でオーバーレイを追加し、テキストの可読性を確保
 
 ### テスト手順
 
