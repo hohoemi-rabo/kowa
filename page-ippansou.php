@@ -583,6 +583,27 @@
       </div>
     </section>
 
+    <!-- Other Plan Link Section -->
+    <section class="other-plan-link">
+      <div class="container">
+        <div class="other-plan-link__content">
+          <div class="other-plan-link__icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h2 class="other-plan-link__title">ご家族中心の温かい葬儀をお考えの方へ</h2>
+          <p class="other-plan-link__description">
+            少人数でゆっくりとお別れの時間を過ごしたい方には、家族葬プランがおすすめです。<br />
+            親族中心の心温まる葬儀で、故人様との最後の時間を大切にお過ごしいただけます。
+          </p>
+          <a href="<?php echo home_url('/family/'); ?>" class="btn btn--primary btn--large">
+            <i class="fas fa-heart"></i>
+            <span>家族葬プランを見る</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact CTA Section -->
     <section
       class="contact-cta-section"

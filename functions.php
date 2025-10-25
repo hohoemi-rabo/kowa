@@ -305,3 +305,37 @@ function kowa_remove_version_from_assets($src) {
 }
 add_filter('style_loader_src', 'kowa_remove_version_from_assets', 9999);
 add_filter('script_loader_src', 'kowa_remove_version_from_assets', 9999);
+
+/**
+ * Add custom body classes for page templates
+ */
+function kowa_custom_body_classes($classes) {
+    // Add page-specific class based on page template
+    if (is_page('ippansou')) {
+        $classes[] = 'page-ippansou';
+    }
+    if (is_page('family')) {
+        $classes[] = 'page-family';
+    }
+    if (is_page('flower')) {
+        $classes[] = 'page-flower';
+    }
+    if (is_page('company')) {
+        $classes[] = 'page-company';
+    }
+    if (is_page('contact')) {
+        $classes[] = 'page-contact';
+    }
+    if (is_page('member')) {
+        $classes[] = 'page-member';
+    }
+    if (is_page('soudan')) {
+        $classes[] = 'page-soudan';
+    }
+    if (is_page('privacy')) {
+        $classes[] = 'page-privacy';
+    }
+
+    return $classes;
+}
+add_filter('body_class', 'kowa_custom_body_classes');

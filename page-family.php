@@ -395,6 +395,27 @@
       </div>
     </section>
 
+    <!-- Other Plan Link Section -->
+    <section class="other-plan-link other-plan-link--ippansou">
+      <div class="container">
+        <div class="other-plan-link__content">
+          <div class="other-plan-link__icon">
+            <i class="fas fa-hands-praying"></i>
+          </div>
+          <h2 class="other-plan-link__title">伝統的な葬儀で多くの方にお別れいただきたい方へ</h2>
+          <p class="other-plan-link__description">
+            親族・友人・知人など、故人様と関わりのあった多くの方々にお別れいただきたい方には、一般葬プランがおすすめです。<br />
+            通夜式・告別式をしっかりと執り行い、心を込めてお見送りいたします。
+          </p>
+          <a href="<?php echo home_url('/ippansou/'); ?>" class="btn btn--primary btn--large">
+            <i class="fas fa-torii-gate"></i>
+            <span>一般葬プランを見る</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact CTA Section -->
     <section
       class="contact-cta-section"
