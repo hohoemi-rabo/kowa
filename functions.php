@@ -244,3 +244,64 @@ function kowa_dns_prefetch($urls, $relation_type) {
     return $urls;
 }
 add_filter('wp_resource_hints', 'kowa_dns_prefetch', 10, 2);
+
+/**
+ * Security Enhancements
+ */
+
+// Remove WordPress version from header and feeds
+remove_action('wp_head', 'wp_generator');
+add_filter('the_generator', '__return_empty_string');
+
+// Disable XML-RPC (if not needed)
+add_filter('xmlrpc_enabled', '__return_false');
+
+// Remove RSD link from header
+remove_action('wp_head', 'rsd_link');
+
+// Remove Windows Live Writer manifest link
+remove_action('wp_head', 'wlwmanifest_link');
+
+// Remove WordPress version from RSS feeds
+function kowa_remove_version_from_rss() {
+    return '';
+}
+add_filter('the_generator', 'kowa_remove_version_from_rss');
+
+// Disable REST API for non-authenticated users (optional - comment out if you need public API access)
+// add_filter('rest_authentication_errors', function($result) {
+//     if (!is_user_logged_in()) {
+//         return new WP_Error('rest_disabled', 'REST API is disabled for non-authenticated users', array('status' => 401));
+//     }
+//     return $result;
+// });
+
+// Add security headers
+function kowa_security_headers() {
+    header('X-Content-Type-Options: nosniff');
+    header('X-Frame-Options: SAMEORIGIN');
+    header('X-XSS-Protection: 1; mode=block');
+    header('Referrer-Policy: strict-origin-when-cross-origin');
+    // Uncomment for production with HTTPS:
+    // header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
+}
+add_action('send_headers', 'kowa_security_headers');
+
+// Disable file editing in WordPress admin
+define('DISALLOW_FILE_EDIT', true);
+
+// Hide login errors (prevent username enumeration)
+function kowa_login_errors() {
+    return 'ログイン情報が正しくありません。';
+}
+add_filter('login_errors', 'kowa_login_errors');
+
+// Remove WordPress version from scripts and styles
+function kowa_remove_version_from_assets($src) {
+    if (strpos($src, 'ver=' . get_bloginfo('version'))) {
+        $src = remove_query_arg('ver', $src);
+    }
+    return $src;
+}
+add_filter('style_loader_src', 'kowa_remove_version_from_assets', 9999);
+add_filter('script_loader_src', 'kowa_remove_version_from_assets', 9999);
