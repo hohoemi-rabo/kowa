@@ -25,6 +25,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - ✅ 全HTMLページ: WordPressテンプレート（page-*.php）に移行完了
 - ✅ アンカーリンク: 別ページからトップページのセクションへのリンク対応済み
 - ✅ タイトルタグ: WordPress自動生成に切り替え済み（ページごとに動的変更）
+- ✅ body_class(): ページ固有のbodyクラスを自動出力（カスタムbodyクラス機能実装）
+- ✅ セキュリティ対策: functions.phpに実装済み（詳細は下記参照）
 
 ## WordPress テーマアーキテクチャ
 
@@ -93,7 +95,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **3. DNS Prefetch** (`kowa_dns_prefetch`)
 - 外部リソースのDNSプリフェッチでパフォーマンス向上
 
+**4. セキュリティ対策** (複数の関数)
+- WordPressバージョン情報の非表示
+- XML-RPC無効化
+- セキュリティヘッダー追加（X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, Referrer-Policy）
+- 管理画面でのファイル編集無効化（DISALLOW_FILE_EDIT）
+- ログインエラーメッセージの統一
+- CSS/JSからバージョン情報削除
+
+**5. カスタムbodyクラス** (`kowa_custom_body_classes`)
+- ページ固有のクラスを自動追加（例: `.page-ippansou`, `.page-family`）
+- CSSのページ固有スタイルに必要（plan.cssなど）
+
 **重要:** header.phpとfooter.phpからCSS/JS読み込みは削除済み。全て`wp_enqueue_*`で管理。
+**重要:** header.phpの`<body>`タグは`<body <?php body_class(); ?>>`形式でbody_class()を使用。
 
 ## WordPress 開発ワークフロー
 
@@ -245,6 +260,17 @@ const breakpoints = {
 };
 ```
 
+### プラン間リンクセクション（plan.css）
+
+**`.other-plan-link`** - プランページ間の相互リンクボタンセクション
+
+- **使用箇所**: page-ippansou.php（一般葬プラン）⇄ page-family.php（家族葬プラン）
+- **デザイン**: グラデーション背景、円形アイコン、中央揃えレイアウト
+- **バリエーション**:
+  - `.other-plan-link` - 家族葬プランへのリンク（グリーン系背景）
+  - `.other-plan-link--ippansou` - 一般葬プランへのリンク（オレンジ/ゴールド系背景）
+- **レスポンシブ**: モバイルではボタンが全幅表示
+
 ### 固定 UI 要素の実装（sidebar.php）
 
 sidebar.php には 3 つの固定 UI 要素が含まれています：
@@ -293,6 +319,7 @@ sidebar.php には 3 つの固定 UI 要素が含まれています：
 - 既存のCSSデザインを維持（`.club-form`, `.form-group`, `.btn`クラス）
 - バリデーションはContact Form 7のデフォルト機能を使用
 - 必須項目: 名前、フリガナ、メール、電話、お問い合わせ内容、プライバシーポリシー同意
+- **メール設定:** 本番環境でWP Mail SMTPプラグインを使用推奨（ローカルでは不要）
 
 **カスタムバリデーション（js/main.js）:**
 
@@ -471,14 +498,8 @@ images/
 
 ### WordPress 移行に関する問題
 
-1. **header.php の不完全な変数置換**
-
-   - Line 18: OGP画像のメタタグが不正 - `content="https://memorial-kowa.example.com/images/og-image.jpg'); ?>"` となっている
-   - Line 29: Twitter Card画像も同様
-   - Line 55: Apple Touch Iconのパスが不正 - `href="/apple-touch-icon.png'); ?>"` となっている
-   - Line 68: JSON-LD内のロゴパスが不正 - `"logo": "https://memorial-kowa.example.com/images/logo.png'); ?>"` となっている
-
-   **修正が必要:** これらの行では、静的URLとPHP関数が混在している。完全にPHPに変換するか、静的URLに統一する必要がある
+1. ✅ **header.php の変数置換** - 修正完了
+   - OGP画像、Twitter Card画像、Apple Touch Icon、JSON-LDロゴ: すべて`get_theme_file_uri()`と`esc_url()`で正しく出力
 
 2. **header.phpのナビゲーション**
    - デスクトップナビゲーション: 「トップ」リンクはコメントアウト済み（ロゴクリックでトップに戻る想定）
@@ -503,6 +524,9 @@ images/
 - ✅ **タイトルタグ**: WordPressによる自動生成（SEO最適化）
 - ✅ **Contact Form 7統合**: お問い合わせページにContact Form 7実装済み（既存デザイン維持）
 - ✅ **ヒーロー画像**: flower/companyページにbackground-image + オーバーレイ実装
+- ✅ **セキュリティ対策**: functions.phpに包括的なセキュリティ機能を実装
+- ✅ **bodyクラス機能**: ページ固有のCSSを適用するためのカスタムbodyクラス自動出力
+- ✅ **プラン間リンク**: page-ippansou.php ⇄ page-family.php で相互リンクボタン実装
 
 ## クイックリファレンス
 
@@ -557,8 +581,10 @@ get_footer();
 3. **ページ固有CSS**: 新しい固定ページを作成する場合、functions.phpに条件分岐（`is_page('slug')`）を追加
 4. **タイトルタグ**: header.phpに手動で`<title>`タグを追加しない（WordPressが自動生成）
 5. **パスの統一**: 画像やアセットのパスは必ず`get_theme_file_uri()`を使用
-6. **Contact Form 7**: フォーム実装時は既存のCSSクラス（`.club-form`, `.form-group`, `.btn`）を使用して統一感を維持
-7. **ヒーロー画像**: 背景画像を使用する場合は`::before`疑似要素でオーバーレイを追加し、テキストの可読性を確保
+6. **bodyクラス**: 新しいページを追加する場合、functions.phpの`kowa_custom_body_classes()`にページ固有のクラスを追加
+7. **Contact Form 7**: フォーム実装時は既存のCSSクラス（`.club-form`, `.form-group`, `.btn`）を使用して統一感を維持
+8. **ヒーロー画像**: 背景画像を使用する場合は`::before`疑似要素でオーバーレイを追加し、テキストの可読性を確保
+9. **プラン間リンク**: plan.cssの`.other-plan-link`セクションを使用して、関連プランへの誘導ボタンを配置可能
 
 ### テスト手順
 
