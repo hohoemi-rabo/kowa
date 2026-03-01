@@ -23,6 +23,7 @@ body {
     var(--color-primary-100) 100%
   );
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Typography Scale - 和モダンに適した階層 */
