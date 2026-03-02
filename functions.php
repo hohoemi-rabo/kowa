@@ -288,7 +288,9 @@ function kowa_security_headers() {
 add_action('send_headers', 'kowa_security_headers');
 
 // Disable file editing in WordPress admin
-define('DISALLOW_FILE_EDIT', true);
+if (!defined('DISALLOW_FILE_EDIT')) {
+    define('DISALLOW_FILE_EDIT', true);
+}
 
 // Hide login errors (prevent username enumeration)
 function kowa_login_errors() {

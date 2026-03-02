@@ -90,31 +90,10 @@
             <div class="container">
                 <div class="footer__features">
                     <div class="footer__feature">
-                        <i class="fas fa-shield-alt"></i>
-                        <div>
-                            <strong>安心の実績</strong>
-                            <span>創業50年の信頼</span>
-                        </div>
-                    </div>
-                    <div class="footer__feature">
                         <i class="fas fa-award"></i>
                         <div>
-                            <strong>経済産業大臣認可</strong>
-                            <span>優良葬祭事業者</span>
-                        </div>
-                    </div>
-                    <div class="footer__feature">
-                        <i class="fas fa-users"></i>
-                        <div>
-                            <strong>年間実績</strong>
-                            <span>1,000件以上</span>
-                        </div>
-                    </div>
-                    <div class="footer__feature">
-                        <i class="fas fa-heart"></i>
-                        <div>
-                            <strong>満足度</strong>
-                            <span>98%以上</span>
+                            <strong>全葬連葬儀事前相談員在籍</strong>
+                            <span>安心の葬儀サポート</span>
                         </div>
                     </div>
                 </div>
