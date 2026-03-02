@@ -126,7 +126,7 @@
             <div class="container">
                 <div class="footer__bottom-content">
                     <div class="footer__copyright">
-                        <p>&copy; 2026 メモリアルホール光和. All rights reserved.</p>
+                        <p>&copy; 2026 株式会社光和. All rights reserved.</p>
                         <p class="footer__address">
                             <i class="fas fa-map-marker-alt"></i>
                             〒395-0821 長野県飯田市松尾新井6544-1

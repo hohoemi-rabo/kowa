@@ -177,10 +177,8 @@
                 <div class="header__logo">
                     <a href="<?php echo home_url('/') ?>" class="logo" aria-label="メモリアルホール光和 ホームページ">
                         <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="メモリアルホール光和ロゴ" class="logo__image">
-                        <div class="logo__text">
-                            <span class="logo__main">メモリアルホール</span>
-                            <span class="logo__sub">光和</span>
-                        </div>
+                        <!-- TODO: images/logo_kowa.png を配置したら完了 -->
+                        <img src="<?php echo get_theme_file_uri('images/logo_kowa.png'); ?>" alt="光和" class="logo__kowa">
                     </a>
                 </div>
 

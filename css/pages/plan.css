@@ -857,7 +857,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto 2rem;
@@ -867,13 +867,15 @@
 .flow-item {
   background: white;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 1px solid #e2e8f0;
   position: relative;
   transition: all 0.3s ease;
-  flex: 0 0 150px;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 150px;
 }
 
 .flow-item:hover {

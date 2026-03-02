@@ -25,7 +25,7 @@
           <!-- Company Philosophy -->
           <div class="company-philosophy">
             <div class="company-philosophy__inner">
-              <h3 class="company-philosophy__title">企業理念</h3>
+              <h3 class="company-philosophy__title">経営理念</h3>
               <div class="company-philosophy__message">
                 <p class="company-philosophy__main">
                   「こころ」を大切に、<br />
@@ -52,7 +52,7 @@
                 <tbody>
                   <tr>
                     <th>会社名</th>
-                    <td>株式会社メモリアルホール光和</td>
+                    <td>株式会社光和</td>
                   </tr>
                   <tr>
                     <th>所在地</th>
@@ -72,12 +72,15 @@
                   <tr>
                     <th>電話番号</th>
                     <td>
+                      <span class="freedial-badge"><i class="fas fa-phone-alt" aria-hidden="true"></i></span>
                       <a href="tel:0120-077-508" itemprop="telephone"
                         >0120-077-508</a
                       >
                       <span class="company-overview__note"
                         >（飯田市・下伊那郡 24時間365日対応）</span
                       >
+                      <br>
+                      TEL. <a href="tel:0265-53-2111">0265-53-2111</a>
                     </td>
                   </tr>
                   <tr>
@@ -86,15 +89,27 @@
                   </tr>
                   <tr>
                     <th>設立</th>
-                    <td>2009年3月18日</td>
+                    <td>1993年4月26日</td>
                   </tr>
                   <tr>
                     <th>事業内容</th>
                     <td>
-                      葬祭業全般<br />
-                      仏壇・仏具の販売<br />
-                      法要・法事の企画運営<br />
-                      生前相談・終活サポート
+                      <ol class="business-list">
+                        <li>式典、葬祭に関する企画運営</li>
+                        <li>貸会場の経営</li>
+                        <li>葬祭の施行</li>
+                        <li>冠婚葬祭用贈答品の販売</li>
+                        <li>料理・飲食店業</li>
+                        <li>仏壇・仏具・墓石の販売</li>
+                        <li>生花の販売</li>
+                        <li>霊園の企画、設計、施工及び墓地の販売業</li>
+                        <li>霊柩輸送の為にする一般区域貨物自動車運送業務</li>
+                        <li>損害保険代理業</li>
+                        <li>少額短期保険募集に係る業務</li>
+                        <li>少額短期保険代理業</li>
+                        <li>生命保険募集に関する業務</li>
+                        <li>上記に関する一切の業務</li>
+                      </ol>
                     </td>
                   </tr>
                   <tr>
@@ -127,7 +142,7 @@
                 </h4>
                 <div class="ceo-message__body">
                   <p>
-                    この度は、メモリアルホール光和のホームページをご覧いただき、
+                    この度は、株式会社光和のホームページをご覧いただき、
                     誠にありがとうございます。
                   </p>
                   <p>
@@ -141,7 +156,7 @@
                     どんな小さなことでも、お気軽にご相談ください。
                   </p>
                   <p class="ceo-message__signature">
-                    株式会社メモリアルホール光和<br />
+                    株式会社光和<br />
                     代表取締役 田中 淳
                   </p>
                 </div>

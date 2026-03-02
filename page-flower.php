@@ -38,7 +38,7 @@
             </p>
           </div>
 
-          <div class="flower-grid flower-grid--two">
+          <div class="flower-grid">
             <!-- 生花2: 枕花 -->
             <div class="flower-card">
               <div class="flower-card__image">

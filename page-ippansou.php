@@ -81,7 +81,7 @@
                 <div class="pricing-tier pricing-tier--alpha">
                   <div class="pricing-tier__label">アルファ会員様</div>
                   <div class="pricing-tier__prices">
-                    <div class="price price--main">775,500円<span class="price--excluding-tax">【税抜】</span></div>
+                    <div class="price price--main">805,000円<span class="price--excluding-tax">【税抜】</span></div>
                     <div class="price price--tax">（税込885,500円）</div>
                   </div>
                 </div>
@@ -121,15 +121,15 @@
                 <div class="pricing-tier pricing-tier--alpha">
                   <div class="pricing-tier__label">アルファ会員様</div>
                   <div class="pricing-tier__prices">
-                    <div class="price price--main">1,055,000円<span class="price--excluding-tax">【税抜】</span></div>
-                    <div class="price price--tax">（税込1,160,500円）</div>
+                    <div class="price price--main">1,105,000円<span class="price--excluding-tax">【税抜】</span></div>
+                    <div class="price price--tax">（税込1,215,500円）</div>
                   </div>
                 </div>
                 <div class="pricing-tier pricing-tier--heart">
                   <div class="pricing-tier__label">ハートライフ会員様</div>
                   <div class="pricing-tier__prices">
-                    <div class="price price--main">1,100,000円<span class="price--excluding-tax">【税抜】</span></div>
-                    <div class="price price--tax">（税込1,210,000円）</div>
+                    <div class="price price--main">1,150,000円<span class="price--excluding-tax">【税抜】</span></div>
+                    <div class="price price--tax">（税込1,265,000円）</div>
                   </div>
                 </div>
                 <div class="pricing-tier pricing-tier--general">
@@ -191,7 +191,7 @@
     <section class="plan-features">
       <div class="container">
         <div class="plan-features__header">
-          <h2 class="section-title">一般葬プランに含まれる基本サービス</h2>
+          <h2 class="section-title">一般葬プランに含まれるご葬儀の流れ</h2>
           <p class="section-description">どのプランをお選びいただいても、大切な方を心を込めてお見送りするための基本的なサービスが含まれています</p>
         </div>
         
@@ -228,7 +228,7 @@
               <i class="fas fa-moon"></i>
             </div>
             <h3 class="flow-item__title">通夜式</h3>
-            <p class="flow-item__description">故人様との最後の夜をお過ごしいただきます</p>
+            <p class="flow-item__description">故人様との最後の夜を過ごします</p>
           </div>
           
           <div class="flow-arrow">
@@ -312,7 +312,7 @@
           <div class="point-card">
             <div class="point-card__number">Point 3</div>
             <div class="point-card__icon">
-              <i class="fas fa-hands-holding-heart"></i>
+              <i class="fas fa-book-open"></i>
             </div>
             <h3 class="point-card__title">故人様の人生を振り返りたい</h3>
             <p class="point-card__description">
@@ -396,12 +396,12 @@
                 </td>
                 <td class="plan-comparison__cell plan-comparison__cell--standard">
                   <div class="plan-comparison__price">
-                    <span class="plan-comparison__price-main">775,500円</span>
+                    <span class="plan-comparison__price-main">885,500円</span>
                   </div>
                 </td>
                 <td class="plan-comparison__cell plan-comparison__cell--basic">
                   <div class="plan-comparison__price">
-                    <span class="plan-comparison__price-main">1,160,500円</span>
+                    <span class="plan-comparison__price-main">1,215,500円</span>
                   </div>
                 </td>
                 <td class="plan-comparison__cell plan-comparison__cell--minimal">
@@ -427,7 +427,7 @@
                 </td>
                 <td class="plan-comparison__cell plan-comparison__cell--basic">
                   <div class="plan-comparison__price">
-                    <span class="plan-comparison__price-main">1,210,000円</span>
+                    <span class="plan-comparison__price-main">1,265,000円</span>
                   </div>
                 </td>
                 <td class="plan-comparison__cell plan-comparison__cell--minimal">
@@ -533,13 +533,13 @@
                 <div class="plan-comparison__mobile-price-row">
                   <span class="plan-comparison__mobile-price-label">アルファ会員</span>
                   <div class="plan-comparison__mobile-price">
-                    <span class="plan-comparison__price-main">1,160,500円</span>
+                    <span class="plan-comparison__price-main">1,215,500円</span>
                   </div>
                 </div>
                 <div class="plan-comparison__mobile-price-row">
                   <span class="plan-comparison__mobile-price-label">ハートライフ会員</span>
                   <div class="plan-comparison__mobile-price">
-                    <span class="plan-comparison__price-main">1,210,000円</span>
+                    <span class="plan-comparison__price-main">1,265,000円</span>
                   </div>
                 </div>
                 <div class="plan-comparison__mobile-price-row">

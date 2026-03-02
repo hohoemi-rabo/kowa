@@ -39,11 +39,11 @@
                         </div>
                         <div class="hero__feature">
                             <i class="fas fa-heart" aria-hidden="true"></i>
-                            <span>地域密着<br>50年の実績</span>
+                            <span>地域密着<br>真心の対応</span>
                         </div>
                         <div class="hero__feature">
                             <i class="fas fa-yen-sign" aria-hidden="true"></i>
-                            <span>明朗会計<br>追加費用なし</span>
+                            <span>明朗会計<br>安心のご提案</span>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                             </div>
                             <div class="hero__philosophy-content-item">
                                 <h3>地域に根ざした信頼</h3>
-                                <p>50年間、地域の皆様に支えられ信頼を築いてまいりました</p>
+                                <p>地域の皆様に支えられ信頼を築いてまいりました</p>
                             </div>
                         </div>
                         <div class="hero__philosophy-item">
@@ -491,6 +491,12 @@
                 <div class="facilities__halls">
                     <!-- Main Hall -->
                     <article class="hall-card hall-card--main" data-hall="main">
+                        <!-- TODO: 画像が用意でき次第、以下のコメントを解除してプレースホルダーを削除 -->
+                        <div class="hall-card__gallery hall-card__gallery--placeholder">
+                            <i class="fas fa-image" aria-hidden="true"></i>
+                            <span>画像準備中</span>
+                        </div>
+                        <!-- 画像用意後に復元するギャラリー
                         <div class="hall-card__gallery">
                             <div class="hall-card__main-image">
                                 <img src="<?php echo get_theme_file_uri('images/facilities/main-hall/main.jpg'); ?>"
@@ -515,12 +521,13 @@
                                 </button>
                             </div>
                         </div>
+                        -->
                         <div class="hall-card__content">
                             <div class="hall-card__header">
                                 <h3 class="hall-card__title">メインホール</h3>
                                 <div class="hall-card__capacity">
                                     <i class="fas fa-users" aria-hidden="true"></i>
-                                    <span>最大500名収容</span>
+                                    <span>最大350名収容</span>
                                 </div>
                             </div>
                             <div class="hall-card__location">
@@ -554,10 +561,16 @@
 
                     <!-- Middle Hall -->
                     <article class="hall-card hall-card--middle" data-hall="middle">
+                        <!-- TODO: 画像が用意でき次第、以下のコメントを解除してプレースホルダーを削除 -->
+                        <div class="hall-card__gallery hall-card__gallery--placeholder">
+                            <i class="fas fa-image" aria-hidden="true"></i>
+                            <span>画像準備中</span>
+                        </div>
+                        <!-- 画像用意後に復元するギャラリー
                         <div class="hall-card__gallery">
                             <div class="hall-card__main-image">
                                 <img src="<?php echo get_theme_file_uri('images/facilities/middle-hall/main.jpg'); ?>"
-                                     alt="中ホール（2F・150名収容）"
+                                     alt="中ホール（2F・100名収容）"
                                      loading="lazy"
                                      decoding="async"
                                      width="800"
@@ -578,12 +591,13 @@
                                 </button>
                             </div>
                         </div>
+                        -->
                         <div class="hall-card__content">
                             <div class="hall-card__header">
                                 <h3 class="hall-card__title">中ホール</h3>
                                 <div class="hall-card__capacity">
                                     <i class="fas fa-users" aria-hidden="true"></i>
-                                    <span>最大150名収容</span>
+                                    <span>最大100名収容</span>
                                 </div>
                             </div>
                             <div class="hall-card__location">
@@ -617,6 +631,12 @@
 
                     <!-- Multi-purpose Hall -->
                     <article class="hall-card hall-card--multi" data-hall="multi">
+                        <!-- TODO: 画像が用意でき次第、以下のコメントを解除してプレースホルダーを削除 -->
+                        <div class="hall-card__gallery hall-card__gallery--placeholder">
+                            <i class="fas fa-image" aria-hidden="true"></i>
+                            <span>画像準備中</span>
+                        </div>
+                        <!-- 画像用意後に復元するギャラリー
                         <div class="hall-card__gallery">
                             <div class="hall-card__main-image">
                                 <img src="<?php echo get_theme_file_uri('images/facilities/multi-hall/main.jpg'); ?>"
@@ -641,6 +661,7 @@
                                 </button>
                             </div>
                         </div>
+                        -->
                         <div class="hall-card__content">
                             <div class="hall-card__header">
                                 <h3 class="hall-card__title">多目的ホール</h3>
@@ -654,7 +675,7 @@
                                 <span>1階・2階</span>
                             </div>
                             <p class="hall-card__description">
-                                可動式パーティションにより、様々な規模に対応可能な多目的ホール。
+                                様々な規模に対応可能な多目的ホール。
                                 直葬から家族葬、一般葬まで、ご希望に合わせてレイアウトを変更いたします。
                             </p>
                             <ul class="hall-card__features">
@@ -767,7 +788,7 @@
                                     <strong>営業時間：</strong>24時間
                                 </li>
                                 <li class="parking-info__item">
-                                    <strong>大型バス：</strong>5台駐車可能
+                                    <strong>大型バス：</strong>駐車可能
                                 </li>
                             </ul>
                             <a href="#contact" class="btn btn--primary">
@@ -857,35 +878,35 @@
                             <li class="p-flow__listItem">
                                 <div class="p-flow__listItemLink">
                                     <span class="p-flow__number">8</span>
-                                    <span class="p-flow__text">納棺</span>
-                                </div>
-                            </li>
-                            <li class="p-flow__listItem">
-                                <div class="p-flow__listItemLink">
-                                    <span class="p-flow__number">9</span>
                                     <span class="p-flow__text">通夜</span>
                                 </div>
                             </li>
                             <li class="p-flow__listItem">
                                 <div class="p-flow__listItemLink">
-                                    <span class="p-flow__number">10</span>
-                                    <span class="p-flow__text">葬儀・告別式</span>
+                                    <span class="p-flow__number">9</span>
+                                    <span class="p-flow__text">納棺</span>
                                 </div>
                             </li>
                             <li class="p-flow__listItem">
-                                <div class="p-flow__listItemLink p-flow__listItemLink--separation">
-                                    <span class="p-flow__number">11</span>
+                                <div class="p-flow__listItemLink">
+                                    <span class="p-flow__number">10</span>
                                     <span class="p-flow__text">出棺</span>
                                 </div>
                             </li>
                             <li class="p-flow__listItem">
                                 <div class="p-flow__listItemLink">
-                                    <span class="p-flow__number">12</span>
+                                    <span class="p-flow__number">11</span>
                                     <span class="p-flow__text">火葬・収骨</span>
                                 </div>
                             </li>
                             <li class="p-flow__listItem">
                                 <div class="p-flow__listItemLink">
+                                    <span class="p-flow__number">12</span>
+                                    <span class="p-flow__text">葬儀・告別式</span>
+                                </div>
+                            </li>
+                            <li class="p-flow__listItem">
+                                <div class="p-flow__listItemLink p-flow__listItemLink--separation">
                                     <span class="p-flow__number">13</span>
                                     <span class="p-flow__text">初七日法要・精進落とし</span>
                                 </div>
@@ -1046,6 +1067,11 @@
                                 </summary>
                                 <div class="faq-item__answer">
                                     <p>はい、事前相談を承っております。葬儀の流れやプラン、費用について詳しくご説明いたします。事前にご相談いただくことで、いざという時も安心してお任せいただけます。</p>
+                                    <a href="<?php echo home_url('/soudan/'); ?>" class="faq-link faq-link--cta">
+                                        <i class="fas fa-certificate" aria-hidden="true"></i>
+                                        <span>全日本葬祭業協同組合連合会認定の専門相談員が親身に対応いたします</span>
+                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </a>
                                 </div>
                             </details>
                             <details class="faq-item">
@@ -1054,7 +1080,7 @@
                                     <span>24時間対応していますか？</span>
                                 </summary>
                                 <div class="faq-item__answer">
-                                    <p>はい、24時間365日対応しております。深夜・早朝問わず、すぐにお伺いいたします。お電話一本でスタッフが駆けつけます。</p>
+                                    <p>はい、24時間365日対応しております。</p>
                                 </div>
                             </details>
                         </div>
@@ -1069,7 +1095,7 @@
                                     <span>駐車場はありますか？</span>
                                 </summary>
                                 <div class="faq-item__answer">
-                                    <p>はい、100台収容可能な無料駐車場を完備しております。大型バスも駐車可能です。</p>
+                                    <p>はい、200台収容可能な無料駐車場を完備しております。大型バスも駐車可能です。</p>
                                 </div>
                             </details>
                             <details class="faq-item">
@@ -1078,8 +1104,8 @@
                                     <span>宿泊は可能ですか？</span>
                                 </summary>
                                 <div class="faq-item__answer">
-                                    <p>申し訳ございませんが、当ホールには宿泊施設のご用意がございません。</p>
-                                    <p>ご遠方からお越しの方には、お調べして宿泊可能な施設をご案内させていただきます。24時間体制でスタッフが常駐しておりますので、夜間のお通夜なども安心してお任せください。</p>
+                                    <p>はい、宿泊が可能です。通夜室・仮眠室を完備しており、故人様と最後の夜をゆっくりお過ごしいただけます。</p>
+                                    <p>館内にはバスルーム（シャワー・バスタブ完備）やパウダールーム、キッチンもございますので、ご遠方からお越しの方も安心してご利用いただけます。</p>
                                 </div>
                             </details>
                         </div>
@@ -1089,7 +1115,7 @@
                 <div class="faq-contact">
                     <p class="faq-contact__text">その他ご不明な点がございましたら、お気軽にご相談ください。</p>
                     <div class="funeral-info__cta-buttons">
-                        <a href="soudan.html" class="btn btn--primary btn--large">
+                        <a href="<?php echo home_url('/soudan/'); ?>" class="btn btn--primary btn--large">
                             <i class="fas fa-user-tie" aria-hidden="true"></i>
                             <span>葬儀事前相談</span>
                         </a>
@@ -1097,7 +1123,7 @@
                     <div class="faq-contact__certification">
                         <i class="fas fa-certificate"></i>
                         <p class="faq-contact__certification-text">
-                            経済産業大臣認可の専門相談員が<br>
+                            全日本葬祭業協同組合連合会認定の専門相談員が<br>
                             親身になってご相談を承ります
                         </p>
                     </div>
@@ -1240,7 +1266,7 @@
                                     <span>A.T</span>
                                 </div>
                                 <div class="voice-card__info">
-                                    <p class="voice-card__name">A.T様（50代・女性）</p>
+                                    <p class="voice-card__name">A.T様（60代・女性）</p>
                                     <p class="voice-card__location">○○市在住</p>
                                 </div>
                             </div>
@@ -1254,17 +1280,17 @@
                         </div>
                         <div class="voice-card__plan">
                             <span class="voice-card__plan-label">ご利用プラン</span>
-                            <span class="voice-card__plan-name">小規模お葬式</span>
+                            <span class="voice-card__plan-name">家族葬</span>
                         </div>
                         <div class="voice-card__content">
                             <i class="fas fa-quote-left voice-card__quote"></i>
                             <p class="voice-card__message">
-                                コロナ禍で県外の親族が参列できない中、
-                                オンライン配信を提案していただき、
-                                遠方の親族も一緒にお別れすることができました。
-                                新しい形の葬儀でしたが、皆が参加できたことで
-                                本当に良い式になりました。
-                                時代に合わせた柔軟な対応に感謝しています。
+                                我が家は特定の宗教を信仰しておらず、
+                                葬儀ができるのか不安でした。
+                                相談したところ「無宗教でも心のこもったお別れはできます」と
+                                親身に対応してくださり、故人が好きだった音楽を流しながら
+                                家族で思い出を語り合う温かい式を行うことができました。
+                                宗教にとらわれない自由な形の葬儀を叶えてくださり、本当に感謝しています。
                             </p>
                         </div>
                         <time class="voice-card__date" datetime="2023-12">2023年12月</time>
