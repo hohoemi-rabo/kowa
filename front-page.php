@@ -72,7 +72,7 @@
                                 <i class="fas fa-list-alt" aria-hidden="true"></i>
                                 <span>プラン・料金を見る</span>
                             </a>
-                            <a href="<?php echo home_url('/contact/') ?>" class="btn btn--secondary btn--sm hero__cta-btn">
+                            <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn--secondary btn--sm hero__cta-btn">
                                 <i class="fas fa-file-alt" aria-hidden="true"></i>
                                 <span>無料資料請求</span>
                             </a>
@@ -81,10 +81,10 @@
 
                     <div class="hero__banners">
                         <a href="https://www.olive-ins.co.jp/" target="_blank" rel="noopener noreferrer" class="hero__banner-link">
-                            <img src="<?php echo get_theme_file_uri('images/olive.png'); ?>" alt="オリーブ少額短期保険" loading="lazy">
+                            <img src="<?php echo esc_url(get_theme_file_uri('images/olive.png')); ?>" alt="オリーブ少額短期保険" loading="lazy">
                         </a>
                         <a href="https://www.zensoren.or.jp/" target="_blank" rel="noopener noreferrer" class="hero__banner-link">
-                            <img src="<?php echo get_theme_file_uri('images/zensouren.png'); ?>" alt="全日本葬祭業協同組合連合会" loading="lazy">
+                            <img src="<?php echo esc_url(get_theme_file_uri('images/zensouren.png')); ?>" alt="全日本葬祭業協同組合連合会" loading="lazy">
                         </a>
                     </div>
 
@@ -281,7 +281,7 @@
                                     
                                     <!-- 詳しく見るボタン -->
                                     <div class="plan-card__cta">
-                                        <a href="<?php echo home_url('/ippansou/') ?>" class="btn btn--hero plan-card__details-btn">
+                                        <a href="<?php echo esc_url(home_url('/ippansou/')); ?>" class="btn btn--hero plan-card__details-btn">
                                             <i class="fas fa-search" aria-hidden="true"></i>
                                             詳しく見る
                                             <i class="fas fa-chevron-right" aria-hidden="true"></i>
@@ -365,7 +365,7 @@
                                     
                                     <!-- 詳しく見るボタン -->
                                     <div class="plan-card__cta">
-                                        <a href="<?php echo home_url('/family/') ?>" class="btn btn--hero plan-card__details-btn">
+                                        <a href="<?php echo esc_url(home_url('/family/')); ?>" class="btn btn--hero plan-card__details-btn">
                                             <i class="fas fa-search" aria-hidden="true"></i>
                                             詳しく見る
                                             <i class="fas fa-chevron-right" aria-hidden="true"></i>
@@ -505,7 +505,7 @@
                         <!-- 画像用意後に復元するギャラリー
                         <div class="hall-card__gallery">
                             <div class="hall-card__main-image">
-                                <img src="<?php echo get_theme_file_uri('images/facilities/main-hall/main.jpg'); ?>"
+                                <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/main-hall/main.jpg')); ?>"
                                      alt="メインホール（1F・500名収容）"
                                      loading="lazy"
                                      decoding="async"
@@ -514,16 +514,16 @@
                             </div>
                             <div class="hall-card__thumbnails">
                                 <button class="hall-card__thumb active" data-image="main-0" aria-label="ホール全体を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/main-hall/main.jpg'); ?>" alt="メインホール 全体" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/main-hall/main.jpg')); ?>" alt="メインホール 全体" width="150" height="100">
                                 </button>
                                 <button class="hall-card__thumb" data-image="main-1" aria-label="祭壇を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/main-hall/altar.jpg'); ?>" alt="メインホール 祭壇" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/main-hall/altar.jpg')); ?>" alt="メインホール 祭壇" width="150" height="100">
                                 </button>
                                 <button class="hall-card__thumb" data-image="main-2" aria-label="座席を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/main-hall/seating.jpg'); ?>" alt="メインホール 座席" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/main-hall/seating.jpg')); ?>" alt="メインホール 座席" width="150" height="100">
                                 </button>
                                 <button class="hall-card__thumb" data-image="main-3" aria-label="内装を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/main-hall/interior.jpg'); ?>" alt="メインホール 内装" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/main-hall/interior.jpg')); ?>" alt="メインホール 内装" width="150" height="100">
                                 </button>
                             </div>
                         </div>
@@ -575,7 +575,7 @@
                         <!-- 画像用意後に復元するギャラリー
                         <div class="hall-card__gallery">
                             <div class="hall-card__main-image">
-                                <img src="<?php echo get_theme_file_uri('images/facilities/middle-hall/main.jpg'); ?>"
+                                <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/middle-hall/main.jpg')); ?>"
                                      alt="中ホール（2F・100名収容）"
                                      loading="lazy"
                                      decoding="async"
@@ -584,16 +584,16 @@
                             </div>
                             <div class="hall-card__thumbnails">
                                 <button class="hall-card__thumb active" data-image="middle-0" aria-label="ホール全体を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/middle-hall/main.jpg'); ?>" alt="中ホール 全体" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/middle-hall/main.jpg')); ?>" alt="中ホール 全体" width="150" height="100">
                                 </button>
                                 <button class="hall-card__thumb" data-image="middle-1" aria-label="祭壇を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/middle-hall/altar.jpg'); ?>" alt="中ホール 祭壇" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/middle-hall/altar.jpg')); ?>" alt="中ホール 祭壇" width="150" height="100">
                                 </button>
                                 <button class="hall-card__thumb" data-image="middle-2" aria-label="座席を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/middle-hall/seating.jpg'); ?>" alt="中ホール 座席" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/middle-hall/seating.jpg')); ?>" alt="中ホール 座席" width="150" height="100">
                                 </button>
                                 <button class="hall-card__thumb" data-image="middle-3" aria-label="内装を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/middle-hall/interior.jpg'); ?>" alt="中ホール 内装" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/middle-hall/interior.jpg')); ?>" alt="中ホール 内装" width="150" height="100">
                                 </button>
                             </div>
                         </div>
@@ -645,7 +645,7 @@
                         <!-- 画像用意後に復元するギャラリー
                         <div class="hall-card__gallery">
                             <div class="hall-card__main-image">
-                                <img src="<?php echo get_theme_file_uri('images/facilities/multi-hall/main.jpg'); ?>"
+                                <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/multi-hall/main.jpg')); ?>"
                                      alt="多目的ホール（10〜210名収容）"
                                      loading="lazy"
                                      decoding="async"
@@ -654,16 +654,16 @@
                             </div>
                             <div class="hall-card__thumbnails">
                                 <button class="hall-card__thumb active" data-image="multi-0" aria-label="ホール全体を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/multi-hall/main.jpg'); ?>" alt="多目的ホール 全体" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/multi-hall/main.jpg')); ?>" alt="多目的ホール 全体" width="150" height="100">
                                 </button>
                                 <button class="hall-card__thumb" data-image="multi-1" aria-label="祭壇を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/multi-hall/altar.jpg'); ?>" alt="多目的ホール 祭壇" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/multi-hall/altar.jpg')); ?>" alt="多目的ホール 祭壇" width="150" height="100">
                                 </button>
                                 <button class="hall-card__thumb" data-image="multi-2" aria-label="座席を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/multi-hall/seating.jpg'); ?>" alt="多目的ホール 座席" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/multi-hall/seating.jpg')); ?>" alt="多目的ホール 座席" width="150" height="100">
                                 </button>
                                 <button class="hall-card__thumb" data-image="multi-3" aria-label="内装を表示">
-                                    <img src="<?php echo get_theme_file_uri('images/facilities/multi-hall/interior.jpg'); ?>" alt="多目的ホール 内装" width="150" height="100">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/multi-hall/interior.jpg')); ?>" alt="多目的ホール 内装" width="150" height="100">
                                 </button>
                             </div>
                         </div>
@@ -774,7 +774,7 @@
                     <h3 class="facilities__subtitle">アクセス・駐車場のご案内</h3>
                     <div class="parking-info">
                         <div class="parking-info__map">
-                            <img src="<?php echo get_theme_file_uri('images/facilities/parking/overview.jpg'); ?>"
+                            <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/parking/overview.jpg')); ?>"
                                  alt="メモリアルホール光和 駐車場全景（200台収容）"
                                  loading="lazy"
                                  decoding="async"
@@ -1073,7 +1073,7 @@
                                 </summary>
                                 <div class="faq-item__answer">
                                     <p>はい、事前相談を承っております。葬儀の流れやプラン、費用について詳しくご説明いたします。事前にご相談いただくことで、いざという時も安心してお任せいただけます。</p>
-                                    <a href="<?php echo home_url('/soudan/'); ?>" class="faq-link faq-link--cta">
+                                    <a href="<?php echo esc_url(home_url('/soudan/')); ?>" class="faq-link faq-link--cta">
                                         <i class="fas fa-certificate" aria-hidden="true"></i>
                                         <span>全日本葬祭業協同組合連合会認定の専門相談員が親身に対応いたします</span>
                                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -1121,7 +1121,7 @@
                 <div class="faq-contact">
                     <p class="faq-contact__text">その他ご不明な点がございましたら、お気軽にご相談ください。</p>
                     <div class="funeral-info__cta-buttons">
-                        <a href="<?php echo home_url('/soudan/'); ?>" class="btn btn--primary btn--large">
+                        <a href="<?php echo esc_url(home_url('/soudan/')); ?>" class="btn btn--primary btn--large">
                             <i class="fas fa-user-tie" aria-hidden="true"></i>
                             <span>葬儀事前相談</span>
                         </a>
@@ -1347,7 +1347,7 @@
                             <div class="contact-option">
                                 <h4 class="contact-option__title">WEBからのお問い合わせ</h4>
                                 <div class="contact-option__content">
-                                    <a href="<?php echo home_url('/contact/') ?>" class="contact-option__button">
+                                    <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="contact-option__button">
                                         <i class="fas fa-envelope"></i>
                                         <span>お問い合わせフォームへ</span>
                                         <i class="fas fa-chevron-right"></i>

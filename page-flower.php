@@ -43,7 +43,7 @@
             <div class="flower-card">
               <div class="flower-card__image">
                 <img
-                  src="<?php echo get_theme_file_uri('images/facilities/flowers/12.jpg'); ?>"
+                  src="<?php echo esc_url(get_theme_file_uri('images/facilities/flowers/12.jpg')); ?>"
                   alt="生花12番"
                   loading="lazy"
                   decoding="async"
@@ -71,7 +71,7 @@
             <div class="flower-card">
               <div class="flower-card__image">
                 <img
-                  src="<?php echo get_theme_file_uri('images/facilities/flowers/13.JPG'); ?>"
+                  src="<?php echo esc_url(get_theme_file_uri('images/facilities/flowers/13.JPG')); ?>"
                   alt="生花13番"
                   loading="lazy"
                   decoding="async"
@@ -99,7 +99,7 @@
             <div class="flower-card">
               <div class="flower-card__image">
                 <img
-                  src="<?php echo get_theme_file_uri('images/facilities/flowers/14.jpg'); ?>"
+                  src="<?php echo esc_url(get_theme_file_uri('images/facilities/flowers/14.jpg')); ?>"
                   alt="生花14番"
                   loading="lazy"
                   decoding="async"
@@ -167,7 +167,7 @@
                 <div class="contact-option">
                   <h4 class="contact-option__title">WEBからのお問い合わせ</h4>
                   <div class="contact-option__content">
-                    <a href="<?php echo home_url('/contact/') ?>" class="contact-option__button">
+                    <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="contact-option__button">
                       <i class="fas fa-envelope"></i>
                       <span>お問い合わせフォームへ</span>
                       <i class="fas fa-chevron-right"></i>

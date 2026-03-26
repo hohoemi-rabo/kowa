@@ -15,7 +15,7 @@
             </div>
         </a>
 
-        <a href="<?php echo home_url('/member/') ?>" class="fixed-sidebar__item fixed-sidebar__item--member" aria-label="会員登録">
+        <a href="<?php echo esc_url(home_url('/member/')); ?>" class="fixed-sidebar__item fixed-sidebar__item--member" aria-label="会員登録">
             <div class="fixed-sidebar__icon">
                 <i class="fas fa-crown"></i>
             </div>
@@ -25,7 +25,7 @@
             </div>
         </a>
 
-        <a href="<?php echo home_url('/#contact'); ?>" class="fixed-sidebar__item fixed-sidebar__item--document" aria-label="無料資料請求">
+        <a href="<?php echo esc_url(home_url('/#contact')); ?>" class="fixed-sidebar__item fixed-sidebar__item--document" aria-label="無料資料請求">
             <div class="fixed-sidebar__icon">
                 <i class="fas fa-file-alt"></i>
             </div>
@@ -35,7 +35,7 @@
             </div>
         </a>
 
-        <a href="<?php echo home_url('/#plans'); ?>" class="fixed-sidebar__item fixed-sidebar__item--plans" aria-label="プラン一覧を見る">
+        <a href="<?php echo esc_url(home_url('/#plans')); ?>" class="fixed-sidebar__item fixed-sidebar__item--plans" aria-label="プラン一覧を見る">
             <div class="fixed-sidebar__icon">
                 <i class="fas fa-list-alt"></i>
             </div>
@@ -59,7 +59,7 @@
     <div class="progress-bar" id="progressBar"></div>
     
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+    <button class="back-to-top" id="backToTopMobile" aria-label="ページトップへ戻る">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </button>
     
@@ -73,14 +73,14 @@
             <span class="fixed-bottom-bar__label">電話</span>
         </a>
 
-        <a href="<?php echo home_url('/member/') ?>" class="fixed-bottom-bar__item fixed-bottom-bar__item--member" aria-label="会員登録">
+        <a href="<?php echo esc_url(home_url('/member/')); ?>" class="fixed-bottom-bar__item fixed-bottom-bar__item--member" aria-label="会員登録">
             <div class="fixed-bottom-bar__icon">
                 <i class="fas fa-crown"></i>
             </div>
             <span class="fixed-bottom-bar__label">会員登録</span>
         </a>
 
-        <a href="<?php echo home_url('/#contact'); ?>" class="fixed-bottom-bar__item fixed-bottom-bar__item--document" aria-label="資料請求">
+        <a href="<?php echo esc_url(home_url('/#contact')); ?>" class="fixed-bottom-bar__item fixed-bottom-bar__item--document" aria-label="資料請求">
             <div class="fixed-bottom-bar__icon">
                 <i class="fas fa-file-alt"></i>
             </div>

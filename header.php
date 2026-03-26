@@ -32,8 +32,8 @@
     <!-- CSS/JS are loaded via functions.php using wp_enqueue_style() and wp_enqueue_script() -->
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="<?php echo esc_url(get_theme_file_uri('apple-touch-icon.png')); ?>">
+    <link rel="icon" type="image/png" href="<?php echo esc_url(get_theme_file_uri('images/favicon.png')); ?>">
+    <link rel="apple-touch-icon" href="<?php echo esc_url(get_theme_file_uri('images/favicon.png')); ?>">
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -170,15 +170,15 @@
     <?php wp_body_open(); ?>
 
     <!-- Header -->
-    <header class="header" role="banner">
+    <header class="header">
         <div class="container">
             <div class="header__inner">
                 <!-- Logo -->
                 <div class="header__logo">
-                    <a href="<?php echo home_url('/') ?>" class="logo" aria-label="メモリアルホール光和 ホームページ">
-                        <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="メモリアルホール光和ロゴ" class="logo__image">
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="logo" aria-label="メモリアルホール光和 ホームページ">
+                        <img src="<?php echo esc_url(get_theme_file_uri('images/logo.png')); ?>" alt="メモリアルホール光和ロゴ" class="logo__image">
                         <!-- TODO: images/logo_kowa.png を配置したら完了 -->
-                        <img src="<?php echo get_theme_file_uri('images/logo_kowa.png'); ?>" alt="光和" class="logo__kowa">
+                        <img src="<?php echo esc_url(get_theme_file_uri('images/logo_kowa.png')); ?>" alt="光和" class="logo__kowa">
                     </a>
                 </div>
 
@@ -192,13 +192,13 @@
                             </a>
                         </li> -->
                         <li class="nav__item">
-                            <a href="<?php echo home_url('/#plans'); ?>" class="nav__link">
+                            <a href="<?php echo esc_url(home_url('/#plans')); ?>" class="nav__link">
                                 <i class="fas fa-list-alt nav__icon" aria-hidden="true"></i>
                                 <span>葬儀プラン</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="<?php echo home_url('/#facilities'); ?>" class="nav__link">
+                            <a href="<?php echo esc_url(home_url('/#facilities')); ?>" class="nav__link">
                                 <i class="fas fa-building nav__icon" aria-hidden="true"></i>
                                 <span>式場・施設案内</span>
                             </a>
@@ -214,25 +214,25 @@
                             </button>
                             <ul class="dropdown" id="funeral-info-dropdown" role="menu" aria-labelledby="funeral-info">
                                 <li class="dropdown__item" role="none">
-                                    <a href="<?php echo home_url('/soudan/') ?>" class="dropdown__link" role="menuitem">
+                                    <a href="<?php echo esc_url(home_url('/soudan/')); ?>" class="dropdown__link" role="menuitem">
                                         <i class="fas fa-user-tie" aria-hidden="true"></i>
                                         <span>事前相談</span>
                                     </a>
                                 </li>
                                 <li class="dropdown__item" role="none">
-                                    <a href="<?php echo home_url('/#flow'); ?>" class="dropdown__link" role="menuitem">
+                                    <a href="<?php echo esc_url(home_url('/#flow')); ?>" class="dropdown__link" role="menuitem">
                                         <i class="fas fa-route" aria-hidden="true"></i>
                                         <span>葬儀の流れ</span>
                                     </a>
                                 </li>
                                 <li class="dropdown__item" role="none">
-                                    <a href="<?php echo home_url('/#manner'); ?>" class="dropdown__link" role="menuitem">
+                                    <a href="<?php echo esc_url(home_url('/#manner')); ?>" class="dropdown__link" role="menuitem">
                                         <i class="fas fa-hand-peace" aria-hidden="true"></i>
                                         <span>葬儀のマナー</span>
                                     </a>
                                 </li>
                                 <li class="dropdown__item" role="none">
-                                    <a href="<?php echo home_url('/#faq'); ?>" class="dropdown__link" role="menuitem">
+                                    <a href="<?php echo esc_url(home_url('/#faq')); ?>" class="dropdown__link" role="menuitem">
                                         <i class="fas fa-question-circle" aria-hidden="true"></i>
                                         <span>よくある質問</span>
                                     </a>
@@ -240,13 +240,13 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="<?php echo home_url('/flower/') ?>" class="nav__link">
+                            <a href="<?php echo esc_url(home_url('/flower/')); ?>" class="nav__link">
                                 <i class="fas fa-seedling nav__icon" aria-hidden="true"></i>
                                 <span>供花・生花</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="<?php echo home_url('/company/') ?>" class="nav__link">
+                            <a href="<?php echo esc_url(home_url('/company/')); ?>" class="nav__link">
                                 <i class="fas fa-users nav__icon" aria-hidden="true"></i>
                                 <span>会社案内</span>
                             </a>
@@ -276,13 +276,13 @@
                     </a>
                 </li> -->
                 <li class="mobile-menu__item">
-                    <a href="<?php echo home_url('/#plans'); ?>" class="mobile-menu__link">
+                    <a href="<?php echo esc_url(home_url('/#plans')); ?>" class="mobile-menu__link">
                         <i class="fas fa-list-alt" aria-hidden="true"></i>
                         <span>葬儀プラン</span>
                     </a>
                 </li>
                 <li class="mobile-menu__item">
-                    <a href="<?php echo home_url('/#facilities'); ?>" class="mobile-menu__link">
+                    <a href="<?php echo esc_url(home_url('/#facilities')); ?>" class="mobile-menu__link">
                         <i class="fas fa-building" aria-hidden="true"></i>
                         <span>式場・施設案内</span>
                     </a>
@@ -297,25 +297,25 @@
                     </button>
                     <ul class="mobile-submenu" id="funeral-submenu">
                         <li class="mobile-submenu__item">
-                            <a href="<?php echo home_url('/soudan/') ?>" class="mobile-submenu__link">
+                            <a href="<?php echo esc_url(home_url('/soudan/')); ?>" class="mobile-submenu__link">
                                 <i class="fas fa-user-tie" aria-hidden="true"></i>
                                 <span>事前相談</span>
                             </a>
                         </li>
                         <li class="mobile-submenu__item">
-                            <a href="<?php echo home_url('/#flow'); ?>" class="mobile-submenu__link">
+                            <a href="<?php echo esc_url(home_url('/#flow')); ?>" class="mobile-submenu__link">
                                 <i class="fas fa-route" aria-hidden="true"></i>
                                 <span>葬儀の流れ</span>
                             </a>
                         </li>
                         <li class="mobile-submenu__item">
-                            <a href="<?php echo home_url('/#manner'); ?>" class="mobile-submenu__link">
+                            <a href="<?php echo esc_url(home_url('/#manner')); ?>" class="mobile-submenu__link">
                                 <i class="fas fa-hand-peace" aria-hidden="true"></i>
                                 <span>葬儀のマナー</span>
                             </a>
                         </li>
                         <li class="mobile-submenu__item">
-                            <a href="<?php echo home_url('/#faq'); ?>" class="mobile-submenu__link">
+                            <a href="<?php echo esc_url(home_url('/#faq')); ?>" class="mobile-submenu__link">
                                 <i class="fas fa-question-circle" aria-hidden="true"></i>
                                 <span>よくある質問</span>
                             </a>
@@ -323,13 +323,13 @@
                     </ul>
                 </li>
                 <li class="mobile-menu__item">
-                    <a href="<?php echo home_url('/flower/') ?>" class="mobile-menu__link">
+                    <a href="<?php echo esc_url(home_url('/flower/')); ?>" class="mobile-menu__link">
                         <i class="fas fa-seedling" aria-hidden="true"></i>
                         <span>供花・生花</span>
                     </a>
                 </li>
                 <li class="mobile-menu__item">
-                    <a href="<?php echo home_url('/company/') ?>" class="mobile-menu__link">
+                    <a href="<?php echo esc_url(home_url('/company/')); ?>" class="mobile-menu__link">
                         <i class="fas fa-users" aria-hidden="true"></i>
                         <span>会社案内</span>
                     </a>

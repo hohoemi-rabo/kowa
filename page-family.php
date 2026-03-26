@@ -1,11 +1,12 @@
 <?php get_header(); ?>
 
+<main id="main-content" tabindex="-1">
     <!-- sub Hero Section -->
     <section class="sub-hero" aria-labelledby="sub-hero-title">
       <div class="container">
         <div class="sub-hero__content">
           <h1 id="sub-hero-title" class="sub-hero__title">
-            <span class="sub-hero__subtitle">GENERAL FUNERAL PLAN</span>
+            <span class="sub-hero__subtitle">FAMILY FUNERAL PLAN</span>
             <span class="sub-hero__maintitle">家族葬</span>
           </h1>
           <p class="sub-hero__text">
@@ -101,7 +102,7 @@
               <div class="plan-card__included">
                 <h4 class="plan-card__included-title">光プランに含まれるもの</h4>
                 <img 
-                  src="<?php echo get_theme_file_uri('images/hikari.png'); ?>" 
+                  src="<?php echo esc_url(get_theme_file_uri('images/hikari.png')); ?>" 
                   alt="光プランに含まれる内容" 
                   class="plan-card__included-image"
                 />
@@ -194,7 +195,7 @@
               <div class="plan-card__included">
                 <h4 class="plan-card__included-title">和みプランに含まれるもの</h4>
                 <img 
-                  src="<?php echo get_theme_file_uri('images/nagomi.png'); ?>" 
+                  src="<?php echo esc_url(get_theme_file_uri('images/nagomi.png')); ?>" 
                   alt="和みプランに含まれる内容" 
                   class="plan-card__included-image"
                 />
@@ -407,7 +408,7 @@
             親族・友人・知人など、故人様と関わりのあった多くの方々にお別れいただきたい方には、一般葬プランがおすすめです。<br />
             通夜式・告別式をしっかりと執り行い、心を込めてお見送りいたします。
           </p>
-          <a href="<?php echo home_url('/ippansou/'); ?>" class="btn btn--primary btn--large">
+          <a href="<?php echo esc_url(home_url('/ippansou/')); ?>" class="btn btn--primary btn--large">
             <i class="fas fa-torii-gate"></i>
             <span>一般葬プランを見る</span>
             <i class="fas fa-chevron-right"></i>
@@ -451,7 +452,7 @@
               <div class="contact-option">
                 <h4 class="contact-option__title">WEBからのお問い合わせ</h4>
                 <div class="contact-option__content">
-                  <a href="<?php echo home_url('/contact/') ?>" class="contact-option__button">
+                  <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="contact-option__button">
                     <i class="fas fa-envelope"></i>
                     <span>お問い合わせフォームへ</span>
                     <i class="fas fa-chevron-right"></i>
@@ -463,6 +464,8 @@
         </div>
       </div>
     </section>
+
+</main>
 
 <?php get_sidebar(); ?>
 

@@ -1,5 +1,6 @@
   <?php get_header(); ?>
 
+  <main id="main-content" tabindex="-1">
   <!--お問い合わせフォーム -->
   <section
     class="club-contact"
@@ -67,7 +68,7 @@
               直接のご相談も承っております。<br />
               事前にお電話でご予約いただくと、スムーズにご案内できます。
             </p>
-            <a href="<?php echo home_url('/company/'); ?>" class="btn btn--outline btn--sm">
+            <a href="<?php echo esc_url(home_url('/company/')); ?>" class="btn btn--outline btn--sm">
               <i class="fas fa-map"></i>
               アクセス情報
             </a>
@@ -77,6 +78,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <?php get_sidebar(); ?>
   <?php get_footer(); ?>

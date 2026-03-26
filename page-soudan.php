@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<main id="main-content" tabindex="-1">
     <!-- sub Hero Section -->
     <section class="sub-hero" aria-labelledby="sub-hero-title">
       <div class="container">
@@ -172,7 +173,7 @@
               <div class="contact-option">
                 <h4 class="contact-option__title">WEBからのお問い合わせ</h4>
                 <div class="contact-option__content">
-                  <a href="<?php echo home_url('/contact/') ?>" class="contact-option__button">
+                  <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="contact-option__button">
                     <i class="fas fa-envelope"></i>
                     <span>お問い合わせフォームへ</span>
                     <i class="fas fa-chevron-right"></i>
@@ -184,6 +185,8 @@
         </div>
       </div>
     </section>
+
+</main>
 
 <?php get_sidebar(); ?>
 

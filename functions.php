@@ -262,12 +262,6 @@ remove_action('wp_head', 'rsd_link');
 // Remove Windows Live Writer manifest link
 remove_action('wp_head', 'wlwmanifest_link');
 
-// Remove WordPress version from RSS feeds
-function kowa_remove_version_from_rss() {
-    return '';
-}
-add_filter('the_generator', 'kowa_remove_version_from_rss');
-
 // Disable REST API for non-authenticated users (optional - comment out if you need public API access)
 // add_filter('rest_authentication_errors', function($result) {
 //     if (!is_user_logged_in()) {
@@ -286,11 +280,6 @@ function kowa_security_headers() {
     // header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
 }
 add_action('send_headers', 'kowa_security_headers');
-
-// Disable file editing in WordPress admin
-if (!defined('DISALLOW_FILE_EDIT')) {
-    define('DISALLOW_FILE_EDIT', true);
-}
 
 // Hide login errors (prevent username enumeration)
 function kowa_login_errors() {

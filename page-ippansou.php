@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<main id="main-content" tabindex="-1">
     <!-- sub Hero Section -->
     <section class="sub-hero" aria-labelledby="sub-hero-title">
       <div class="container">
@@ -339,7 +340,7 @@
         <!-- 画像用意後に復元
         <div class="plan-includes__content">
           <img
-            src="<?php echo get_theme_file_uri('images/plan.png');?>"
+            src="<?php echo esc_url(get_theme_file_uri('images/plan.png')); ?>"
             alt="一般葬プランに含まれる内容"
             class="plan-includes__image"
           />
@@ -602,7 +603,7 @@
             少人数でゆっくりとお別れの時間を過ごしたい方には、家族葬プランがおすすめです。<br />
             親族中心の心温まる葬儀で、故人様との最後の時間を大切にお過ごしいただけます。
           </p>
-          <a href="<?php echo home_url('/family/'); ?>" class="btn btn--primary btn--large">
+          <a href="<?php echo esc_url(home_url('/family/')); ?>" class="btn btn--primary btn--large">
             <i class="fas fa-heart"></i>
             <span>家族葬プランを見る</span>
             <i class="fas fa-chevron-right"></i>
@@ -646,7 +647,7 @@
               <div class="contact-option">
                 <h4 class="contact-option__title">WEBからのお問い合わせ</h4>
                 <div class="contact-option__content">
-                  <a href="<?php echo home_url('/contact/') ?>" class="contact-option__button">
+                  <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="contact-option__button">
                     <i class="fas fa-envelope"></i>
                     <span>お問い合わせフォームへ</span>
                     <i class="fas fa-chevron-right"></i>
@@ -658,6 +659,8 @@
         </div>
       </div>
     </section>
+
+</main>
 
 <?php get_sidebar(); ?>
 

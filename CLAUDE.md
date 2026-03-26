@@ -444,6 +444,7 @@ images/
 │   └── flowers/        # 生花（3枚: 12.jpg, 13.JPG, 14.jpg）
 ├── hikari.png          # 光プラン内容図
 ├── nagomi.png          # 和みプラン内容図
+├── favicon.png         # ファビコン・Apple Touch Icon
 ├── logo.png            # ヘッダーロゴマーク
 ├── logo_kowa.png       # ヘッダー「光和」ロゴ文字
 ├── logo_2.png          # フッターロゴ
@@ -564,6 +565,8 @@ images/
 - ✅ **バナー配置**: ヒーロー・フッターにolive/zensouren/全葬連バナー
 - ✅ **ヘッダーロゴ**: ロゴマーク(logo.png) + 光和文字(logo_kowa.png)の横並び
 - ✅ **フッター更新**: Copyright「株式会社光和」、全葬連葬儀事前相談員在籍カード
+- ✅ **WordPress準拠リファクタリング**: エスケープ処理統一、style.css情報補完、index.php実装、mainタグ追加、ID重複修正、冗長ARIA削除
+- ✅ **ファビコン**: images/favicon.png（header.phpで直接設定）
 
 ## クイックリファレンス
 
