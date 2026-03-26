@@ -2225,6 +2225,10 @@
   .hall-card__gallery {
     height: 250px;
   }
+  .hall-card__gallery--placeholder {
+    height: auto;
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
