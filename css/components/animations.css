@@ -134,10 +134,13 @@
   .hero__orchid,
   .hero__light,
   .animate-fade-in-up,
+  .animate-fade-in,
   .animate-float,
   .animate-pulse,
   .highlight-pulse,
   .scroll-highlight {
-    animation: none;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
