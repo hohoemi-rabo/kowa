@@ -331,13 +331,20 @@
           <p class="section-description">葬儀に必要な基本的なものがすべて含まれています</p>
         </div>
         
+        <!-- TODO: 画像が用意でき次第、以下のコメントを解除してプレースホルダーを削除 -->
+        <div class="plan-includes__content plan-includes__content--placeholder">
+          <i class="fas fa-image" aria-hidden="true"></i>
+          <span>画像準備中</span>
+        </div>
+        <!-- 画像用意後に復元
         <div class="plan-includes__content">
-          <img 
-            src="<?php echo get_theme_file_uri('images/plan.png');?>" 
-            alt="一般葬プランに含まれる内容" 
+          <img
+            src="<?php echo get_theme_file_uri('images/plan.png');?>"
+            alt="一般葬プランに含まれる内容"
             class="plan-includes__image"
           />
         </div>
+        -->
       </div>
     </section>
 

@@ -1156,6 +1156,29 @@
   justify-content: center;
 }
 
+.plan-includes__content--placeholder {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  max-width: 1000px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: var(--radius-xl);
+  color: #9ca3af;
+  gap: var(--spacing-3);
+}
+
+.plan-includes__content--placeholder i {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.plan-includes__content--placeholder span {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 .plan-includes__image {
   width: 100%;
   max-width: 1000px;
