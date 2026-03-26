@@ -3446,11 +3446,40 @@
 /* Responsive for Contact CTA */
 @media (max-width: 768px) {
   .contact-cta__overlay {
-    padding: var(--spacing-12);
+    padding: var(--spacing-8);
   }
   .contact-cta__options {
     grid-template-columns: 1fr;
     gap: var(--spacing-8);
+  }
+  .contact-option {
+    padding: var(--spacing-6);
+  }
+  .contact-option__phone {
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-3);
+    letter-spacing: 1px;
+  }
+  .contact-option__button {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-3) var(--spacing-4);
+    min-height: 48px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-cta__overlay {
+    padding: var(--spacing-6);
+  }
+  .contact-option__phone {
+    font-size: var(--font-size-lg);
+    letter-spacing: 0;
+  }
+  .contact-option__button {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-2) var(--spacing-3);
+    gap: var(--spacing-2);
   }
 }
 
