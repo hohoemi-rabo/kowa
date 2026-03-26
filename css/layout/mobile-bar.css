@@ -16,7 +16,7 @@
   padding: var(--spacing-2) var(--spacing-1);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .fixed-bottom-bar {
     display: none;
   }
