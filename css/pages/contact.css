@@ -302,6 +302,28 @@
     grid-template-columns: 1fr;
   }
 
+  .form-radio-group,
+  .form-checkbox-group,
+  .wpcf7-radio,
+  .wpcf7-checkbox {
+    flex-direction: column;
+    gap: var(--spacing-3);
+    display: flex;
+  }
+
+  .form-radio,
+  .form-checkbox,
+  .wpcf7-list-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-4);
+    background: var(--color-background);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
   /* թ��ܿ�n�����t */
   .form-actions {
     display: flex;
