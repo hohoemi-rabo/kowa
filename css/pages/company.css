@@ -329,6 +329,33 @@
   color: var(--color-primary-dark);
 }
 
+@media (max-width: 768px) {
+  .company-overview__table,
+  .company-overview__table tbody,
+  .company-overview__table tr,
+  .company-overview__table th,
+  .company-overview__table td {
+    display: block;
+    width: 100%;
+  }
+
+  .company-overview__table th {
+    background: var(--color-primary-50);
+    border-bottom: none;
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-sm);
+  }
+
+  .company-overview__table td {
+    padding: var(--spacing-3) var(--spacing-4) var(--spacing-5);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .company-overview__table th::before {
+    display: none;
+  }
+}
+
 .company-overview__note {
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
