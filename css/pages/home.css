@@ -447,19 +447,42 @@
   opacity: 0.9;
 }
 
-.hero__cta-group {
+.hero__actions-top {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-4);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .hero__actions-top {
+    flex-direction: row;
+    align-items: stretch;
+    gap: var(--spacing-4);
+  }
+}
+
+.hero__cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
   width: 100%;
   max-width: 400px;
 }
 
 @media (min-width: 768px) {
   .hero__cta-group {
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: none;
+    flex-direction: column;
+    max-width: 180px;
+    justify-content: center;
+    margin-top: var(--spacing-8);
+  }
+
+  .hero__cta-group .hero__cta-btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    flex: none;
   }
 }
 
@@ -467,6 +490,14 @@
   flex: 1;
   min-width: 200px;
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hero__cta-btn {
+    min-width: auto;
+    min-height: auto;
+    flex: none;
+  }
 }
 
 /* ヒーローセクション内のボタンホバー時の修正 */
@@ -512,6 +543,34 @@
   border-color: #ea580c;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+.hero__banners {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+  margin-top: var(--spacing-4);
+}
+
+.hero__banner-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2);
+  background: transparent;
+  border-radius: var(--radius-md);
+  transition: var(--transition-all);
+}
+
+.hero__banner-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero__banner-link img {
+  max-height: 90px;
+  width: auto;
+  object-fit: contain;
 }
 
 .hero__quick-info {

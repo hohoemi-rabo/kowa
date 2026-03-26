@@ -88,14 +88,20 @@
         <!-- Footer Middle -->
         <div class="footer__middle">
             <div class="container">
-                <div class="footer__features">
-                    <div class="footer__feature">
+                <div class="footer__banners">
+                    <a href="https://www.olive-ins.co.jp/" target="_blank" rel="noopener noreferrer" class="footer__banner">
+                        <img src="<?php echo get_theme_file_uri('images/olive.png'); ?>" alt="オリーブ少額短期保険" loading="lazy">
+                    </a>
+                    <a href="https://www.zensoren.or.jp/" target="_blank" rel="noopener noreferrer" class="footer__banner">
+                        <img src="<?php echo get_theme_file_uri('images/zensouren.png'); ?>" alt="全日本葬祭業協同組合連合会" loading="lazy">
+                    </a>
+                    <a href="<?php echo home_url('/soudan/'); ?>" class="footer__feature">
                         <i class="fas fa-award"></i>
                         <div>
                             <strong>全葬連葬儀事前相談員在籍</strong>
                             <span>安心の葬儀サポート</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

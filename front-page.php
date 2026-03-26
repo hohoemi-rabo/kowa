@@ -49,39 +49,45 @@
                 </div>
                 
                 <div class="hero__actions">
-                    <div class="hero__emergency">
-                        <div class="hero__emergency-label">
-                            <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
-                            <span>緊急の場合は今すぐお電話ください</span>
+                    <div class="hero__actions-top">
+                        <div class="hero__emergency">
+                            <div class="hero__emergency-label">
+                                <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                                <span>緊急の場合は今すぐお電話ください</span>
+                            </div>
+                            <a href="tel:0120-077-508" class="hero__phone-primary">
+                                <div class="hero__phone-icon">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <div class="hero__phone-pulse"></div>
+                                </div>
+                                <div class="hero__phone-content">
+                                    <span class="hero__phone-label">フリーダイヤル</span>
+                                    <span class="hero__phone-number">0120-077-508</span>
+                                    <span class="hero__phone-note">24時間受付・相談無料</span>
+                                </div>
+                            </a>
                         </div>
-                        <a href="tel:0120-077-508" class="hero__phone-primary">
-                            <div class="hero__phone-icon">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                <div class="hero__phone-pulse"></div>
-                            </div>
-                            <div class="hero__phone-content">
-                                <span class="hero__phone-label">フリーダイヤル</span>
-                                <span class="hero__phone-number">0120-077-508</span>
-                                <span class="hero__phone-note">24時間受付・相談無料</span>
-                            </div>
+                        <div class="hero__cta-group">
+                            <a href="#plans" class="btn btn--primary btn--sm hero__cta-btn">
+                                <i class="fas fa-list-alt" aria-hidden="true"></i>
+                                <span>プラン・料金を見る</span>
+                            </a>
+                            <a href="<?php echo home_url('/contact/') ?>" class="btn btn--secondary btn--sm hero__cta-btn">
+                                <i class="fas fa-file-alt" aria-hidden="true"></i>
+                                <span>無料資料請求</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero__banners">
+                        <a href="https://www.olive-ins.co.jp/" target="_blank" rel="noopener noreferrer" class="hero__banner-link">
+                            <img src="<?php echo get_theme_file_uri('images/olive.png'); ?>" alt="オリーブ少額短期保険" loading="lazy">
+                        </a>
+                        <a href="https://www.zensoren.or.jp/" target="_blank" rel="noopener noreferrer" class="hero__banner-link">
+                            <img src="<?php echo get_theme_file_uri('images/zensouren.png'); ?>" alt="全日本葬祭業協同組合連合会" loading="lazy">
                         </a>
                     </div>
-                    
-                    <div class="hero__cta-group">
-                        <a href="#plans" class="btn btn--primary btn--lg hero__cta-btn">
-                            <i class="fas fa-list-alt" aria-hidden="true"></i>
-                            <span>プラン・料金を見る</span>
-                        </a>
-                        <a href="<?php echo home_url('/contact/') ?>" class="btn btn--secondary btn--lg hero__cta-btn">
-                            <i class="fas fa-file-alt" aria-hidden="true"></i>
-                            <span>無料資料請求</span>
-                        </a>
-                        <a href="<?php echo home_url('/member/') ?>" class="btn btn--outline btn--lg hero__cta-btn">
-                            <i class="fas fa-crown" aria-hidden="true"></i>
-                            <span>会員制度について</span>
-                        </a>
-                    </div>
-                    
+
                     <div class="hero__quick-info">
                         <div class="hero__location">
                             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
