@@ -13,6 +13,17 @@
   margin-bottom: var(--spacing-2);
 }
 
+.required {
+  color: #dc2626;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  border: 1px solid #dc2626;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-left: var(--spacing-2);
+  vertical-align: middle;
+}
+
 .form-label--required::after {
   content: ' *';
   color: var(--color-error);
