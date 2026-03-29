@@ -578,21 +578,29 @@
   flex-direction: column;
   gap: var(--spacing-3);
   font-size: var(--font-size-sm);
-  color: var(--color-gold-100);
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   .hero__quick-info {
     flex-direction: row;
-    gap: var(--spacing-6);
+    gap: var(--spacing-4);
+    justify-content: center;
   }
 }
 
 .hero__location,
 .hero__parking {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--spacing-2);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  color: white;
+  font-weight: var(--font-weight-medium);
 }
 
 .hero__location i,
