@@ -686,8 +686,8 @@
     max-width: 100%;
   }
 
-  .flower-grid--two .flower-card__image {
-    height: 300px;
+  .flower-card__image {
+    height: 400px;
   }
 
   .flower-section__title {
@@ -708,7 +708,7 @@
 
 @media (max-width: 480px) {
   .flower-card__image {
-    height: 200px;
+    height: 350px;
   }
 
   .flower-card__content {
