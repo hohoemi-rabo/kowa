@@ -687,7 +687,7 @@
   }
 
   .flower-card__image {
-    height: 500px;
+    height: 600px;
   }
 
   .flower-section__title {
@@ -708,7 +708,7 @@
 
 @media (max-width: 480px) {
   .flower-card__image {
-    height: 450px;
+    height: 550px;
   }
 
   .flower-card__content {
