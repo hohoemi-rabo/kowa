@@ -94,8 +94,3 @@
   line-height: var(--line-height-normal);
   cursor: pointer;
 }
-
-/* Turnstile（スパム対策）を非表示 */
-.cf7-turnstile {
-  display: none;
-}
