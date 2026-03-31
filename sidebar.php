@@ -25,7 +25,7 @@
             </div>
         </a>
 
-        <a href="<?php echo esc_url(home_url('/#contact')); ?>" class="fixed-sidebar__item fixed-sidebar__item--document" aria-label="無料資料請求">
+        <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="fixed-sidebar__item fixed-sidebar__item--document" aria-label="無料資料請求">
             <div class="fixed-sidebar__icon">
                 <i class="fas fa-file-alt"></i>
             </div>
@@ -80,7 +80,7 @@
             <span class="fixed-bottom-bar__label">会員登録</span>
         </a>
 
-        <a href="<?php echo esc_url(home_url('/#contact')); ?>" class="fixed-bottom-bar__item fixed-bottom-bar__item--document" aria-label="資料請求">
+        <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="fixed-bottom-bar__item fixed-bottom-bar__item--document" aria-label="資料請求">
             <div class="fixed-bottom-bar__icon">
                 <i class="fas fa-file-alt"></i>
             </div>
