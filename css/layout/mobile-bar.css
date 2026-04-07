@@ -12,7 +12,7 @@
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(15px);
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-  z-index: var(--z-fixed);
+  z-index: calc(var(--z-modal) + 10);
   border-top: 1px solid var(--color-border-light);
   height: 80px;
   padding: var(--spacing-2) var(--spacing-1);

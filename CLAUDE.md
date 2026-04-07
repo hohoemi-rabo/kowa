@@ -359,7 +359,7 @@ sidebar.php には 3 つの固定 UI 要素が含まれています：
 
 3. **IntersectionObserver 多用:** スクロールアニメーション、遅延読み込み、カウンターアニメーションに使用
 
-4. **モバイルメニュー:** スライドイン式（transform: translateX方式）、visibility制御、オーバーレイクリックで閉じる、サブメニュー展開機能付き
+4. **モバイルメニュー:** スライドイン式（transform: translateX方式）、visibility制御、オーバーレイクリックで閉じる、サブメニュー展開機能付き。`<header>`タグの外に配置（backdrop-filterによるposition:fixed問題回避）
 
 5. **構造化データ:** JSON-LD 形式で Organization、LocalBusiness、WebSite、BreadcrumbList を実装
 
@@ -569,6 +569,9 @@ images/
 - ✅ **ファビコン**: images/favicon.png（header.phpで直接設定）
 - ✅ **モバイルバー**: 非表示ブレークポイントを1024pxに変更（大画面Android対応）
 - ✅ **モバイルバーはみ出し修正**: width/max-width/overflow/flex-shrink対応
+- ✅ **モバイルメニューposition:fixed修正**: header外に移動（backdrop-filterによる包含ブロック問題回避）
+- ✅ **モバイルバーz-index修正**: メニュー展開時も固定下部バーが常に最前面に表示
+- ✅ **ヒーロー背景アニメーション**: モバイル（767px以下）でhero__bg-elementsを非表示（視認性向上）
 - ✅ **モバイルレスポンシブ**: お問い合わせCTAボタン、会社概要テーブル縦積み、フォーム選択肢縦並び
 - ✅ **reduced-motion対応**: prefers-reduced-motion時にコンテンツが非表示にならないよう修正
 - ✅ **スパム対策**: Contact Form 7 + Cloudflare Turnstile連携（インテグレーション設定）

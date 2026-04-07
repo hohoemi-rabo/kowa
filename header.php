@@ -257,95 +257,96 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
-        
-        <!-- Mobile Menu -->
-        <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="モバイルメニュー">
-            <div class="mobile-menu__header">
-                <span class="mobile-menu__title">メニュー</span>
-                <button class="mobile-menu__close" aria-label="メニューを閉じる">
-                    <i class="fas fa-times" aria-hidden="true"></i>
-                </button>
-            </div>
-            <ul class="mobile-menu__list">
-                <!-- <li class="mobile-menu__item">
-                    <a href="<?php echo home_url('/') ?>" class="mobile-menu__link" aria-current="page">
-                        <i class="fas fa-home" aria-hidden="true"></i>
-                        <span>トップ</span>
-                    </a>
-                </li> -->
-                <li class="mobile-menu__item">
-                    <a href="<?php echo esc_url(home_url('/#plans')); ?>" class="mobile-menu__link">
-                        <i class="fas fa-list-alt" aria-hidden="true"></i>
-                        <span>葬儀プラン</span>
-                    </a>
-                </li>
-                <li class="mobile-menu__item">
-                    <a href="<?php echo esc_url(home_url('/#facilities')); ?>" class="mobile-menu__link">
-                        <i class="fas fa-building" aria-hidden="true"></i>
-                        <span>式場・施設案内</span>
-                    </a>
-                </li>
-                <li class="mobile-menu__item mobile-menu__item--expandable">
-                    <button class="mobile-menu__link mobile-menu__expand-toggle"
-                            aria-expanded="false"
-                            data-target="funeral-submenu">
-                        <i class="fas fa-info-circle" aria-hidden="true"></i>
-                        <span>葬儀について</span>
-                        <i class="fas fa-chevron-down mobile-menu__arrow" aria-hidden="true"></i>
-                    </button>
-                    <ul class="mobile-submenu" id="funeral-submenu">
-                        <li class="mobile-submenu__item">
-                            <a href="<?php echo esc_url(home_url('/soudan/')); ?>" class="mobile-submenu__link">
-                                <i class="fas fa-user-tie" aria-hidden="true"></i>
-                                <span>事前相談</span>
-                            </a>
-                        </li>
-                        <li class="mobile-submenu__item">
-                            <a href="<?php echo esc_url(home_url('/#flow')); ?>" class="mobile-submenu__link">
-                                <i class="fas fa-route" aria-hidden="true"></i>
-                                <span>葬儀の流れ</span>
-                            </a>
-                        </li>
-                        <li class="mobile-submenu__item">
-                            <a href="<?php echo esc_url(home_url('/#manner')); ?>" class="mobile-submenu__link">
-                                <i class="fas fa-hand-peace" aria-hidden="true"></i>
-                                <span>葬儀のマナー</span>
-                            </a>
-                        </li>
-                        <li class="mobile-submenu__item">
-                            <a href="<?php echo esc_url(home_url('/#faq')); ?>" class="mobile-submenu__link">
-                                <i class="fas fa-question-circle" aria-hidden="true"></i>
-                                <span>よくある質問</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mobile-menu__item">
-                    <a href="<?php echo esc_url(home_url('/flower/')); ?>" class="mobile-menu__link">
-                        <i class="fas fa-seedling" aria-hidden="true"></i>
-                        <span>供花・生花</span>
-                    </a>
-                </li>
-                <li class="mobile-menu__item">
-                    <a href="<?php echo esc_url(home_url('/company/')); ?>" class="mobile-menu__link">
-                        <i class="fas fa-users" aria-hidden="true"></i>
-                        <span>会社案内</span>
-                    </a>
-                </li>
-            </ul>
-
-            <!-- Mobile Menu CTA -->
-            <div class="mobile-menu__cta">
-                <a href="tel:0120-077-508" class="btn btn--primary btn--lg">
-                    <i class="fas fa-phone" aria-hidden="true"></i>
-                    <span>今すぐ相談</span>
-                </a>
-                <!-- <a href="#contact" class="btn btn--secondary btn--lg">
-                    <i class="fas fa-file-alt" aria-hidden="true"></i>
-                    <span>資料請求</span>
-                </a> -->
-            </div>
-        </nav>
     </header>
+
+    <!-- Mobile Menu Overlay (headerの外に配置 - backdrop-filterによるposition:fixed問題回避) -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="モバイルメニュー">
+        <div class="mobile-menu__header">
+            <span class="mobile-menu__title">メニュー</span>
+            <button class="mobile-menu__close" aria-label="メニューを閉じる">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu__list">
+            <!-- <li class="mobile-menu__item">
+                <a href="<?php echo home_url('/') ?>" class="mobile-menu__link" aria-current="page">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>トップ</span>
+                </a>
+            </li> -->
+            <li class="mobile-menu__item">
+                <a href="<?php echo esc_url(home_url('/#plans')); ?>" class="mobile-menu__link">
+                    <i class="fas fa-list-alt" aria-hidden="true"></i>
+                    <span>葬儀プラン</span>
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="<?php echo esc_url(home_url('/#facilities')); ?>" class="mobile-menu__link">
+                    <i class="fas fa-building" aria-hidden="true"></i>
+                    <span>式場・施設案内</span>
+                </a>
+            </li>
+            <li class="mobile-menu__item mobile-menu__item--expandable">
+                <button class="mobile-menu__link mobile-menu__expand-toggle"
+                        aria-expanded="false"
+                        data-target="funeral-submenu">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    <span>葬儀について</span>
+                    <i class="fas fa-chevron-down mobile-menu__arrow" aria-hidden="true"></i>
+                </button>
+                <ul class="mobile-submenu" id="funeral-submenu">
+                    <li class="mobile-submenu__item">
+                        <a href="<?php echo esc_url(home_url('/soudan/')); ?>" class="mobile-submenu__link">
+                            <i class="fas fa-user-tie" aria-hidden="true"></i>
+                            <span>事前相談</span>
+                        </a>
+                    </li>
+                    <li class="mobile-submenu__item">
+                        <a href="<?php echo esc_url(home_url('/#flow')); ?>" class="mobile-submenu__link">
+                            <i class="fas fa-route" aria-hidden="true"></i>
+                            <span>葬儀の流れ</span>
+                        </a>
+                    </li>
+                    <li class="mobile-submenu__item">
+                        <a href="<?php echo esc_url(home_url('/#manner')); ?>" class="mobile-submenu__link">
+                            <i class="fas fa-hand-peace" aria-hidden="true"></i>
+                            <span>葬儀のマナー</span>
+                        </a>
+                    </li>
+                    <li class="mobile-submenu__item">
+                        <a href="<?php echo esc_url(home_url('/#faq')); ?>" class="mobile-submenu__link">
+                            <i class="fas fa-question-circle" aria-hidden="true"></i>
+                            <span>よくある質問</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="<?php echo esc_url(home_url('/flower/')); ?>" class="mobile-menu__link">
+                    <i class="fas fa-seedling" aria-hidden="true"></i>
+                    <span>供花・生花</span>
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="<?php echo esc_url(home_url('/company/')); ?>" class="mobile-menu__link">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <span>会社案内</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Mobile Menu CTA -->
+        <div class="mobile-menu__cta">
+            <a href="tel:0120-077-508" class="btn btn--primary btn--lg">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <span>今すぐ相談</span>
+            </a>
+            <!-- <a href="#contact" class="btn btn--secondary btn--lg">
+                <i class="fas fa-file-alt" aria-hidden="true"></i>
+                <span>資料請求</span>
+            </a> -->
+        </div>
+    </nav>
