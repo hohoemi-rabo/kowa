@@ -291,16 +291,16 @@ sidebar.php には 3 つの固定 UI 要素が含まれています：
 
    - 電話相談: `tel:0120-077-508`
    - 会員登録: `<?php echo home_url('/member/'); ?>` へのリンク
-   - 資料請求: `<?php echo home_url('/#contact'); ?>` アンカーリンク（トップページ）
+   - 資料請求: `<?php echo home_url('/contact/'); ?>` お問い合わせページへのリンク
    - プラン一覧: `<?php echo home_url('/#plans'); ?>` アンカーリンク（トップページ）
    - TOP へ戻る: `#backToTop` ボタン（300px 以上スクロールで表示）
 
 2. **プログレスバー** - `.progress-bar` (スクロール進行度表示)
 
-3. **固定下部バー（モバイル版 767px 以下）** - `.fixed-bottom-bar`
+3. **固定下部バー（モバイル版 1023px 以下）** - `.fixed-bottom-bar`
    - 電話: `tel:0120-077-508`
    - 会員登録: `<?php echo home_url('/member/'); ?>` へのリンク
-   - 資料請求: `<?php echo home_url('/#contact'); ?>` アンカーリンク（トップページ）
+   - 資料請求: `<?php echo home_url('/contact/'); ?>` お問い合わせページへのリンク
    - メニュー: `.mobile-menu-toggle-bottom` (モバイルメニュー開閉)
 
 **重要:**
@@ -560,13 +560,18 @@ images/
 - ✅ **セキュリティ対策**: functions.phpに包括的なセキュリティ機能を実装
 - ✅ **bodyクラス機能**: ページ固有のCSSを適用するためのカスタムbodyクラス自動出力
 - ✅ **プラン間リンク**: page-ippansou.php ⇄ page-family.php で相互リンクボタン実装
-- ✅ **横スクロール防止**: モバイルメニューをtransform方式に変更、bodyにoverflow-x: hidden
+- ✅ **横スクロール防止**: モバイルメニューをtransform方式に変更、html/bodyにoverflow-x: hidden
 - ✅ **グリッドレイアウト固定**: 充実の設備(4列)、お客様の声(2列)、相談カード(2列)、生花カード(3列)をrepeat固定
 - ✅ **バナー配置**: ヒーロー・フッターにolive/zensouren/全葬連バナー
 - ✅ **ヘッダーロゴ**: ロゴマーク(logo.png) + 光和文字(logo_kowa.png)の横並び
 - ✅ **フッター更新**: Copyright「株式会社光和」、全葬連葬儀事前相談員在籍カード
 - ✅ **WordPress準拠リファクタリング**: エスケープ処理統一、style.css情報補完、index.php実装、mainタグ追加、ID重複修正、冗長ARIA削除
 - ✅ **ファビコン**: images/favicon.png（header.phpで直接設定）
+- ✅ **モバイルバー**: 非表示ブレークポイントを1024pxに変更（大画面Android対応）
+- ✅ **モバイルバーはみ出し修正**: width/max-width/overflow/flex-shrink対応
+- ✅ **モバイルレスポンシブ**: お問い合わせCTAボタン、会社概要テーブル縦積み、フォーム選択肢縦並び
+- ✅ **reduced-motion対応**: prefers-reduced-motion時にコンテンツが非表示にならないよう修正
+- ✅ **スパム対策**: Contact Form 7 + Cloudflare Turnstile連携（インテグレーション設定）
 
 ## クイックリファレンス
 
