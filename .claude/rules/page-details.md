@@ -49,7 +49,9 @@ paths:
 
 - Contact Form 7実装済み（既存CSSデザイン維持）
 
-## フッターバナー
+## フッター
 
 - `.footer__banners`（4列グリッド）: zensouren/olive/IF共済会 + 全葬連事前相談員カード（角丸囲み線）
 - `.footer__ambassadors`: アンバサダー画像3枚横並び
+- Footer Bottom: 住所+認証（横並び）、コピーライト（中央下）
+- モバイル: `padding-bottom: 80px`（固定下部バー分の余白）

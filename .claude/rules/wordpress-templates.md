@@ -55,6 +55,16 @@ paths:
 2. **プログレスバー**: スクロール進行度表示
 3. **固定下部バー（モバイル 1023px以下）**: 電話/会員登録/資料請求/メニュー
 
+## SEO / meta情報
+
+- 本番ドメイン: `https://mh-kowa.com/`
+- canonical / OG URL: `home_url()` で動的生成（ページごとに変化）
+- OG/Twitter タイトル: `wp_title()` で動的生成
+- OG画像: `logo.png`（専用og-image.jpgは未作成）
+- JSON-LD: Organization + FuneralHome + WebSite + BreadcrumbList
+- 名称: 「株式会社光和」で統一（「メモリアルホール光和」は使用しない）
+- SNSアカウント: なし（sameAs未設定）
+
 ## Contact Form 7
 
 - ショートコード: `[contact-form-7 id="2017a2e" title="お問い合わせ"]`
