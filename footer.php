@@ -89,11 +89,14 @@
         <div class="footer__middle">
             <div class="container">
                 <div class="footer__banners">
+                    <a href="https://www.zensoren.or.jp/" target="_blank" rel="noopener noreferrer" class="footer__banner">
+                        <img src="<?php echo esc_url(get_theme_file_uri('images/zensouren.gif')); ?>" alt="全日本葬祭業協同組合連合会" loading="lazy">
+                    </a>
                     <a href="https://www.olive-ins.co.jp/" target="_blank" rel="noopener noreferrer" class="footer__banner">
                         <img src="<?php echo esc_url(get_theme_file_uri('images/olive.png')); ?>" alt="オリーブ少額短期保険" loading="lazy">
                     </a>
-                    <a href="https://www.zensoren.or.jp/" target="_blank" rel="noopener noreferrer" class="footer__banner">
-                        <img src="<?php echo esc_url(get_theme_file_uri('images/zensouren.png')); ?>" alt="全日本葬祭業協同組合連合会" loading="lazy">
+                    <a href="https://if-kyosai.jp/" target="_blank" rel="noopener noreferrer" class="footer__banner">
+                        <img src="<?php echo esc_url(get_theme_file_uri('images/if-logo.jpg')); ?>" alt="IF共済会" loading="lazy">
                     </a>
                     <a href="<?php echo esc_url(home_url('/soudan/')); ?>" class="footer__feature">
                         <i class="fas fa-award"></i>
@@ -102,6 +105,11 @@
                             <span>安心の葬儀サポート</span>
                         </div>
                     </a>
+                </div>
+                <div class="footer__ambassadors">
+                    <img src="<?php echo esc_url(get_theme_file_uri('images/ambassador1_compressed.jpg')); ?>" alt="全葬連フューネラルアンバサダー 田村 淳" loading="lazy">
+                    <img src="<?php echo esc_url(get_theme_file_uri('images/ambassador2_compressed.jpg')); ?>" alt="全葬連フューネラルアンバサダー 田村 淳" loading="lazy">
+                    <img src="<?php echo esc_url(get_theme_file_uri('images/ambassador3_compressed.jpg')); ?>" alt="全葬連フューネラルアンバサダー 田村 淳" loading="lazy">
                 </div>
             </div>
         </div>
