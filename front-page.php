@@ -80,12 +80,16 @@
                     </div>
 
                     <div class="hero__banners">
+                        <a href="https://www.zensoren.or.jp/" target="_blank" rel="noopener noreferrer" class="hero__banner-link">
+                            <img src="<?php echo esc_url(get_theme_file_uri('images/zensouren.gif')); ?>" alt="全日本葬祭業協同組合連合会" loading="lazy">
+                        </a>
                         <a href="https://www.olive-ins.co.jp/" target="_blank" rel="noopener noreferrer" class="hero__banner-link">
                             <img src="<?php echo esc_url(get_theme_file_uri('images/olive.png')); ?>" alt="オリーブ少額短期保険" loading="lazy">
                         </a>
-                        <a href="https://www.zensoren.or.jp/" target="_blank" rel="noopener noreferrer" class="hero__banner-link">
-                            <img src="<?php echo esc_url(get_theme_file_uri('images/zensouren.png')); ?>" alt="全日本葬祭業協同組合連合会" loading="lazy">
-                        </a>
+                        <div class="hero__ambassador">
+                            <img src="<?php echo esc_url(get_theme_file_uri('images/ambassador3_compressed.jpg')); ?>" alt="全葬連フューネラルアンバサダー 田村 淳" loading="lazy">
+                            <span class="hero__ambassador-caption">全葬連フューネラルアンバサダー 田村 淳</span>
+                        </div>
                     </div>
 
                     <div class="hero__quick-info">
@@ -1162,7 +1166,7 @@
                                 </div>
                                 <div class="voice-card__info">
                                     <p class="voice-card__name">S.T様（60代・女性）</p>
-                                    <p class="voice-card__location">○○市在住</p>
+                                    <p class="voice-card__location">飯田市在住</p>
                                 </div>
                             </div>
                             <div class="voice-card__rating">
@@ -1199,7 +1203,7 @@
                                 </div>
                                 <div class="voice-card__info">
                                     <p class="voice-card__name">M.K様（50代・男性）</p>
-                                    <p class="voice-card__location">○○市在住</p>
+                                    <p class="voice-card__location">飯田市在住</p>
                                 </div>
                             </div>
                             <div class="voice-card__rating">
@@ -1236,7 +1240,7 @@
                                 </div>
                                 <div class="voice-card__info">
                                     <p class="voice-card__name">Y.H様（70代・女性）</p>
-                                    <p class="voice-card__location">○○市在住</p>
+                                    <p class="voice-card__location">喬木村在住</p>
                                 </div>
                             </div>
                             <div class="voice-card__rating">
@@ -1274,7 +1278,7 @@
                                 </div>
                                 <div class="voice-card__info">
                                     <p class="voice-card__name">A.T様（60代・女性）</p>
-                                    <p class="voice-card__location">○○市在住</p>
+                                    <p class="voice-card__location">豊丘村在住</p>
                                 </div>
                             </div>
                             <div class="voice-card__rating">

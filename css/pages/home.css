@@ -551,6 +551,7 @@
 
 .hero__banners {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-4);
   justify-content: center;
   margin-top: var(--spacing-4);
@@ -575,6 +576,38 @@
   max-height: 90px;
   width: auto;
   object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.hero__ambassador {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+}
+
+.hero__ambassador img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hero__ambassador img:hover {
+  transform: scale(1.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position: relative;
+}
+
+.hero__ambassador-caption {
+  margin-top: var(--spacing-2);
+  font-size: 0.75rem;
+  color: var(--color-text-light, #666);
+  letter-spacing: 0.05em;
 }
 
 .hero__quick-info {
