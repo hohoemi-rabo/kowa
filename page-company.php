@@ -174,7 +174,7 @@
                 <div class="company-access__map-placeholder">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.3091062908375!2d137.85599547524245!3d35.50323243973228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c9bc68d8dbaed%3A0xe4ed2cb283e77dd7!2z44CSMzk1LTA4MjEg6ZW36YeO55yM6aOv55Sw5biC5p2-5bC-5paw5LqV77yW77yV77yU77yU4oiS77yR!5e1!3m2!1sja!2sjp!4v1756546687760!5m2!1sja!2sjp"
-                    width="600"
+                    width="100%"
                     height="450"
                     style="border: 0"
                     allowfullscreen=""
