@@ -330,6 +330,43 @@
 }
 
 @media (max-width: 768px) {
+  /* 経営理念 */
+  .company-philosophy {
+    padding: var(--spacing-8);
+    border-radius: 12px;
+  }
+
+  .company-philosophy__title {
+    margin-bottom: var(--spacing-6);
+  }
+
+  .company-philosophy__main {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .company-philosophy__sub {
+    font-size: var(--font-size-sm);
+    line-height: 1.8;
+  }
+
+  .company-philosophy__decoration {
+    font-size: 60px;
+    top: 10px;
+    right: 10px;
+  }
+
+  /* 会社概要 */
+  .company-overview {
+    padding: var(--spacing-8);
+    border-radius: 12px;
+  }
+
+  .company-overview__title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-6);
+  }
+
   .company-overview__table,
   .company-overview__table tbody,
   .company-overview__table tr,
@@ -349,10 +386,18 @@
   .company-overview__table td {
     padding: var(--spacing-3) var(--spacing-4) var(--spacing-5);
     border-bottom: 1px solid var(--color-border);
+    font-size: var(--font-size-sm);
+    line-height: 2;
   }
 
   .company-overview__table th::before {
     display: none;
+  }
+
+  .company-overview__note {
+    display: block;
+    margin-left: 0;
+    margin-top: var(--spacing-1);
   }
 }
 
