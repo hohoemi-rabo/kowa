@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## プロジェクト概要
 
-メモリアルホール光和の公式 Web サイト - 長野県飯田市の葬儀場向けの WordPress テーマ。「ご葬儀からご創儀へ」をコンセプトとした和モダンデザイン。
+株式会社光和の公式 Web サイト - 長野県飯田市の葬儀場向けの WordPress テーマ。「ご葬儀からご創儀へ」をコンセプトとした和モダンデザイン。
 
 **プロジェクトステータス:** 静的HTMLからWordPressへの移行完了（全ページPHP化済み）
 

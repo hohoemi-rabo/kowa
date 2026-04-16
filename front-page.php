@@ -779,7 +779,7 @@
                     <div class="parking-info">
                         <div class="parking-info__map">
                             <img src="<?php echo esc_url(get_theme_file_uri('images/facilities/parking/overview.jpg')); ?>"
-                                 alt="メモリアルホール光和 駐車場全景（200台収容）"
+                                 alt="株式会社光和 駐車場全景（200台収容）"
                                  loading="lazy"
                                  decoding="async"
                                  width="800"
@@ -1151,7 +1151,7 @@
                         <span class="section-title__sub">Customer Voices</span>
                     </h2>
                     <p class="section-description">
-                        メモリアルホール光和をご利用いただいたお客様からの<br>
+                        株式会社光和をご利用いただいたお客様からの<br>
                         心温まるメッセージをご紹介いたします
                     </p>
                 </header>

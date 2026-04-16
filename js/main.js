@@ -1,5 +1,5 @@
 /**
- * メモリアルホール光和 - メインJavaScript
+ * 株式会社光和 - メインJavaScript
  */
 
 // ブラウザのスクロール復元を有効化
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initContactFormsAnimation();
     }
     
-    console.log('メモリアルホール光和 - サイトが読み込まれました');
+    console.log('株式会社光和 - サイトが読み込まれました');
 });
 
 /**

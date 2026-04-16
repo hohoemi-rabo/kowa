@@ -180,7 +180,7 @@
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
-                    title="メモリアルホール光和のアクセスマップ"
+                    title="株式会社光和のアクセスマップ"
                   ></iframe>
                 </div>
               </div>

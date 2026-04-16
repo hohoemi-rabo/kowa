@@ -6,7 +6,7 @@
                     <!-- Company Info -->
                     <div class="footer__column footer__column--main">
                         <div class="footer__logo">
-                            <img src="<?php echo esc_url(get_theme_file_uri('images/logo_2.png')); ?>" alt="メモリアルホール光和ロゴ" class="footer__logo-image">
+                            <img src="<?php echo esc_url(get_theme_file_uri('images/logo_2.png')); ?>" alt="株式会社光和ロゴ" class="footer__logo-image">
                         </div>
                         <p class="footer__description">
                             心を込めて、最期のお別れをお手伝いいたします。<br>
