@@ -118,16 +118,16 @@
         <div class="footer__bottom">
             <div class="container">
                 <div class="footer__bottom-content">
-                    <div class="footer__copyright">
-                        <p>&copy; 2026 株式会社光和. All rights reserved.</p>
+                    <div class="footer__bottom-top">
                         <p class="footer__address">
                             <i class="fas fa-map-marker-alt"></i>
                             〒395-0821 長野県飯田市松尾新井6544-1
                         </p>
+                        <div class="footer__certifications">
+                            <span class="footer__cert-text">認証・資格</span>
+                        </div>
                     </div>
-                    <div class="footer__certifications">
-                        <span class="footer__cert-text">認証・資格</span>
-                    </div>
+                    <p class="footer__copyright-text">&copy; 2026 株式会社光和. All rights reserved.</p>
                 </div>
             </div>
         </div>

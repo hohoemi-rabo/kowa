@@ -3133,6 +3133,53 @@
   }
 }
 
+@media (max-width: 767px) {
+  .customer-voices {
+    padding: var(--spacing-16) 0;
+  }
+
+  .customer-voices__content {
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-10);
+    padding: 0 var(--spacing-4);
+  }
+
+  .voice-card {
+    padding: var(--spacing-6);
+  }
+
+  .voice-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .voice-card__avatar {
+    width: 42px;
+    height: 42px;
+    font-size: var(--font-size-base);
+  }
+
+  .voice-card__plan {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .voice-card__content {
+    padding-left: var(--spacing-5);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .voice-card__quote {
+    font-size: 18px;
+  }
+
+  .voice-card__message {
+    font-size: var(--font-size-sm);
+    line-height: 2;
+  }
+}
+
 /* Voice Card */
 .voice-card {
   background: white;
