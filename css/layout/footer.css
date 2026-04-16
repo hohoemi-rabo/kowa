@@ -259,6 +259,7 @@
   gap: var(--spacing-3);
   padding: var(--spacing-3);
   background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--radius-md);
   transition: var(--transition-all);
   text-decoration: none;

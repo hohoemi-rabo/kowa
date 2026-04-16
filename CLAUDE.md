@@ -29,7 +29,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - ✅ セキュリティ対策: functions.phpに実装済み（詳細は下記参照）
 - ✅ モバイルメニュー: transform方式に変更（横スクロール防止）
 - ✅ グリッドレイアウト固定化: 各セクションのカード列数を固定（auto-fit/auto-fill廃止）
-- ✅ バナー設置: ヒーロー・フッターにolive/zensouren/全葬連バナー配置済み
+- ✅ バナー設置: ヒーロー・フッターにolive/zensouren/IF共済会/全葬連バナー配置済み
+- ✅ アンバサダー画像: ヒーロー・フッターに全葬連フューネラルアンバサダー（田村淳）画像配置済み
 
 **会社情報:**
 - 正式名称: 株式会社光和
@@ -449,7 +450,11 @@ images/
 ├── logo_kowa.png       # ヘッダー「光和」ロゴ文字
 ├── logo_2.png          # フッターロゴ
 ├── olive.png           # オリーブ少額短期保険バナー
-└── zensouren.png       # 全日本葬祭業協同組合連合会バナー
+├── zensouren.gif       # 全日本葬祭業協同組合連合会バナー
+├── if-logo.jpg         # IF共済会バナー
+├── ambassador1_compressed.jpg  # アンバサダー画像1（圧縮済み）
+├── ambassador2_compressed.jpg  # アンバサダー画像2（圧縮済み）
+└── ambassador3_compressed.jpg  # アンバサダー画像3（圧縮済み）
 ```
 
 ## UI/UX の特徴的な実装
@@ -487,12 +492,12 @@ images/
 - FAQ: 宿泊可能（通夜室・仮眠室、バスルーム完備）
 - ヒーロー特徴: 24時間365日受付対応 / 即日対応可能 / 地域密着 真心の対応 / 明朗会計 安心のご提案
 - ヒーローCTA: フリーダイヤル横に「プラン・料金を見る」「無料資料請求」ボタン（btn--sm）
-- ヒーローバナー: olive.png、zensouren.png配置済み
+- ヒーローバナー: zensouren.gif（左）、olive.png（右）配置済み、下にアンバサダー画像（キャプション+ホバー拡大）
 - 葬儀の流れ: 15ステップ、3フェーズ区切り（7番・13番に--separation）
   - 亡くなる前～直後（1-6）→ 葬儀中（7-12）→ 葬儀直後～葬儀後（13-15）
   - ヘッダー幅: grid-template-columns: 7fr 5fr 3fr
 - FAQ事前相談: 回答末尾にCTAリンク（全日本葬祭業協同組合連合会認定の専門相談員）
-- お客様の声: 2列×2行レイアウト固定
+- お客様の声: 2列×2行レイアウト固定、地名は飯田市(上2枚)・喬木村・豊丘村
 
 ### page-ippansou.php（一般葬プラン）
 
@@ -562,7 +567,7 @@ images/
 - ✅ **プラン間リンク**: page-ippansou.php ⇄ page-family.php で相互リンクボタン実装
 - ✅ **横スクロール防止**: モバイルメニューをtransform方式に変更、html/bodyにoverflow-x: hidden
 - ✅ **グリッドレイアウト固定**: 充実の設備(4列)、お客様の声(2列)、相談カード(2列)、生花カード(3列)をrepeat固定
-- ✅ **バナー配置**: ヒーロー・フッターにolive/zensouren/全葬連バナー
+- ✅ **バナー配置**: ヒーロー・フッターにzensouren/olive/IF共済会/全葬連バナー、アンバサダー画像配置
 - ✅ **ヘッダーロゴ**: ロゴマーク(logo.png) + 光和文字(logo_kowa.png)の横並び
 - ✅ **フッター更新**: Copyright「株式会社光和」、全葬連葬儀事前相談員在籍カード
 - ✅ **WordPress準拠リファクタリング**: エスケープ処理統一、style.css情報補完、index.php実装、mainタグ追加、ID重複修正、冗長ARIA削除
@@ -635,7 +640,7 @@ get_footer();
 9. **プラン間リンク**: plan.cssの`.other-plan-link`セクションを使用して、関連プランへの誘導ボタンを配置可能
 10. **グリッドレイアウト**: カード数に合わせてrepeat固定を使用（auto-fit/auto-fillは使わない）。モニターサイズによる崩れ防止
 11. **バナー配置**: 外部リンクバナーには`target="_blank" rel="noopener noreferrer"`を付与
-12. **フッターバナー**: `.footer__banners`（3列グリッド）でバナー2つ + 全葬連カードを配置
+12. **フッターバナー**: `.footer__banners`（4列グリッド）でバナー3つ（zensouren/olive/IF共済会）+ 全葬連カードを配置、下に`.footer__ambassadors`でアンバサダー画像3枚横並び
 
 ### テスト手順
 
